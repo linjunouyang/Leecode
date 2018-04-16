@@ -1,4 +1,12 @@
 public class SearchInsertPosition {
+    /**
+     * Binary Search
+     * Time Complexity: O(logn)
+     * Space Complexity: O(1)
+     * @param nums
+     * @param target
+     * @return
+     */
     public int searchInsert(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return 0;
