@@ -1,3 +1,5 @@
+package BinarySearch;
+
 public class GuessNumberHigherOrLower {
     /**
      * Binary Search
