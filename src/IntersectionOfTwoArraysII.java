@@ -5,8 +5,8 @@ import java.util.HashMap;
 public class IntersectionOfTwoArraysII {
     public int[] intersect(int[] nums1, int[] nums2) {
         /**
-         * Time Complexity: O(nlogn)
-         * Space Complexity: O(n)
+         * Time Complexity: O(mlogm + nlogn + min(m, n))  -> O(nlogn)
+         * Space Complexity: O(min(m, n))                 -> O(m)
          */
         if (nums1 == null || nums2 == null || nums1.length == 0 || nums2.length == 0) {
             return new int[]{};
@@ -40,9 +40,9 @@ public class IntersectionOfTwoArraysII {
     }
 
     public int[] intersect2(int[] nums1, int[] nums2) {
-        /**
-         * Time Complexity: O(n);
-         * Space Complexity: O(n);
+        /** Hashmap
+         * Time Complexity: O(m+n);             -> O(n)
+         * Space Complexity: O(m + min(m, n));  -> O(m)
          */
         if (nums1 == null || nums2 == null || nums1.length == 0 || nums2.length == 0) {
             return new int[]{};
@@ -77,13 +77,11 @@ public class IntersectionOfTwoArraysII {
 
     public int[] intersect3(int[] nums1, int[] nums2) {
         /**
-         * time complexity: max(O(mlgm), O(nlgn), O(mlgn)) or max(O(mlgm),
-         * O(nlgn), O(nlgm))
+         * time complexity: max(O(mlgm), O(nlgn), O(mlgn))
          * O(mlgm) <-- sort first array
          * O(nlgn) <— sort second array
          * O(mlgn) <— for each element in nums1, do binary search in nums2
-         * O(nlgm) <— for each element in nums2, do binary search in nums1
-         * space complexity: O(n) or O(m)
+         * space complexity: O(min(m, n))
          */
         if (nums1 == null || nums2 == null || nums1.length == 0 || nums2.length == 0) {
             return new int[]{};
