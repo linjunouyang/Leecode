@@ -60,4 +60,104 @@ public class _33SearchInRotatedSortedArray {
         return -1;
     }
 
+    /*
+    Binary Search
+
+    Pivot number: 1st element of rotated sorted array.
+
+    Why not normal BS?
+    Because target and mid might not be on different half.
+    Solution:
+    Same side -> comparator = nums[mid]
+    target (14) left, mid (12) right -> comparator = INF
+    mid (12) left, target (5) right -> comparator = -INF
+
+    Time Complexity: O(logn)
+    Space Complexity: O(1)
+
+    Detailed Discussion:
+    https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/14435/Clever-idea-making-it-simple
+    https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/154836/The-INF-and-INF-method-but-with-a-better-explanation-for-dummies-like-me
+     */
+    public int search2(int[] nums, int target) {
+        int lo = 0;
+        int hi = nums.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            int num = nums[mid];
+            // If nums[mid] and target are on the same side of nums[0], we just take nums[mid]
+            if ((nums[mid] < nums[0]) == (target < nums[0])) {
+                num = nums[mid];
+            } else {
+                num = target < nums[0] ? Integer.MIN_VALUE : Integer.MAX_VALUE;
+            }
+
+            if (target < num) {
+                hi = mid - 1;
+            } else if (target > num) {
+                lo = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+        return -1;
+    }
+
+    /**
+     * One Binary Search
+     *
+     * Always check whether target is in the sorted part or rotated part
+     *
+     * Time complexity: O(logn)
+     * Space complexity: O(1)
+     *
+     * Link:
+     * https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/14436/Revised-Binary-Search
+     *
+     */
+    public int search3(int[] nums, int target) {
+        int lo = 0;
+        int hi = nums.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+
+            if (nums[mid] == target) {
+                return mid;
+            }
+
+            if (nums[lo] <= nums[mid]) {
+                if (target >= nums[lo] && target < nums[mid]) {
+                    hi = mid - 1;
+                } else {
+                    lo = mid + 1;
+                }
+            } else {
+                if (target > nums[mid] && target <= nums[hi]) {
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+        }
+        return -1;
+    }
+
+
+    /**
+     * Binary Search with XOR
+     *
+     * Not intuitive to me
+     */
+    public int search4(int[] nums, int target) {
+        int lo = 0, hi = nums.length - 1;
+        while (lo < hi) {
+            int mid = (lo + hi) / 2;
+            if ((nums[0] > target) ^ (nums[0] > nums[mid]) ^ (target > nums[mid])) {
+                lo = mid + 1;
+            } else {
+                hi = mid;
+            }
+        }
+        return lo == hi && nums[lo] == target ? lo : -1;
+    }
 }
