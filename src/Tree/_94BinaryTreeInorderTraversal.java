@@ -50,6 +50,8 @@ public class _94BinaryTreeInorderTraversal {
     /*
     Approach 2: Iterating method using Stack
 
+    stack stores all the unvisited roots of subtrees
+
     Note:
     1.
     Outside while loop:

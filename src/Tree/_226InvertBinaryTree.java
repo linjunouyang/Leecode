@@ -6,7 +6,7 @@ import java.util.Queue;
 
 public class _226InvertBinaryTree {
     /*
-    1. Recursion
+    1. Recursion, DFS
 
     Treat left and right child as a tree.
 
@@ -14,7 +14,8 @@ public class _226InvertBinaryTree {
     Space complexity:
     O(h) function calls will be places on the stack. h: height of tree.
     If the tree is skewed, then O(h) = O(n)
-    Not really scalable
+
+    Bound to the application stack, not scalable
      */
     public TreeNode invertTree(TreeNode root) {
         if (root == null) {
@@ -49,15 +50,36 @@ public class _226InvertBinaryTree {
     For a full binary tree, the leaf level has n/2 -> O(n) leaves
     ---------------------------------------
     Deque and Queue are both queue interfaces. FIFO. -> BFS
+    Interface: Iterable <- Collection <- Queue <- Deque
+    Class AbstractCollection <- ArrayDeque
+
+    Queue interface extends Collection interface.
+    Queue interface implementation: PriorityQueue, LinkedList
+    Inherited from Collection: size(), isEmpty(), contains()
 
     Queues typically, but not necessarily , order elements in a FIFO manner.
     Its implementations generally don't allow null insertion. (Exception: LinkedList)
 
-    Deque extends Queue interface. FIFO / LIFO
+    Methods:
+    return values: offer(e), poll(), peek()
+    throws exception: add(e), remove(), element()
+
+
+
+    Deque: double-ended queue, extends Queue. FIFO / LIFO
+    supports insertion and removal at both ends
+    faster than Stack and LinkedList
+
+    Features: resizeable, Array deques prohibit null
+    https://www.geeksforgeeks.org/deque-interface-java-example/
+
     This interface should be used in preference to the legacy Stack class.
     Better not to insert null.
 
-    Stack class extends class Vector.
+
+
+
+    Stack class extends class Vector. (FILO)
     It has a way of accessing an element by position. (bad)
 
     class LinkedList implements List and Deque interfaces.
@@ -83,13 +105,12 @@ public class _226InvertBinaryTree {
                 queue.add(current.right);
             }
         }
+
         return root;
     }
 
     /*
-    3. Iteration.
-
-    DFS.
+    3. Iteration, DFS.
 
     Using stack to store all the nodes (not-null) whose children have not been swapped.
 
