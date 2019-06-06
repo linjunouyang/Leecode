@@ -71,6 +71,8 @@ public class _230KthSmallestElementInABST {
      * O(N * lgN) average,
      * O(N^2) worst
      *
+     * Space complexity:
+     * [UNKNOWN]
      *
      */
     public int kthSmallest3(TreeNode root, int k) {
