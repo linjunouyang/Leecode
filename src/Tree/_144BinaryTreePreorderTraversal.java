@@ -49,6 +49,9 @@ public class _144BinaryTreePreorderTraversal {
     ArrayDeque class: Resizable, null prohibited.
     Faster than Stack when used as stacks, and faster than LinkedList when used as queues
 
+    LinkedList: Doubly-linked list implementation of the List and Deque interfaces
+    Permits all elements (including null)
+
      */
     public List<Integer> preorderTraversal2(TreeNode root) {
         List<Integer> res = new ArrayList<>();
