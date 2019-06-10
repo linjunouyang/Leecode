@@ -2,13 +2,6 @@ package Tree;
 
 import java.util.*;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-}
-
 /**
  * 9.20 First. Not Solved in 20 minutes.
  * Notice that the array size is [1, 10000] (no 0)
@@ -41,7 +34,7 @@ public class _654MaximumBinaryTree {
             return null;
         }
         int max_i = max(nums, l, r);
-        TreeNode root = new TreeNode(nums[max_i);
+        TreeNode root = new TreeNode(nums[max_i]);
         root.left = construct(nums, l, max_i);
         root.right = construct(nums, max_i + 1, r);
         return root;

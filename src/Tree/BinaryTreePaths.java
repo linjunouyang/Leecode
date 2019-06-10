@@ -1,3 +1,8 @@
+package Tree;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryTreePaths {
     /**
      * Traverse
@@ -6,7 +11,7 @@ public class BinaryTreePaths {
      * @param root
      * @return
      */
-    public List<String>  binaryTreePaths1(TreeNode root) {
+    public List<String> binaryTreePaths1(TreeNode root) {
         List<String> paths = new ArrayList<String>();
         if (root != null) {
             helper1(root, "", paths);

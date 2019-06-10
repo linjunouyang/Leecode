@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class FlattenBinaryTreeToLinkedList {
     private class TreeNode {
         int val;

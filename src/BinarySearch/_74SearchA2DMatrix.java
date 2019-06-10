@@ -11,7 +11,7 @@ public class _74SearchA2DMatrix {
     Space Complexity: O(1)
 
     Note:
-    1. row_num * col_num might cause overflow.  it is better to binary search by row first, then binary search by column. The time complexity is the same but this avoids multiplication overflow.
+    1. row_num * col_num might cause overflow.
     2. % and / are expensive
      */
     public boolean searchMatrix(int[][] matrix, int target) {
@@ -40,4 +40,6 @@ public class _74SearchA2DMatrix {
 
         return false;
     }
+
+
 }
