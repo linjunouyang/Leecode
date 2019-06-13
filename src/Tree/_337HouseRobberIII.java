@@ -45,6 +45,8 @@ public class _337HouseRobberIII {
      * which grows exponentially (more info can be found here).
      *
      * Space complexity:
+     * Recursion call stack: O(lgn) for balanced trees, O(n) for skewed tres.
+     *
      *
      */
     public int rob1(TreeNode root) {
@@ -85,9 +87,13 @@ public class _337HouseRobberIII {
      *
      * Time complexity:
      * n entries in the map
+     * O(n)
+     *
+     * Space complexity:
+     * HashMap: O(n)
+     * Recursion call stack: O(lgn) for balanced trees, O(n) for skewed trees;
      *
      *
-     * Space complexity: O(n) (Stack cost for recursion is counted)
      */
     public int rob2(TreeNode root) {
         return robSub(root, new HashMap<>());
@@ -150,6 +156,13 @@ public class _337HouseRobberIII {
      *
      * by keeping track of the information of both scenarios,
      * we decoupled the subproblems and the solution essentially boiled down to a greedy one.
+     *
+     * Time complexity (not sure):
+     * O(n)
+     *
+     * Space complexity:
+     * O(lgn) for balanced trees
+     * O(n) for skewed trees
      *
      *
      */
