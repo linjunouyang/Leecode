@@ -47,23 +47,35 @@ public class _145BinaryTreePostorderTraversal {
     depending on the tree structure, we could keep up to the entire tree,
     therefore, the space complexity is \mathcal{O}(N)O(N).
 
+    ----
+    Note:
+    1. List interface doesn't have addFirst method.
+    2. strictly speaking, this solution for the post order is incorrect.
+    Even though the result is correct, but if there are topological dependencies among the nodes,
+    the visiting order would be significant. Simply reversing the preorder result isn't right.
+
+
      */
     public List<Integer> postorderTraversal2(TreeNode root) {
-        LinkedList<TreeNode> stack = new LinkedList<>();
         LinkedList<Integer> output = new LinkedList<>();
+
         if (root == null) {
             return output;
         }
 
+        Deque<TreeNode> stack = new ArrayDeque<>();
         stack.add(root);
+
         while (!stack.isEmpty()) {
-            TreeNode node = stack.pollLast();
+            TreeNode node = stack.pop();
             output.addFirst(node.val);
+
             if (node.left != null) {
-                stack.add(node.left);
+                stack.push(node.left);
             }
+
             if (node.right != null) {
-                stack.add(node.right);
+                stack.push(node.right);
             }
         }
 
