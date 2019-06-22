@@ -136,6 +136,9 @@ public class _105ConstructBinaryTreeFromPreorderAndInorderTraversal {
      * O(n) for left-skewed trees' stack
      * O(1) for right-skewed trees' stack
      * O(lgn) for balanced trees
+     *
+     * Runtime: 4 ms, faster than 59.73% of Java online submissions for Construct Binary Tree from Preorder and Inorder Traversal.
+     * Memory Usage: 36 MB, less than 99.90% of Java online submissions for Construct Binary Tree from Preorder and Inorder Traversal.
      */
     public TreeNode buildTree3(int[] preorder, int[] inorder) {
         // deal with edge cases
