@@ -72,13 +72,27 @@ public class _106ConstructBinaryTreeFromInorderAndPostorderTraversal {
      * inorder:  (inorder left) root (inorder right)
      * postorder: (postorder left) (postorder right) root
      *
-     * inorder =   9,3,15,[20],7
-     * postorder = 9,[15],7,20,3
+     * ---
+     * inorder =   9, 3, 15, 20, [7]
+     * postorder = 9, [15], 7, 20,3
+     *
+     * prev =
+     * root =
+     * stack = 7 20 3
+     *
+     * stack.peek() = inorder[ip] (reaches the rightest)
+     *
+     * -----
+     * prev = 7
+     * inorder =   9, 3, 15, [20], 7
+     * stack = 20 3
+     *
+     * stack.peek() = inorder[ip]
+     * ---
      *
      * prev = 20
-     * root = 3
-     * stack = 7 3
-     *
+     * inorder = 9, 3, [15], 20, 7
+     * stack = 3
      *
      * 1
      *  \
@@ -140,6 +154,7 @@ public class _106ConstructBinaryTreeFromInorderAndPostorderTraversal {
 
         while (pp >= 0) {
             while (!stack.isEmpty() && stack.peek().val == inorder[ip]) {
+                // stack.peek().val == inorder[ip] reach to the most right
                 prev = stack.pop();
                 ip--;
             }

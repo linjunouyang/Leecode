@@ -94,7 +94,7 @@ public class _105ConstructBinaryTreeFromPreorderAndInorderTraversal {
             inMap.put(inorder[i], i);
         }
 
-        return build2(preorder, 0, 0, inorder.length - 1, inMap;\
+        return build2(preorder, 0, 0, inorder.length - 1, inMap);
     }
 
     private TreeNode build2(int[] preorder, int preStart, int inStart, int inEnd, Map<Integer, Integer> inMap) {
@@ -183,5 +183,6 @@ public class _105ConstructBinaryTreeFromPreorderAndInorderTraversal {
             stack.push(node);
         }
 
+        return root;
     }
 }

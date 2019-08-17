@@ -62,7 +62,7 @@ public class _107BinaryTreeLevelOrderTraversalII {
      * O(n) for unbalanced trees
      */
     public List<List<Integer>> levelOrderBottom2(TreeNode root) {
-        List<List<Integer>> res = new LinkedList<>;
+        List<List<Integer>> res = new LinkedList<>();
         levelHelper(res, root, 0);
         return res;
     }

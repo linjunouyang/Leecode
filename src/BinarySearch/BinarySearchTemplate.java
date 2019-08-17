@@ -1,20 +1,26 @@
 package BinarySearch;
 
+/**
+ * Binary Search 总结：https://github.com/yuzhoujr/leetcode/issues/8
+ */
 public class BinarySearchTemplate {
     public int findPosition(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return -1;
         }
 
-        int start = 0, end = nums.length - 1;
+        int start = 0;
+        int end = nums.length - 1;
+
         /**
          * while循环只负责缩小问题范围，不解决问题本身（不return），缩小到可以用
          * 几个if语句检查的时候再处理。
          *
-         * start + 1 < end 意味着相邻就退出 比如start = 1, end = 2
+         * start + 1 < end 相邻就退出 比如start = 1, end = 2
          *
          * 如果写成start < end，那么当题目[2, 2]要求last position时, mid = 0,
-         * nums[mid] == target; start = mid = 0, 即区间没有缩小，出现死循环
+         * nums[mid] == target -> start = mid = 0, 即区间没有缩小，出现死循环
+         *
          */
         while (start + 1 < end) {
             /**
@@ -30,10 +36,16 @@ public class BinarySearchTemplate {
                  *  (3) 如果题目求last position, 那么start = mid;
                  * 检查后方是否还有，不能start = mid + 1，因为可能此时mid就是解
                  *
-                 * 最终==的处理方案可能和<或者>相同，但是一开始还是分开写，之后想清楚了再合并
+                 * 最终==的处理方案可能和 < 或者 > 相同，但是一开始还是分开写，之后想清楚了再合并
                  */
+
+                // first position 不能移到end-1 因为mid可能是唯一解
                 end = mid;
+
+                // last position 不能移到mid+1 因为mid可能是唯一
                 start = mid;
+
+                // Any position
                 return mid;
             } else if (nums[mid] < target) {
                 /**

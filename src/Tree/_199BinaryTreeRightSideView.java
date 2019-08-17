@@ -61,7 +61,7 @@ public class _199BinaryTreeRightSideView {
         return result;
     }
 
-    public void rightView(TreeNode curr, List<Integer> result, int currDepth) {
+    public static void rightView(TreeNode curr, List<Integer> result, int currDepth) {
         if (curr == null) {
             return;
         }
@@ -121,7 +121,7 @@ public class _199BinaryTreeRightSideView {
         root.right = new TreeNode(3);
         root.left.right = new TreeNode(5);
         root.right.right = new TreeNode(4);
-        rightSideView(root);
+        rightSideView3(root);
 
     }
 }
