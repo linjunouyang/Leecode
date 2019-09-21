@@ -1,6 +1,16 @@
 package BinarySearch;
 
-public class ValidPerfectSquare {
+/**
+ *
+ * To avoid overflow:
+ * 1. mid * mid > num -> num / mid < mid
+ * 2. long mid; mid * mid < num; low = (int) mid + 1;
+ *
+ * -----
+ * 8.17 First: Time limit exceeded. (mid * mid can be overflow)
+ *      Second: passed
+ */
+public class _367ValidPerfectSquare {
     /**
      * Intution - Iteration
      * Time Complexity: O(n)
@@ -9,9 +19,10 @@ public class ValidPerfectSquare {
      * @return
      */
     public boolean isPerfectSquare1(int num){
-        if (num < 0) {
-            return false;
-        }
+//        if (num < 0) {
+//            return false;
+//        }
+
         if (num == 0 || num == 1) {
             return true;
         }
@@ -25,6 +36,31 @@ public class ValidPerfectSquare {
     }
 
     /**
+     * Intuitive Binary Search
+     *
+     * @param num
+     * @return
+     */
+    public boolean isPerfectSquare15(int num) {
+        int start = 1;
+        int end = num - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (mid * mid == num) {
+                return true;
+            } else if (num / mid > mid) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Binary Search
      * Time Complexity: O(logn)
      * Space Complexity: O(1)
@@ -32,10 +68,6 @@ public class ValidPerfectSquare {
      * @return
      */
     public boolean isPerfectSquare2(int num) {
-        if (num == 0 || num == 1) {
-            return true;
-        }
-
         int start = 1;
         int end = num - 1;
 
@@ -54,13 +86,13 @@ public class ValidPerfectSquare {
             return true;
         } else if (end * end == num) {
             return true;
-        } else {
-            return false;
         }
+
+        return false;
     }
 
     /**
-     * The Sum of Odd Numbers
+     * Not intuitive: The Sum of Odd Numbers
      * Time Complexity: O(sqrt(N))
      * Space Complexity: O(1)
      */

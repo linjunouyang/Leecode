@@ -12,13 +12,12 @@ public class _107BinaryTreeLevelOrderTraversalII {
      *
      * Note: the returned object is of interface List, which doesn't support addFirst
      * but list interface has another method:
-     *
      * add(int index, E element)
      * Inserts the specified element at the specified position in this list
      *
      */
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<>();
+        List<List<Integer>> res = new LinkedList<>();
 
         if (root == null) {
             return res;

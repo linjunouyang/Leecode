@@ -1,8 +1,18 @@
 package BinarySearch;
 
+/**
+ * TBD: Divide and Conquer
+ *
+ * Not binary search, but similar
+ *
+ * --
+ * 8.22 passed
+ */
+
+
 public class _240SearchA2DMatrixII {
     /*
-    Binary-Search like method
+    1. Binary-Search like method
 
     Explanation:
     Start from top right corner (or bottom left corner).
@@ -11,10 +21,26 @@ public class _240SearchA2DMatrixII {
     Rule out one row or one column each time, so the time complexity is O(m+n).
     (It's like the matrix contains two binary search trees with two corresponding roots)
 
-    Potential Improvement:
+    little Improvement:
     1. In the while loop you put '==' at first, but mostly it will be passed.
     We can end the if-chain earlier by putting the '==' at last. It beats 93%.
     When you put '==' at first, it beat 56%.
+
+    2.  pre-increment is better than post-increments (++i is better than i++)
+    because of the way it works internally avoiding an extra register copy.
+
+    // ++i
+    int pre_increment(int &i) {
+        i = i + 1;
+        return i;
+    }
+
+    // i++
+    int post_increment(int &i) {
+        int original_i = i;
+        i = i + 1;
+        return original_i;
+    }
 
     Time Complexity: O(m+n)
     Space Complexity: O(1)
@@ -41,4 +67,8 @@ public class _240SearchA2DMatrixII {
 
         return false;
     }
+
+    /**
+     * 2. Divide and Conquer
+     */
 }

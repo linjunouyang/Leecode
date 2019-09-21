@@ -1,8 +1,15 @@
 package BinarySearch;
 
+/** TBD
+ *
+ * -
+ * 8.22 Don't understand solution 1.
+ * Need to checkout other solution on discussion session
+ *
+ */
 public class _33SearchInRotatedSortedArray {
     /*
-    Two Binary Search.
+    1. Two Binary Search.
 
     First, binary search for existing min index.
     start < end prevents useless loop (start = end, that must be the min)
@@ -61,32 +68,49 @@ public class _33SearchInRotatedSortedArray {
     }
 
     /*
-    Binary Search
 
-    Pivot number: 1st element of rotated sorted array.
+     */
 
-    Why not normal BS?
-    Because target and mid might not be on different half.
-    Solution:
-    Same side -> comparator = nums[mid]
-    target (14) left, mid (12) right -> comparator = INF
-    mid (12) left, target (5) right -> comparator = -INF
-
-    Time Complexity: O(logn)
-    Space Complexity: O(1)
-
-    Detailed Discussion:
-    https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/14435/Clever-idea-making-it-simple
-    https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/154836/The-INF-and-INF-method-but-with-a-better-explanation-for-dummies-like-me
+    /**
+     * 2. Binary Search
+     *
+     * Pivot number: 1st element of rotated sorted array.
+     *
+     * Why not normal BS?
+     * Because target and mid might not be on different half.
+     *
+     * Solution:
+     * Same side -> comparator = nums[mid]
+     * target (14) left, mid (12) right -> comparator = INF
+     * mid (12) left, target (5) right -> comparator = -INF
+     *
+     * Time Complexity: O(logn)
+     * Space Complexity: O(1)
+     *
+     * Detailed Discussion:
+     * https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/14435/Clever-idea-making-it-simple
+     * https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/154836/The-INF-and-INF-method-but-with-a-better-explanation-for-dummies-like-me
+     *
+     * https://leetcode.wang/leetCode-33-Search-in-Rotated-Sorted-Array.html 解法2 中文解释
+     *
+     * @param nums
+     * @param target
+     * @return
      */
     public int search2(int[] nums, int target) {
         int lo = 0;
         int hi = nums.length - 1;
+
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             int num = nums[mid];
-            // If nums[mid] and target are on the same side of nums[0], we just take nums[mid]
+
+
             if ((nums[mid] < nums[0]) == (target < nums[0])) {
+                // nums[mid] and target on the same side of nums[0], just take nums[mid]
+
+                // >=, > e.g. [1] 1
+                // > > e.g. [1, 3] 3
                 num = nums[mid];
             } else {
                 num = target < nums[0] ? Integer.MIN_VALUE : Integer.MAX_VALUE;
@@ -100,13 +124,24 @@ public class _33SearchInRotatedSortedArray {
                 return mid;
             }
         }
+
         return -1;
     }
 
     /**
-     * One Binary Search
+     * 3. One Binary Search
      *
      * Always check whether target is in the sorted part or rotated part
+     *
+     * 数组从任意位置劈开后，至少有一半是有序的，什么意思呢？
+     *
+     * 比如 [ 4 5 6 7 1 2 3] ，从 7 劈开，左边是 [ 4 5 6 7] 右边是 [ 7 1 2 3]，左边是有序的。
+     *
+     * 基于这个事实。
+     *
+     * 我们可以先找到哪一段是有序的 (只要判断端点即可)，然后看 target 在不在这一段里，
+     * 1) 如果在，那么就把另一半丢弃。
+     * 2) 如果不在，那么就把这一段丢弃。
      *
      * Time complexity: O(logn)
      * Space complexity: O(1)
@@ -118,23 +153,36 @@ public class _33SearchInRotatedSortedArray {
     public int search3(int[] nums, int target) {
         int lo = 0;
         int hi = nums.length - 1;
+
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
 
+            // check earlier to avoid double check later
             if (nums[mid] == target) {
                 return mid;
             }
 
             if (nums[lo] <= nums[mid]) {
-                if (target >= nums[lo] && target < nums[mid]) {
+                // equal case must be included in this branch
+                // e.g. nums = [3, 1], target = 1
+                // lo = mid = 0, end = 1
+                // ？any intuitive idea to make sure this
+
+                // left part is in order
+                if (nums[lo] <= target && target < nums[mid]) {
+                    // target is in left side
                     hi = mid - 1;
                 } else {
+                    // target is not in left side
                     lo = mid + 1;
                 }
             } else {
-                if (target > nums[mid] && target <= nums[hi]) {
+                // right part is in order
+                if (nums[mid] < target && target <= nums[hi]) {
+                    // target is in right side
                     lo = mid + 1;
                 } else {
+                    // target is not in right side
                     hi = mid - 1;
                 }
             }
