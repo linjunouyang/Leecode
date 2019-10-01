@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class _349IntersectionOfTwoArrays {
+public class _0349IntersectionOfTwoArrays {
     /**
      * 1. Two HashSet
      *

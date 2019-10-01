@@ -12,6 +12,26 @@ public class _144InterleavingPositiveAndNegativeNumbers {
      * We want interleave positive and negative,
      * the number of pos and negs decides which category goes first
      *
+     * Template:
+     *
+     * while (scan pointers are in the bound) {
+     *     // find first position whose element is supposed to be category 1, but not.
+     *     while (scan pointer 1 in the bound && curr element is legal) {
+     *         precede scan pointer 1;
+     *     }
+     *
+     *     // find first position whose element is supposed to be category 2, but not.
+     *     while (scan pointer 2 in the bound && curr element is legal) {
+     *         precede scan pointer 2;
+     *     }
+     *
+     *     if (two scan pointers out of bound) {
+     *         break;
+     *     }
+     *
+     *     swap pointer 1's element and pointer 2's element;
+     * }
+     *
      * Time complexity: O(n)
      * Space complexity: O(1)
      *

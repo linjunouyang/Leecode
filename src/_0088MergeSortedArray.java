@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class _88MergeSortedArray {
+public class _0088MergeSortedArray {
     /**
      * 1. Intuition
      *

@@ -9,7 +9,7 @@ import java.util.*;
  * there is also an static DP and math solution
  *
  */
-public class _279PerfectSquares {
+public class _0279PerfectSquares {
     /**
      * 1. Dynamic Programming
      *

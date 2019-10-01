@@ -1,4 +1,4 @@
-public class _26RemoveDuplicatesFromSortedArray {
+public class _0026RemoveDuplicatesFromSortedArray {
     /**
      * 1. Two Pointers
      *

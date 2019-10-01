@@ -1,4 +1,4 @@
-public class _283MoveZeroes {
+public class _0283MoveZeroes {
     /**
      * 1. Two Pointers
      *
