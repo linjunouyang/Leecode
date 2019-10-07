@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/src/_0004MedianOfTwoSortedArrays.java" />
+      <file url="file://$PROJECT_DIR$/src/BFS/_261GraphValidTree.java" />
+      <file url="file://$PROJECT_DIR$/src/BFS/_207CourseSchedule.java" />
+      <file url="file://$PROJECT_DIR$/src/BFS/TopologicalOrdering.java" />
+      <file url="file://$PROJECT_DIR$/src/BFS/_444SequenceReconstruction.java" />
+      <file url="file://$PROJECT_DIR$/src/BFS/_133CloneGraph.java" />
+    </excludeFromCompile>
+  </component>
+</project>

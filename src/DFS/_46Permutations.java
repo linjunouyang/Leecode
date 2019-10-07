@@ -90,7 +90,7 @@ public class _46Permutations {
 
         boolean[] isVisited = new boolean[nums.length];
         ArrayList<Integer> permutation = new ArrayList<>();
-        helper(nums, permutation, isVisited, permutations);
+        helper2(nums, permutation, isVisited, permutations);
 
         return permutations;
     }

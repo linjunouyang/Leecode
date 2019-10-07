@@ -53,6 +53,8 @@ public class _200NumberOfIslands {
                 }
             }
         }
+
+        return 0;
     }
 
     private void markByBFS(char[][] grid, int x, int y) {

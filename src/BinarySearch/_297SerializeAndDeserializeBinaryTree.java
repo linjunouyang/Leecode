@@ -10,7 +10,7 @@ import java.util.Queue;
  *
  */
 
-private class TreeNode {
+class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;

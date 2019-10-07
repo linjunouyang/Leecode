@@ -16,10 +16,18 @@ import java.util.Arrays;
  * 2 + 15 < 24
  * 7 + 11 < 24
  * 7 + 15 < 25
- *
- *
  */
 public class TwoSum_LessThanOrEqualToTarget {
+    /**
+     * 1. Two Pointers
+     *
+     * Time complexity: O(nlgn)
+     * Space complexity: O(1)
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     public int twoSum5(int[] nums, int target) {
         if (nums == null || nums.length < 2) {
             return 0;

@@ -135,6 +135,8 @@ public class _374GuessNumberHigherOrLower {
             }
         }
 
+        return -1;
+
     }
 
 
