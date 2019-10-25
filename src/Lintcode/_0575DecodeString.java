@@ -4,7 +4,7 @@ package Lintcode;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class _575DecodeString {
+public class _0575DecodeString {
     /**
      * 1. Stack
      *

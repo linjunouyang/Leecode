@@ -2,51 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_337HouseRobberIII.java" afterPath="$PROJECT_DIR$/src/Tree/_337HouseRobberIII.java" />
+      <change afterPath="$PROJECT_DIR$/src/Lintcode/_0129Rehashing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lintcode/_0545TopKLargestNumbersII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lintcode/testSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0023MergeKSortedLists.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0027RemoveElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0084LargestRectangleInHistogram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0146LRUCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0155MinStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0251Flatten2DVector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0263UglyNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0264UglyNumberII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0341FlattenNestedListIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0973KClosestPointsToOrigin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1086HighFive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lintcode/_575DecodeString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lintcode/_0575DecodeString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lintcode/_575DecodeStringMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lintcode/_0575DecodeStringMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_225ImplementStackUsingQueues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0225ImplementStackUsingQueues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_232ImplementQueueUsingStacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0232ImplementQueueUsingStacks.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="_145BinaryTreePostorderTraversal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/_145BinaryTreePostorderTraversal.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/_0027RemoveElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_199BinaryTreeRightSideView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/_199BinaryTreeRightSideView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="83" column="57" lean-forward="false" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_337HouseRobberIII.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Tree/_337HouseRobberIII.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3539#3540#0" expanded="true" />
-                <element signature="e#3591#3592#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="513">
+              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -60,68 +53,80 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>map</find>
+      <find>DualPivotQuicksort</find>
+      <find>DualPivot</find>
+      <find>sort(</find>
+      <find>47</find>
+      <find>elementData</find>
+      <find>insertion</find>
+      <find>insertion sort</find>
+      <find>insertion so</find>
+      <find>mergesort</find>
+      <find>sort</find>
+      <find>286</find>
+      <find>mergeSort</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ContainsDuplicate.java" />
-        <option value="$PROJECT_DIR$/src/TestJumpGame.java" />
-        <option value="$PROJECT_DIR$/src/jumpgame.java" />
-        <option value="$PROJECT_DIR$/src/BestTimeToBuyAndSellStock.java" />
-        <option value="$PROJECT_DIR$/src/ContainerWithMostWater.java" />
-        <option value="$PROJECT_DIR$/src/IncreasingTripletSubsequence.java" />
-        <option value="$PROJECT_DIR$/src/IntersectionOfTwoArrays.java" />
-        <option value="$PROJECT_DIR$/src/TestTwoSumII.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearchTemplate.java" />
-        <option value="$PROJECT_DIR$/src/TwoSumII.java" />
-        <option value="$PROJECT_DIR$/src/TestIntersectionOfTwoArraysII.java" />
-        <option value="$PROJECT_DIR$/src/IntersectionOfTwoArraysII.java" />
-        <option value="$PROJECT_DIR$/src/FindSmallestLetterGreaterThanTarget.java" />
-        <option value="$PROJECT_DIR$/src/SearchInsertPosition.java" />
-        <option value="$PROJECT_DIR$/src/TestValidPerfectSquare.java" />
-        <option value="$PROJECT_DIR$/src/ValidPerfectSquare.java" />
-        <option value="$PROJECT_DIR$/src/GuessNumberHigherOrLower.java" />
-        <option value="$PROJECT_DIR$/src/BinaryTreePaths.java" />
-        <option value="$PROJECT_DIR$/src/PeakIndexInAMountainArray.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/BinarySearchTemplate.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/PeakIndexInAMountainArray.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/ValidPerfectSquare.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/ContainerWithMostWater.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/TwoSumIIInputArrayIsSorted.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/_240SearchA2DMatrixII.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/_33SearchInRotatedSortedArray.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_617MergeTwoBinaryTrees.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_814BinaryTreePruning.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_894AllPossibleFullBinaryTrees.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_701InsertIntoABinarySearchTree.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_700SearchInABinarySearchTree.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_590NaryTreePostorderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_559MaximumDepthOfNaryTree.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_104MaximumDepthOfBinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_226InvertBinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_94BinaryTreeInorderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_144BinaryTreePreorderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_230KthSmallestElementInABST.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_108ConvertSortedArrayToBinarySearchTree.java" />
-        <option value="$PROJECT_DIR$/src/Tree/TreeNode.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_654MaximumBinaryTree.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/_74SearchA2DMatrix.java" />
-        <option value="$PROJECT_DIR$/src/Tree/BinaryTreePaths.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/TestValidPerfectSquare.java" />
-        <option value="$PROJECT_DIR$/src/BinarySearch/GuessNumberHigherOrLower.java" />
-        <option value="$PROJECT_DIR$/src/FlattenBinaryTreeToLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_100SameTree.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_102BinaryTreeLevelOrderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_145BinaryTreePostorderTraversal.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_199BinaryTreeRightSideView.java" />
-        <option value="$PROJECT_DIR$/src/Tree/_337HouseRobberIII.java" />
+        <option value="$PROJECT_DIR$/src/_26RemoveDuplicatesFromSortedArray.java" />
+        <option value="$PROJECT_DIR$/src/_125ValidPalindrome.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_31PartitionArray.java" />
+        <option value="$PROJECT_DIR$/src/_215KthLargestElementInAnArray.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_373PartitionArraybyOddAndEven.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_49SortLettersBycase.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_144InterleavingPositiveAndNegativeNumbers.java" />
+        <option value="$PROJECT_DIR$/src/_75SortColors.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_143SortColorsII.java" />
+        <option value="$PROJECT_DIR$/src/_1TwoSum.java" />
+        <option value="$PROJECT_DIR$/src/_0167TwoSumII_InputArrayIsSorted.java" />
+        <option value="$PROJECT_DIR$/src/_0170TwoSumII_DataStructureDesign.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/TwoSum_UniquePairs.java" />
+        <option value="$PROJECT_DIR$/src/_00153Sum.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_0042MaximumSubarrayII.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/TwoSum_LessThanOrEqualToTarget.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/TwoSum_GreaterThanTarget.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/TwoSum_ClosetToTarget.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_00593SumClosest.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/TwoSum_DifferenceEqualsToTarget.java" />
+        <option value="$PROJECT_DIR$/src/BFS/_133CloneGraph.java" />
+        <option value="$PROJECT_DIR$/src/BinarySearch/_297SerializeAndDeserializeBinaryTree.java" />
+        <option value="$PROJECT_DIR$/src/DFS/_46Permutations.java" />
+        <option value="$PROJECT_DIR$/src/BinarySearch/_374GuessNumberHigherOrLower.java" />
+        <option value="$PROJECT_DIR$/src/_00184Sum.java" />
+        <option value="$PROJECT_DIR$/src/BFS/_200NumberOfIslands.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_575DecodeStringMain.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_575DecodeString.java" />
+        <option value="$PROJECT_DIR$/src/_232ImplementQueueUsingStacks.java" />
+        <option value="$PROJECT_DIR$/src/_225ImplementStackUsingQueues.java" />
+        <option value="$PROJECT_DIR$/src/_0225ImplementStackUsingQueues.java" />
+        <option value="$PROJECT_DIR$/src/_0232ImplementQueueUsingStacks.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_0575DecodeString.java" />
+        <option value="$PROJECT_DIR$/src/_0341FlattenNestedListIterator.java" />
+        <option value="$PROJECT_DIR$/src/_173BinarySearchTreeIterator.java" />
+        <option value="$PROJECT_DIR$/src/_0173BinarySearchTreeIterator.java" />
+        <option value="$PROJECT_DIR$/src/_0281ZigzagIterator.java" />
+        <option value="$PROJECT_DIR$/src/_0251Flatten2DVector.java" />
+        <option value="$PROJECT_DIR$/src/_0155MinStack.java" />
+        <option value="$PROJECT_DIR$/src/_0084LargestRectangleInHistogram.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_0129Rehashing.java" />
+        <option value="$PROJECT_DIR$/src/_0146LRUCache.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_0130Heapify.java" />
+        <option value="$PROJECT_DIR$/src/_0263UglyNumber.java" />
+        <option value="$PROJECT_DIR$/src/_0264UglyNumberII.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/testSort.java" />
+        <option value="$PROJECT_DIR$/src/_1086HighFive.java" />
+        <option value="$PROJECT_DIR$/src/Lintcode/_0545TopKLargestNumbersII.java" />
+        <option value="$PROJECT_DIR$/src/_0973KClosestPointsToOrigin.java" />
+        <option value="$PROJECT_DIR$/src/_0023MergeKSortedLists.java" />
+        <option value="$PROJECT_DIR$/src/_0027RemoveElement.java" />
       </list>
     </option>
   </component>
@@ -132,27 +137,17 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="553" />
-    <option name="y" value="23" />
-    <option name="width" value="1127" />
-    <option name="height" value="1027" />
+    <option name="x" value="836" />
+    <option name="y" value="186" />
+    <option name="width" value="1681" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,27 +160,21 @@
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Tree" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/lemonade/Documents/CS61b/LeetCode/src/Tree/_226InvertBinaryTree.java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/lemonade/Documents/CS61b/LeetCode/src/Tree/_226InvertBinaryTree.java" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -199,204 +188,130 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._199BinaryTreeRightSideView">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
+  <component name="RunManager" selected="Application.testSort">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="_100SameTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+    <configuration name="_0575DecodeStringMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lintcode._0575DecodeStringMain" />
+      <module name="LeetCode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tree.*" />
+          <option name="PATTERN" value="Lintcode.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Tree._100SameTree" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="LeetCode" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="_102BinaryTreeLevelOrderTraversal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <option name="MAIN_CLASS_NAME" value="Tree._102BinaryTreeLevelOrderTraversal" />
+      <module name="LeetCode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Tree._102BinaryTreeLevelOrderTraversal" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_113PathSumII" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Tree._113PathSumII" />
       <module name="LeetCode" />
-      <envs />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="_199BinaryTreeRightSideView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+      <option name="MAIN_CLASS_NAME" value="Tree._199BinaryTreeRightSideView" />
+      <module name="LeetCode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Tree.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Tree._199BinaryTreeRightSideView" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="LeetCode" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="TestIntersectionOfTwoArraysII.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="testSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lintcode.testSort" />
       <module name="LeetCode" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestIntersectionOfTwoArraysII" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="TestValidPerfectSquare.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="LeetCode" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="BinarySearch" />
-      <option name="MAIN_CLASS_NAME" value="BinarySearch.TestValidPerfectSquare" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lintcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.TestIntersectionOfTwoArraysII.test1" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestValidPerfectSquare.test" />
-      <item index="2" class="java.lang.String" itemvalue="Application._100SameTree" />
-      <item index="3" class="java.lang.String" itemvalue="Application._102BinaryTreeLevelOrderTraversal" />
-      <item index="4" class="java.lang.String" itemvalue="Application._199BinaryTreeRightSideView" />
+    <list>
+      <item itemvalue="Application._102BinaryTreeLevelOrderTraversal" />
+      <item itemvalue="Application._113PathSumII" />
+      <item itemvalue="Application._199BinaryTreeRightSideView" />
+      <item itemvalue="Application._0575DecodeStringMain" />
+      <item itemvalue="Application.testSort" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application._199BinaryTreeRightSideView" />
-        <item index="1" class="java.lang.String" itemvalue="Application._102BinaryTreeLevelOrderTraversal" />
-        <item index="2" class="java.lang.String" itemvalue="Application._100SameTree" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestValidPerfectSquare.test" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestIntersectionOfTwoArraysII.test1" />
+      <list>
+        <item itemvalue="Application.testSort" />
+        <item itemvalue="Application._0575DecodeStringMain" />
+        <item itemvalue="Application._113PathSumII" />
+        <item itemvalue="Application._199BinaryTreeRightSideView" />
+        <item itemvalue="Application._102BinaryTreeLevelOrderTraversal" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -450,66 +365,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="553" y="23" width="1127" height="1027" extended-state="0" />
+    <frame x="836" y="186" width="1681" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3583691" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18414322" sideWeight="0.22566372" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286445" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.7743363" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2631579" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24937344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63412017" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3599756" />
+      <window_info id="Structure" order="1" weight="0.16666667" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32901832" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.031088082" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
+      <window_info anchor="bottom" id="Style Checker" order="7" weight="0.3286445" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7743363" weight="0.17098446" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.22566372" side_tool="true" weight="0.18414322" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3564767" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24945533" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3299539" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.32855093" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18414322" sideWeight="0.22566372" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24937344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49356222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32736573" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Style Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18414322" sideWeight="0.7743363" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -536,9 +423,20 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -562,412 +460,496 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/BinarySearch/TestValidPerfectSquare.java</url>
-          <line>10</line>
+          <url>file://$PROJECT_DIR$/src/Tree/_113PathSumII.java</url>
+          <line>138</line>
           <properties />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Tree/_199BinaryTreeRightSideView.java</url>
-          <line>123</line>
+          <url>file://$PROJECT_DIR$/src/Lintcode/_0575DecodeStringMain.java</url>
+          <line>6</line>
           <properties />
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lintcode/_0575DecodeString.java</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Lintcode/testSort.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_0023MergeKSortedLists.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
     </breakpoint-manager>
-    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/TestJumpGame.java">
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_31PartitionArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_143SortColorsII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="206" column="28" selection-start-line="206" selection-start-column="28" selection-end-line="206" selection-end-column="28" />
+          <folding>
+            <element signature="e#3065#3066#0" expanded="true" />
+            <element signature="e#3100#3101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0001TwoSum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GasStation.java">
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_0042MaximumSubarrayII.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HIndex.java">
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/TwoSum_LessThanOrEqualToTarget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="255">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ContainsDuplicate.java">
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/TwoSum_GreaterThanTarget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+        <state relative-caret-position="165">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../javalib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/_00153Sum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BestTimeToBuyAndSellStock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jumpgame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ContainsDuplicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GasStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestJumpGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="269">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TwoSumII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IntersectionOfTwoArrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1205">
-          <caret line="116" column="5" lean-forward="true" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IntersectionOfTwoArraysII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="83" column="41" lean-forward="false" selection-start-line="79" selection-start-column="56" selection-end-line="83" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestIntersectionOfTwoArraysII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FindSmallestLetterGreaterThanTarget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SearchInsertPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestTwoSumII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/IncreasingTripletSubsequence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/BinarySearchTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/ContainerWithMostWater.java" />
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/TwoSumIIInputArrayIsSorted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/ValidPerfectSquare.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="46" lean-forward="true" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/PeakIndexInAMountainArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/_240SearchA2DMatrixII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/_33SearchInRotatedSortedArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2130">
-          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_701InsertIntoABinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_894AllPossibleFullBinaryTrees.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_814BinaryTreePruning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_617MergeTwoBinaryTrees.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="39" column="8" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_590NaryTreePostorderTraversal.java">
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/TwoSum_UniquePairs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_559MaximumDepthOfNaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_104MaximumDepthOfBinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="126" column="43" lean-forward="true" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_226InvertBinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
-          <caret line="131" column="20" lean-forward="true" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_94BinaryTreeInorderTraversal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1335">
-          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_230KthSmallestElementInABST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_700SearchInABinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/TreeNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
           <folding>
-            <element signature="e#112#113#0" expanded="false" />
-            <element signature="e#135#136#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/BinaryTreePaths.java">
+    <entry file="file://$PROJECT_DIR$/src/_0167TwoSumII_InputArrayIsSorted.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="37" column="34" lean-forward="false" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+        <state relative-caret-position="-237">
+          <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/_74SearchA2DMatrix.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/DualPivotQuicksort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="3169">
+          <caret line="530" column="17" lean-forward="true" selection-start-line="530" selection-start-column="17" selection-end-line="530" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_654MaximumBinaryTree.java">
+    <entry file="file://$PROJECT_DIR$/src/_0170TwoSumII_DataStructureDesign.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-          <folding />
+        <state>
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/TestValidPerfectSquare.java">
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_00593SumClosest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="36" column="17" lean-forward="true" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/TwoSum_ClosetToTarget.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="12" selection-end-column="3" />
+          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/TwoSum_DifferenceEqualsToTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="37" column="25" lean-forward="true" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BFS/_133CloneGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="55" column="11" lean-forward="true" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1174#1186#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/GuessNumberHigherOrLower.java">
+    <entry file="file://$PROJECT_DIR$/src/DFS/_46Permutations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="392">
+          <caret line="101" column="19" lean-forward="true" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FlattenBinaryTreeToLinkedList.java">
+    <entry file="file://$PROJECT_DIR$/src/BFS/_207CourseSchedule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="128" column="11" lean-forward="false" selection-start-line="128" selection-start-column="11" selection-end-line="128" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="-497">
+          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_100SameTree.java">
+    <entry file="file://$PROJECT_DIR$/src/_00184Sum.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="218" column="2" lean-forward="false" selection-start-line="218" selection-start-column="2" selection-end-line="218" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_108ConvertSortedArrayToBinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="89" column="54" lean-forward="false" selection-start-line="89" selection-start-column="54" selection-end-line="89" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#361#362#0" expanded="false" />
-            <element signature="e#432#433#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_144BinaryTreePreorderTraversal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="59" column="50" lean-forward="false" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_102BinaryTreeLevelOrderTraversal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="55" column="24" lean-forward="true" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+        <state relative-caret-position="421">
+          <caret line="156" column="5" selection-start-line="156" selection-start-column="5" selection-end-line="158" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_145BinaryTreePostorderTraversal.java">
+    <entry file="file://$PROJECT_DIR$/src/_0225ImplementStackUsingQueues.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="405">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1087#1088#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#2402#2403#0" expanded="true" />
+            <element signature="e#2446#2447#0" expanded="true" />
+            <element signature="e#2356#2357#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
+            <element signature="e#2485#2486#0" expanded="true" />
+            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2856#2857#0" expanded="true" />
+            <element signature="e#2906#2907#0" expanded="true" />
+            <element signature="e#3284#3285#0" expanded="true" />
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#3391#3392#0" expanded="true" />
+            <element signature="e#3434#3435#0" expanded="true" />
+            <element signature="e#3519#3520#0" expanded="true" />
+            <element signature="e#3565#3566#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_199BinaryTreeRightSideView.java">
+    <entry file="file://$PROJECT_DIR$/src/_0232ImplementQueueUsingStacks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="33" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/ArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="502" selection-start-line="502" selection-end-line="502" />
+          <folding>
+            <element signature="e#16206#16207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0004MedianOfTwoSortedArrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="83" column="57" lean-forward="false" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BFS/_261GraphValidTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_0575DecodeStringMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BFS/_200NumberOfIslands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinarySearch/_374GuessNumberHigherOrLower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BinarySearch/_297SerializeAndDeserializeBinaryTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0341FlattenNestedListIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="30" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0173BinarySearchTreeIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3624#3625#0" expanded="true" />
+            <element signature="e#3663#3664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0281ZigzagIterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding>
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1675#1676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0279PerfectSquares.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0155MinStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0084LargestRectangleInHistogram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="111" column="48" selection-start-line="111" selection-start-column="48" selection-end-line="111" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0146LRUCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="118" column="35" lean-forward="true" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/_337HouseRobberIII.java">
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_0129Rehashing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_0130Heapify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="69" lean-forward="true" selection-start-line="22" selection-start-column="69" selection-end-line="22" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0263UglyNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/testSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3539#3540#0" expanded="true" />
-            <element signature="e#3591#3592#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+          <folding>
+            <element signature="e#5675#5676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="1453" selection-start-line="1453" selection-end-line="1453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#46394#46395#0" expanded="true" />
+            <element signature="e#46458#46459#0" expanded="true" />
+            <element signature="e#47036#47037#0" expanded="true" />
+            <element signature="e#47092#47093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/ComparableTimSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="1534" column="33" selection-start-line="1534" selection-start-column="24" selection-end-line="1534" selection-end-column="33" />
+          <folding>
+            <element signature="e#5027#5028#0" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0251Flatten2DVector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_1086HighFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0264UglyNumberII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-57">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0973KClosestPointsToOrigin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding>
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0023MergeKSortedLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="221" column="28" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_0575DecodeString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="147" column="17" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lintcode/_0545TopKLargestNumbersII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="67" column="6" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0027RemoveElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1028,6 +1010,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

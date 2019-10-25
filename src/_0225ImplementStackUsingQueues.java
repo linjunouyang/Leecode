@@ -1,7 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-public class _225ImplementStackUsingQueues {
+public class _0225ImplementStackUsingQueues {
     /**
      * 1. Two Queues Push O(1), Pop O(n)
      *

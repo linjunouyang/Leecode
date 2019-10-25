@@ -1,7 +1,7 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class _232ImplementQueueUsingStacks {
+public class _0232ImplementQueueUsingStacks {
     class MyQueue {
         private Deque<Integer> stack1;
         private Deque<Integer> stack2;

@@ -8,6 +8,8 @@
       <file url="file://$PROJECT_DIR$/src/BFS/TopologicalOrdering.java" />
       <file url="file://$PROJECT_DIR$/src/BFS/_444SequenceReconstruction.java" />
       <file url="file://$PROJECT_DIR$/src/BFS/_133CloneGraph.java" />
+      <file url="file://$PROJECT_DIR$/src/Tree/_894AllPossibleFullBinaryTrees.java" />
+      <file url="file://$PROJECT_DIR$/src/_0251Flatten2DVector.java" />
     </excludeFromCompile>
   </component>
 </project>
