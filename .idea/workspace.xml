@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0041FirstMissingPositive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0045JumpGameII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0055JumpGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0080RemoveDuplicatesFromSortedArrayII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0121BestTimeToBuyAndSellStock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0122BestTimeToBuyAndSellStockII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0134GasStation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0217ContainsDuplicate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0219ContainsDuplicateII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0243ShortestWordDistance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0244ShortestWordDistanceII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0245ShortestWordDistanceIII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0274HIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0275HIndexII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0277FindTheCelebrity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0299BullsAndCows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_189RotateArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0011ContainerWithMostWater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0042TrappingRainWater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0123BestTimeToBuyAndSellStockIII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0122BestTimeToBuyAndSellStockII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0122BestTimeToBuyAndSellStockII.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,62 +21,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_0217ContainsDuplicate.java">
+        <entry file="file://$PROJECT_DIR$/src/_0123BestTimeToBuyAndSellStockIII.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_0219ContainsDuplicateII.java">
+        <entry file="file://$PROJECT_DIR$/src/_0011ContainerWithMostWater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="48" column="54" lean-forward="true" selection-start-line="48" selection-start-column="54" selection-end-line="48" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_0055JumpGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="140" column="1" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
-              <folding>
-                <element signature="e#333#334#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_0045JumpGameII.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/_0121BestTimeToBuyAndSellStock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="83" column="23" lean-forward="true" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
+            <state relative-caret-position="240">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/_0122BestTimeToBuyAndSellStockII.java">
+        <entry file="file://$PROJECT_DIR$/src/_0042TrappingRainWater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+            <state relative-caret-position="330">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -126,9 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Lintcode/TwoSum_ClosetToTarget.java" />
-        <option value="$PROJECT_DIR$/src/Lintcode/_00593SumClosest.java" />
-        <option value="$PROJECT_DIR$/src/Lintcode/TwoSum_DifferenceEqualsToTarget.java" />
         <option value="$PROJECT_DIR$/src/BFS/_133CloneGraph.java" />
         <option value="$PROJECT_DIR$/src/BinarySearch/_297SerializeAndDeserializeBinaryTree.java" />
         <option value="$PROJECT_DIR$/src/DFS/_46Permutations.java" />
@@ -177,6 +127,9 @@
         <option value="$PROJECT_DIR$/src/_0045JumpGameII.java" />
         <option value="$PROJECT_DIR$/src/_0121BestTimeToBuyAndSellStock.java" />
         <option value="$PROJECT_DIR$/src/_0122BestTimeToBuyAndSellStockII.java" />
+        <option value="$PROJECT_DIR$/src/_0123BestTimeToBuyAndSellStockIII.java" />
+        <option value="$PROJECT_DIR$/src/_0011ContainerWithMostWater.java" />
+        <option value="$PROJECT_DIR$/src/_0042TrappingRainWater.java" />
       </list>
     </option>
   </component>
@@ -187,10 +140,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="976" />
-    <option name="y" value="45" />
-    <option name="width" value="1267" />
-    <option name="height" value="989" />
+    <option name="x" value="1059" />
+    <option name="y" value="23" />
+    <option name="width" value="1461" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -208,24 +161,6 @@
               <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="_0173BinarySearchTreeIterator.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="_0341FlattenNestedListIterator.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="_0973KClosestPointsToOrigin.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
           </expand>
           <select />
@@ -433,7 +368,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="976" y="45" width="1267" height="989" extended-state="0" />
+    <frame x="1059" y="23" width="1461" height="1057" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.39020407" />
@@ -451,7 +386,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
       <window_info anchor="bottom" id="Style Checker" order="7" weight="0.3286445" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7743363" visible="true" weight="0.18394649" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7743363" weight="0.18394649" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.22566372" side_tool="true" weight="0.18414322" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32939914" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3564767" />
@@ -465,6 +400,36 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.3299539" />
       <window_info anchor="right" id="Maven" order="8" weight="0.3285273" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.39020407" />
+      <window_info id="Structure" order="1" weight="0.16666667" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32901832" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.031088082" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
+      <window_info anchor="bottom" id="Style Checker" order="7" weight="0.3286445" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7743363" visible="true" weight="0.18394649" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.22566372" side_tool="true" weight="0.18414322" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32939914" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3564767" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24945533" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3299539" />
+      <window_info anchor="right" id="Maven" order="8" weight="0.3285273" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -565,27 +530,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BFS/_200NumberOfIslands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/_374GuessNumberHigherOrLower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BinarySearch/_297SerializeAndDeserializeBinaryTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/_0173BinarySearchTreeIterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -960,6 +904,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0122BestTimeToBuyAndSellStockII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/_0045JumpGameII.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -969,15 +920,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_0121BestTimeToBuyAndSellStock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
+        <state relative-caret-position="491">
           <caret line="83" column="23" lean-forward="true" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/_0122BestTimeToBuyAndSellStockII.java">
+    <entry file="file://$PROJECT_DIR$/src/_0123BestTimeToBuyAndSellStockIII.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+        <state relative-caret-position="330">
+          <caret line="22" column="40" lean-forward="true" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0011ContainerWithMostWater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0042TrappingRainWater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
         </state>
       </provider>
     </entry>

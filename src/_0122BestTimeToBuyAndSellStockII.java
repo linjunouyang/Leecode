@@ -48,6 +48,10 @@ public class _0122BestTimeToBuyAndSellStockII {
      *
      */
     public int maxProfit2(int[] prices) {
+        if (prices == null) {
+            return 0;
+        }
+
         int maxProfit = 0;
 
         for (int i = 0; i < prices.length - 1; i++) {
