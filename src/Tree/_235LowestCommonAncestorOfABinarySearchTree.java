@@ -1,8 +1,5 @@
 package Tree;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 6.18 Solved it with binary search
  *

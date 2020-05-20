@@ -1,8 +1,6 @@
-package Tree;
-
 import java.util.*;
 
-public class _100SameTree {
+public class _0100SameTree {
     /**
      * 1. Recursion, pre-order traversal (DFS), divide and conquer?
      *

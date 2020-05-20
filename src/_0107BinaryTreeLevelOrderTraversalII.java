@@ -1,8 +1,6 @@
-package Tree;
-
 import java.util.*;
 
-public class _107BinaryTreeLevelOrderTraversalII {
+public class _0107BinaryTreeLevelOrderTraversalII {
 
     /**
      * 1. Queue, Level Order Traversal, BFS
@@ -17,6 +15,7 @@ public class _107BinaryTreeLevelOrderTraversalII {
      *
      */
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        // You can declare it as LinkedList
         List<List<Integer>> res = new LinkedList<>();
 
         if (root == null) {
@@ -71,10 +70,12 @@ public class _107BinaryTreeLevelOrderTraversalII {
             return;
         }
 
+        // can't put any of left or right here because last level (root) list is not created
         if (level == res.size()) {
             res.add(0, new ArrayList<>());
         }
 
+        // From here, the order of left, right and root doesn't matter
         levelHelper(res, root.left, level + 1);
         levelHelper(res, root.right, level + 1);
         res.get(res.size() - level - 1).add(root.val);
@@ -89,7 +90,6 @@ public class _107BinaryTreeLevelOrderTraversalII {
      *
      * Space complexity:
      * O(lgn)
-     *
      */
     public List<List<Integer>> levelOrderBottom3(TreeNode root) {
         List<List<Integer>> res = new LinkedList<>();

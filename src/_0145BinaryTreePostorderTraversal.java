@@ -1,8 +1,6 @@
-package Tree;
-
 import java.util.*;
 
-public class _145BinaryTreePostorderTraversal {
+public class _0145BinaryTreePostorderTraversal {
     /*
     1. Recursion
 
@@ -80,5 +78,49 @@ public class _145BinaryTreePostorderTraversal {
         }
 
         return output;
+    }
+
+    public List<Integer> postorderTraversal3(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+
+        if (root == null) {
+            return res;
+        }
+
+        ArrayDeque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode prev = null;
+        TreeNode curr = root;
+        stack.push(curr);
+
+        while (!stack.isEmpty()) {
+            curr = stack.peek();
+
+            if (prev == null || prev.left == curr || prev.right == curr) {
+                // traverse down the tree
+                if (curr.left != null) {
+                    stack.push(curr.left);
+                } else if (curr.right != null) {
+                    stack.push(curr.right);
+                }
+            } else if (curr.left == prev) {
+                // traverse up from the left
+                if (curr.right != null) {
+                    stack.push(curr.right);
+                }
+            } else if (curr == prev || curr.right == prev ) {
+                // traverse up from the right
+                // previously, we didn't add any new nodes to the stack, and then prev = curr
+                // second condition can be neglected because:
+                // for trees like [1, null, 2, 3], when curr = 2, prev = 3.
+                // no code in this if-else if-else if will execute, but prev = curr will execute
+                // so in the next iteration, we will fall into this case
+                res.add(stack.pop().val);
+            }
+
+            prev = curr;
+        }
+
+        return res;
+
     }
 }

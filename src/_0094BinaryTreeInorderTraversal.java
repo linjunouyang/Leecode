@@ -1,8 +1,6 @@
-package Tree;
-
 import java.util.*;
 
-public class _94BinaryTreeInorderTraversal {
+public class _0094BinaryTreeInorderTraversal {
     /*
     Approach 1: Recursive Approach
 
@@ -21,6 +19,7 @@ public class _94BinaryTreeInorderTraversal {
     the recursion has already proceeded or how far it still has to proceed.
     This only makes sense when helper methods are private.
 
+    --------------------------
     Time complexity:
     O(n), n: number of nodes
     T(n) = 2 * T(n/2) + 1
@@ -28,6 +27,10 @@ public class _94BinaryTreeInorderTraversal {
     Space complexity:
     Average: O(log(n))
     Worst: O(log n) for left skewed tree
+
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Inorder Traversal.
+    Memory Usage: 37.9 MB, less than 5.11% of Java online submissions for Binary Tree Inorder Traversal.
+    --------------------------
      */
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
@@ -68,6 +71,11 @@ public class _94BinaryTreeInorderTraversal {
     Space complexity:
     worst : O(n) for left-skewed tree.
     average: o(log n)
+
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Inorder Traversal.
+    Memory Usage: 38.2 MB, less than 5.11% of Java online submissions for Binary Tree Inorder Traversal.
+
+
     */
     public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> res= new ArrayList<>();

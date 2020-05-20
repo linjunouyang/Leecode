@@ -1,5 +1,3 @@
-package Tree;
-
 /**
  * 6.22 Failed
  *
@@ -12,7 +10,7 @@ package Tree;
  * We have to check whether the left and right subtree is balanced as well.
  */
 
-public class _110BalancedBinaryTree {
+public class _0110BalancedBinaryTree {
     /**
      * 1. Recursion, top-down
      *

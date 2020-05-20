@@ -1,8 +1,10 @@
-package Tree;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
 
-import java.util.*;
 
-public class _144BinaryTreePreorderTraversal {
+public class _0144BinaryTreePreorderTraversal {
     /*
     1. Recursion
 
@@ -16,6 +18,9 @@ public class _144BinaryTreePreorderTraversal {
     Advantage of helper method:
     Avoid addAll() method.
     Don't have to instantiate a new List at each recursive call.
+
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Preorder Traversal.
+    Memory Usage: 38 MB, less than 5.17% of Java online submissions for Binary Tree Preorder Traversal.
      */
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
@@ -38,25 +43,36 @@ public class _144BinaryTreePreorderTraversal {
     Optimization:
     ** No need to store left children **
 
+    Note:
+    ArrayDeque class: Resizable-array implementation of the Deque interface. null prohibited.
+    Faster than Stack when used as stacks, and faster than LinkedList when used as queues
+
+    LinkedList: Doubly-linked list implementation of the List and Deque interfaces
+    Permits all elements (including null)
+
+    -------
     Time complexity:
     O(n)
 
     Space complexity:
     average: O(logn)
-    worst: O(n) for left skewed trees.
+    worst: O(n) for trees like below.
 
-    Note:
-    ArrayDeque class: Resizable, null prohibited.
-    Faster than Stack when used as stacks, and faster than LinkedList when used as queues
+          1
+         2 3
+        3 4
+       5 6
+      7 8
 
-    LinkedList: Doubly-linked list implementation of the List and Deque interfaces
-    Permits all elements (including null)
+    Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Preorder Traversal.
+    Memory Usage: 38 MB, less than 5.17% of Java online submissions for Binary Tree Preorder Traversal.
 
      */
     public List<Integer> preorderTraversal2(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
         TreeNode node = root;
+
         while (!stack.isEmpty() || node != null) {
             if (node != null) {
                 res.add(node.val);
@@ -66,6 +82,7 @@ public class _144BinaryTreePreorderTraversal {
                 node = stack.pop();
             }
         }
+
         return res;
     }
 }

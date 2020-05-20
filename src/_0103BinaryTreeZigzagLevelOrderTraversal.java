@@ -1,13 +1,9 @@
-package Tree;
-
-import sun.tools.tree.ArrayAccessExpression;
-
 import java.util.*;
 
 /**
  * 6.20 Failed. Stuck on the reversing order.
  */
-public class _103BinaryTreeZigzagLevelOrderTraversal {
+public class _0103BinaryTreeZigzagLevelOrderTraversal {
 
     /**
      * 1. Iteration. BFS. Queues
@@ -19,7 +15,9 @@ public class _103BinaryTreeZigzagLevelOrderTraversal {
      * Time complexity: O(n)
      * Space complexity: O(n)
      *
-     * Notice: add(0, val) & LinkedList
+     * Intuition:
+     * When we implements a list, if needing to add at front -> linked list
+     * otherwise, ArrayList
      *
      * @param root
      * @return
@@ -70,7 +68,6 @@ public class _103BinaryTreeZigzagLevelOrderTraversal {
      *
      * By changing the order we process the root, left, and right.
      * we can achieve pre-order / in-order / post-order traversal
-     *
      *
      * @param root
      * @return
@@ -125,7 +122,7 @@ public class _103BinaryTreeZigzagLevelOrderTraversal {
         Deque<TreeNode> s2 = new ArrayDeque<>();
         s1.push(root);
 
-        while (!s1.isEmpty() || !s2.isEmpty()) {
+        while (!s1.isEmpty()) {
             List<Integer> level = new ArrayList<>();
 
             while (!s1.isEmpty()) {
@@ -150,7 +147,7 @@ public class _103BinaryTreeZigzagLevelOrderTraversal {
                     s1.push(node.right);
                 }
                 if (node.left != null) {
-                    s2.push(node.left);
+                    s1.push(node.left);
                 }
             }
 

@@ -1,22 +1,19 @@
-package Tree;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
-public class _102BinaryTreeLevelOrderTraversal {
+public class _0102BinaryTreeLevelOrderTraversal {
     /**
      * 1. Iteration, BFS (level-order traversal)
      *
      * Time complexity: O(n)
-     * Space complexity: O(lgn) for balanced, O(1) for unbalanced.
+     * Space complexity: O(n) for balanced, O(1) for unbalanced.
      *
-     * ? BUT in the end we have to store all the nodes
-     * ? does it mean it always take O(n) space?
      */
     public static List<List<Integer>> levelOrder1(TreeNode root) {
         List<List<Integer>> total = new ArrayList<>();
+
         if (root == null) {
             return total;
         }
@@ -44,14 +41,14 @@ public class _102BinaryTreeLevelOrderTraversal {
     }
 
     /**
-     * 2 Recrusion, DFS (pre-order traversal)
+     * 2 Recursion, DFS (pre-order traversal)
      *
      * We add root.val into the list, and then look at left and right child;
      *
      * Time complexity: O(n)
      * Space complexity: O(lgn) for balanced, O(n) for unbalanced.
      *
-     * @param args
+     * @param
      */
     public static List<List<Integer>> levelOrder2(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
@@ -65,7 +62,7 @@ public class _102BinaryTreeLevelOrderTraversal {
         }
 
         if (depth == res.size()) {
-            res.add(new ArrayList<Integer>());
+            res.add(new ArrayList<>());
         }
 
         res.get(depth).add(root.val);

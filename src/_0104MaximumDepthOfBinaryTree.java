@@ -1,8 +1,6 @@
-package Tree;
-
 import java.util.*;
 
-public class _104MaximumDepthOfBinaryTree {
+public class _0104MaximumDepthOfBinaryTree {
     /*
     1. Recursion, DFS.
 
