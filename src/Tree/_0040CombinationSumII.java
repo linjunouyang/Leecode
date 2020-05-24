@@ -8,14 +8,14 @@ public class _0040CombinationSumII {
     /**
      * 1. Backtracking
      *
-     * Time complexity: O(n * 2^n)
+     * Time complexity: O(target * 2^n)
      *
      * Suppose we have n candidates, for each candidate, we have two choices: choose or not.
      * Think of it as a tree. The leaf nodes are all combinations (2^n)
      * Traversing the tree (deciding including the element or not) is O(2 ^ n)
      * + copy each list O(n * 2^n)
      *
-     * Space complexity: O(n)
+     * Space complexity: O(target)
      *
      * @param candidates
      * @param target

@@ -33,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/_0077Combinations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="139" column="37" lean-forward="true" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+            <state relative-caret-position="139">
+              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
               <folding>
                 <element signature="e#2460#2475#0" expanded="true" />
                 <element signature="e#2687#2702#0" expanded="true" />
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tree/_0040CombinationSumII.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="255">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,10 +71,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/_0090SubsetsII.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+            <state>
+              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#197#212#0" expanded="true" />
                 <element signature="e#428#437#0" expanded="true" />
               </folding>
@@ -409,9 +408,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="487" y="23" width="1433" height="1057" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2077642" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2077642" />
       <window_info id="Structure" order="1" weight="0.16666667" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -426,7 +424,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
       <window_info anchor="bottom" id="Style Checker" order="7" sideWeight="0.49874687" weight="0.32834226" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7659575" visible="true" weight="0.07668394" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7659575" visible="true" weight="0.5046632" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50231266" side_tool="true" weight="0.15025906" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32939914" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49768734" visible="true" weight="0.3564767" />
@@ -957,36 +955,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/_0090SubsetsII.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#197#212#0" expanded="true" />
-            <element signature="e#428#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/_0078Subsets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
           <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/_0077Combinations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="139" column="37" lean-forward="true" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
-          <folding>
-            <element signature="e#2460#2475#0" expanded="true" />
-            <element signature="e#2687#2702#0" expanded="true" />
-            <element signature="e#3077#3086#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,12 +972,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0090SubsetsII.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#197#212#0" expanded="true" />
+            <element signature="e#428#437#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/_0040CombinationSumII.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="255">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0077Combinations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+          <folding>
+            <element signature="e#2460#2475#0" expanded="true" />
+            <element signature="e#2687#2702#0" expanded="true" />
+            <element signature="e#3077#3086#0" expanded="true" />
           </folding>
         </state>
       </provider>

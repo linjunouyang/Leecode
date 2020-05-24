@@ -16,6 +16,8 @@ public class _0039CombinationSum {
      * Just assuming that each recursive step we go over all existing candidates, so base N.
      * And go as deep as target in our recursive calls (if candidates are close to 1), so power of target.
      *
+     * - O(target * 2^n)
+     *
      * Space complexity:
      * O(target) (If every number is almost 1, recursion depth ~= target)
      *
@@ -53,7 +55,7 @@ public class _0039CombinationSum {
             // [1] -> [1, 2]
             tempList.add(nums[i]);
 
-            // 把所有[1, 2]开头的剩余的和为remain-nums[i]的集合，都找到，放入到results
+            // 把所有[1, 2]开头的剩余的和为remain - nums[i]的集合，都找到，放入到results
             backtrack(list, tempList, nums, remain - nums[i], i);
 
             // [1, 2] -> [1]
