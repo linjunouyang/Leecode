@@ -21,8 +21,6 @@ public class _0078Subsets {
     /**
      * 1. DFS, recursion
      *
-     * Driver
-     *
      * Time complexity: O(n * 2^n)
      * the base: the amount of forks we can make at each decision point
      * the power: the depth of the tree, the amount of choices
