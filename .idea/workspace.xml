@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0032CoinChange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0256PaintHouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -58,11 +58,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/_0032CoinChange.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/_0332CoinChange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="315">
+              <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/_0256PaintHouse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -99,8 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/_0242ValidAnagram.java" />
-        <option value="$PROJECT_DIR$/src/_0049GroupAnagrams.java" />
         <option value="$PROJECT_DIR$/src/_0249GroupShiftedStrings.java" />
         <option value="$PROJECT_DIR$/src/_0179LargestNumber.java" />
         <option value="$PROJECT_DIR$/src/_0006ZigZagConversion.java" />
@@ -150,6 +157,8 @@
         <option value="$PROJECT_DIR$/src/_0063UniquePathsII.java" />
         <option value="$PROJECT_DIR$/src/_0139WordBreak.java" />
         <option value="$PROJECT_DIR$/src/_0032CoinChange.java" />
+        <option value="$PROJECT_DIR$/src/_0332CoinChange.java" />
+        <option value="$PROJECT_DIR$/src/_0256PaintHouse.java" />
       </list>
     </option>
   </component>
@@ -388,6 +397,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="23" width="960" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24836601" />
       <window_info id="Structure" order="1" weight="0.16666667" />
@@ -404,7 +414,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
       <window_info anchor="bottom" id="Style Checker" order="7" sideWeight="0.49874687" weight="0.32834226" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7659575" visible="true" weight="0.25492227" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7659575" visible="true" weight="0.25492227" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50231266" side_tool="true" weight="0.15025906" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32939914" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49768734" visible="true" weight="0.3564767" />
@@ -548,17 +558,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/_0049GroupAnagrams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding>
-            <element signature="e#309#331#0" expanded="true" />
-            <element signature="e#1220#1234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/_0249GroupShiftedStrings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -964,10 +963,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/_0032CoinChange.java">
+    <entry file="file://$PROJECT_DIR$/src/_0332CoinChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="315">
+          <caret line="21" column="48" lean-forward="true" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0256PaintHouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
         </state>
       </provider>
     </entry>
