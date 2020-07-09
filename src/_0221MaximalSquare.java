@@ -64,8 +64,9 @@ public class _0221MaximalSquare {
     public int maximalSquare2(char[][] matrix) {
         int rows = matrix.length, cols = rows > 0 ? matrix[0].length : 0;
         int[] dp = new int[cols + 1];
-        int maxsqlen = 0, prev = 0;
+        int maxsqlen = 0;
         for (int i = 1; i <= rows; i++) {
+            int prev = 0;
             for (int j = 1; j <= cols; j++) {
                 int temp = dp[j];
                 if (matrix[i - 1][j - 1] == '1') {
