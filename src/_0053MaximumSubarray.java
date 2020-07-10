@@ -37,7 +37,7 @@ public class _0053MaximumSubarray {
      * 1. format of sub problems -> recursive relation
      *
      * a. maxSubArray(int A[], int i, int j) -> maxSubArray(A, 0, A.length - 1)
-     * hard to find connection from sub problems to the orginal problems
+     * hard to find connection from sub problems to the original problems
      *
      * b. maxSubArray(int A[], int i), which must has A[i] as the end element.
      *
@@ -60,7 +60,6 @@ public class _0053MaximumSubarray {
      *
      * Time complexity: O(n)
      * Space complexity: O(1)
-     *
      *
      * @param A
      * @return
@@ -112,5 +111,60 @@ public class _0053MaximumSubarray {
         }
 
         return max;
+    }
+
+    /**
+     * 4. Divide and Conquer
+     *
+     *
+     * Time complexity: O(NlogN)
+     * Space complexity: O(logN)
+     *
+     * @param nums
+     * @return
+     */
+    public int maxSubArray4(int[] nums) {
+        if (nums == null) {
+            return 0;
+        }
+
+        return helper(nums, 0, nums.length - 1);
+    }
+
+    private int helper(int[] nums, int left, int right) {
+        if (left == right) {
+            return nums[left];
+        }
+
+        int middle = left + (right - left) / 2;
+        int leftSum = helper(nums, left, middle);
+        int rightSum = helper(nums, middle + 1, right);
+        int crossSum = crossSum(nums, left, right);
+
+        return Math.max(Math.max(leftSum, rightSum), crossSum);
+    }
+
+    private int crossSum(int[] nums, int left, int right) {
+        if (left == right) {
+            return nums[left];
+        }
+
+        int middle = left + (right - left) / 2;
+
+        int leftSum = Integer.MIN_VALUE;
+        int curSum = 0;
+        for (int i = middle; i >= left; i--) {
+            curSum += nums[i];
+            leftSum = Math.max(leftSum, curSum);
+        }
+
+        int rightSum = Integer.MIN_VALUE;
+        curSum = 0;
+        for (int i = middle + 1; i <= right; i++) {
+            curSum += nums[i];
+            rightSum = Math.max(rightSum, curSum);
+        }
+
+        return leftSum + rightSum;
     }
 }
