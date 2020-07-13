@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/_0392IsSubsequence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0053MaximumSubarray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0053MaximumSubarray.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,11 +71,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/_0053MaximumSubarray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+            <state relative-caret-position="288">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/_0392IsSubsequence.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,7 +124,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/_0168ExcelSheetColumnTitle.java" />
         <option value="$PROJECT_DIR$/src/_0171ExcelSheetColumnNumber.java" />
         <option value="$PROJECT_DIR$/src/_0013RomanToInteger.java" />
         <option value="$PROJECT_DIR$/src/_0012IntegerToRoman.java" />
@@ -163,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/_0221MaximalSquare.java" />
         <option value="$PROJECT_DIR$/src/_0005LongestPalindromicSubstring.java" />
         <option value="$PROJECT_DIR$/src/_0053MaximumSubarray.java" />
+        <option value="$PROJECT_DIR$/src/_0392IsSubsequence.java" />
       </list>
     </option>
   </component>
@@ -332,11 +344,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application._0199BinaryTreeRightSideView" />
       <item itemvalue="Application._0575DecodeStringMain" />
       <item itemvalue="Application._113PathSumII" />
-      <item itemvalue="Application.huawei" />
+      <item itemvalue="Application._0199BinaryTreeRightSideView" />
       <item itemvalue="Application.testSort" />
+      <item itemvalue="Application.huawei" />
     </list>
     <recent_temporary>
       <list>
@@ -418,7 +430,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3272727" />
       <window_info anchor="bottom" id="Style Checker" order="7" sideWeight="0.49874687" weight="0.32834226" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7659575" visible="true" weight="0.253886" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7659575" visible="true" weight="0.253886" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50231266" side_tool="true" weight="0.15025906" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32939914" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49768734" visible="true" weight="0.3564767" />
@@ -562,18 +574,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/_0179LargestNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/_0038CountAndSay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -967,8 +967,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_0053MaximumSubarray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="74" column="33" lean-forward="true" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+        <state relative-caret-position="288">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0392IsSubsequence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
