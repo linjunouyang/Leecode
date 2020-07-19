@@ -155,6 +155,10 @@ public class _0253MeetingRoomsII {
      * > open, open, close, close, open, close.
      * We can easily see there are two consecutive open, we need 2 meeting rooms.
      *
+     * ____
+     *
+     * Related: 56, 57, 252, 253, 729, 731, 732
+     *
      * Time complexity:
      * @param intervals
      * @return
