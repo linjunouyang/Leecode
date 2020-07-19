@@ -25,6 +25,13 @@ public class _0406QueueReconstructionByHeight {
      * 1) for same height, prioritize smallest k
      * 2) shorter is invisible to higher
      *
+     * Why second dimension is not mandatory in 2d array?
+     * https://stackoverflow.com/questions/45582174/why-second-dimension-is-not-mandatory-in-2d-array-in-java
+     * Each entry is a reference to an integer array object
+     *  It doesn't matter what size these integer array objects end up being, as it doesn't change the size of the reference.
+     *
+     * toArray return type: Object[]
+     *
      * Time complexity: O(n ^ 2)
      * Sorting: O(nlgn)
      * ArrayList add(index, element): O(n)
@@ -46,12 +53,13 @@ public class _0406QueueReconstructionByHeight {
                 }
             });
 
-            // Arrays.sort(people, (a, b) -> a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);
+            // OR Arrays.sort(people, (a, b) -> a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);
 
             List<int[]> res = new LinkedList<>();
             for(int[] cur : people){
                 res.add(cur[1],cur);
             }
-            return res.toArray(new int[people.length][]);
-        }
+
+            return res.toArray(new int[people.length][]); // or int[people.length][2]
+    }
 }
