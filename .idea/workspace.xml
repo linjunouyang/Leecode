@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_1111MaximumNestingDepthOfTwoValidParenthesesStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0767ReorganizeString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,11 +59,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/_1111MaximumNestingDepthOfTwoValidParenthesesStrings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+            <state relative-caret-position="344">
+              <caret line="58" column="80" lean-forward="true" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/_0767ReorganizeString.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -100,7 +109,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/_0094BinaryTreeInorderTraversal.java" />
         <option value="$PROJECT_DIR$/src/_0145BinaryTreePostorderTraversal.java" />
         <option value="$PROJECT_DIR$/src/_102BinaryTreeLevelOrderTraversal.java" />
         <option value="$PROJECT_DIR$/src/_0102BinaryTreeLevelOrderTraversal.java" />
@@ -151,6 +159,7 @@
         <option value="$PROJECT_DIR$/src/_0135Candy.java" />
         <option value="$PROJECT_DIR$/src/_0763PartitionLabels.java" />
         <option value="$PROJECT_DIR$/src/_1111MaximumNestingDepthOfTwoValidParenthesesStrings.java" />
+        <option value="$PROJECT_DIR$/src/_0767ReorganizeString.java" />
       </list>
     </option>
   </component>
@@ -550,13 +559,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/_0102BinaryTreeLevelOrderTraversal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="68" column="40" selection-start-line="68" selection-start-column="40" selection-end-line="68" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/_0100SameTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2955">
@@ -949,8 +951,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_1111MaximumNestingDepthOfTwoValidParenthesesStrings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+        <state relative-caret-position="344">
+          <caret line="58" column="80" lean-forward="true" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/_0767ReorganizeString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="22" column="6" lean-forward="true" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
         </state>
       </provider>
     </entry>
