@@ -1,11 +1,9 @@
-package Tree;
-
 /**
  * 6.16 Failed to come up with a solution. Never solved a DP problem before.
  * Other solutions?
  *
  */
-public class _96UniqueBinarySearchTrees {
+public class _0096UniqueBinarySearchTrees {
     /**
      * 1. Dynamic Programming
      *
