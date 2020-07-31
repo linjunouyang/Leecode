@@ -4,6 +4,12 @@ public class _0236LowestCommonAncestorOfABinaryTree {
     /**
      * 1. Recursion (Pre-order)
      *
+     * Definition of this recursion:
+     *
+     * from this point (root) (looking below), what is the lowest common ancestor
+     *
+     * https://www.youtube.com/watch?v=py3R23aAPCA
+     *
      * Time complexity: O(n)
      * Space complexity: O(n)
      *
@@ -25,6 +31,11 @@ public class _0236LowestCommonAncestorOfABinaryTree {
         if (left != null && right != null) {
             return root;
         }
+
+        // Suppose we just [return root;] from a previous frame,
+        // which could be current root's left or right
+        // we just return this non-null value
+        // because nothing will come up on the other side because q and p are UNIQUE
         if (left != null ) {
             return left;
         }
