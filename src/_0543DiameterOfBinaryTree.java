@@ -59,6 +59,10 @@ public class _0543DiameterOfBinaryTree {
      * because we don't have the info of left child and right child
      *
      * but this one could be another iterative post-order traversal (using hashmap to indicating visit status)
+     * -----
+     * array creation with both dimension expression and initialization is illegal
+     * NO: new int[2]{0, 0}
+     * 
      *
      * Time complexity: O(n)
      * Space complexity: O(n)
