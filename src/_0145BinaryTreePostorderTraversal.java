@@ -108,7 +108,6 @@ public class _0145BinaryTreePostorderTraversal {
     public List<Integer> postorderTraversal3(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
         Deque<TreeNode> stack = new ArrayDeque<>();
-        Deque<Integer> height = new ArrayDeque<>();
         TreeNode cur = root;
         TreeNode pre = null;
 
