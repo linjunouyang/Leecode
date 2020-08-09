@@ -1,5 +1,11 @@
 /**
  * The problem states that given n will always be valid
+ *
+ * Summary So Far:
+ * Types of two pointers:
+ * 1) slow and fast
+ * 2) two pointers separated with n distance (this one)
+ * 3) sliding windows (two pointers with different condition of moving forward)
  */
 public class _0019RemoveNthNodeFromEndOfList {
     class ListNode {
