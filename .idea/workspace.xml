@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_00163SumCloset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0234PalindromeLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0986IntervalListIntersections.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0019RemoveNthNodeFromEndOfList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0030SubstringWithConcatenationOfAllWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0076MinimumWindowSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0159LongestSubstringWithAtMostTwoDistinctCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0209MinimumSizeSubarraySum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0438FindAllAnagramsInAString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,23 +24,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>map</find>
-      <find>DualPivotQuicksort</find>
-      <find>DualPivot</find>
-      <find>sort(</find>
-      <find>47</find>
-      <find>elementData</find>
-      <find>insertion</find>
-      <find>insertion sort</find>
-      <find>insertion so</find>
-      <find>mergesort</find>
-      <find>sort</find>
-      <find>286</find>
-      <find>mergeSort</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -206,38 +192,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522032169975</updated>
-      <workItem from="1596836775267" duration="9840000" />
+      <workItem from="1596836775267" duration="27543000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="TestIntersectionOfTwoArraysII_test1 - 2018.04.15 at 19h 42m 40s.xml">
-      <configuration name="TestIntersectionOfTwoArraysII.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestIntersectionOfTwoArraysII_test1 - 2018.04.15 at 20h 14m 40s.xml">
-      <configuration name="TestIntersectionOfTwoArraysII.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestJumpGame_testexample - 2018.04.02 at 20h 21m 13s.xml">
-      <configuration name="TestJumpGame.testexample" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestJumpGame_testexample - 2018.04.03 at 11h 30m 05s.xml">
-      <configuration name="TestJumpGame.testexample" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestJumpGame_testexample - 2018.04.15 at 15h 38m 50s.xml">
-      <configuration name="TestJumpGame.testexample" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTwoSumII_test1 - 2018.04.15 at 15h 13m 50s.xml">
-      <configuration name="TestTwoSumII.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTwoSumII_test1 - 2018.04.15 at 15h 38m 50s.xml">
-      <configuration name="TestTwoSumII.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestTwoSumII_test1 - 2018.04.15 at 15h 41m 36s.xml">
-      <configuration name="TestTwoSumII.test1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestValidPerfectSquare_test - 2018.04.16 at 15h 54m 23s.xml">
-      <configuration name="TestValidPerfectSquare.test" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
