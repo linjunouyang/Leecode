@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0202HappyNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0380InsertDeleteGetRandomO1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0560SubarraySumEqualsK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0692TopKFrequentWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0706DesignHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0811SubdomainVisitCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0981TimeBasedKey_ValueStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0609FindDuplicateFileInSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -196,7 +190,7 @@
       <option name="presentableId" value="Default" />
       <updated>1522032169975</updated>
       <workItem from="1596836775267" duration="40733000" />
-      <workItem from="1597093440976" duration="23634000" />
+      <workItem from="1597093440976" duration="31015000" />
     </task>
     <servers />
   </component>
