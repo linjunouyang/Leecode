@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0609FindDuplicateFileInSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0311SparseMatrixMultiplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0739DailyTemperatures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,19 +124,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -190,7 +178,8 @@
       <option name="presentableId" value="Default" />
       <updated>1522032169975</updated>
       <workItem from="1596836775267" duration="40733000" />
-      <workItem from="1597093440976" duration="31015000" />
+      <workItem from="1597093440976" duration="34017000" />
+      <workItem from="1597330915171" duration="8533000" />
     </task>
     <servers />
   </component>
@@ -237,6 +226,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1597103003628" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597351853505">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597351853505" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
