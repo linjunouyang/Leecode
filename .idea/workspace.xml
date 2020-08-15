@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0347TopKFrequentElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0359LoggerRateLimiter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0463IslandPerimeter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0535EncodeAndDecodeTinyURL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1048LongestStringChain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0347TopKFrequentElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0347TopKFrequentElements.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +195,7 @@
       <workItem from="1596836775267" duration="40733000" />
       <workItem from="1597093440976" duration="34017000" />
       <workItem from="1597330915171" duration="14421000" />
-      <workItem from="1597378208308" duration="10764000" />
+      <workItem from="1597378208308" duration="23101000" />
     </task>
     <servers />
   </component>
@@ -240,6 +242,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1597103003628" />
+    <state x="1225" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597525437511">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1225" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1920.1057@0.23.1920.1057" timestamp="1597525437511" />
     <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597351853505">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
