@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0694NumberOfDistinctIslands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0037SudokuSolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0204CountPrimes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1244DesignALeaderboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +194,7 @@
       <workItem from="1596836775267" duration="40733000" />
       <workItem from="1597093440976" duration="34017000" />
       <workItem from="1597330915171" duration="14421000" />
-      <workItem from="1597378208308" duration="31120000" />
+      <workItem from="1597378208308" duration="48839000" />
     </task>
     <servers />
   </component>
@@ -239,18 +241,22 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1597103003628" />
-    <state x="1253" y="274" key="#com.intellij.ide.util.MemberChooser" timestamp="1597536164447">
+    <state x="1253" y="274" key="#com.intellij.ide.util.MemberChooser" timestamp="1597686940071">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1253" y="274" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1597536164447" />
+    <state x="1253" y="274" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1057@0.23.1920.1057" timestamp="1597686940071" />
     <state x="1225" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597525437511">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1225" y="449" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.23.1920.1057@0.23.1920.1057" timestamp="1597525437511" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597351853505">
+    <state x="595" y="319" width="540" height="524" key="StructurePopup" timestamp="1597687387306">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597351853505" />
+    <state x="595" y="319" width="540" height="524" key="StructurePopup/0.23.1920.1057@0.23.1920.1057" timestamp="1597687387306" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597689612314">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597689612314" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -297,9 +303,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
   </component>
 </project>
