@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0037SudokuSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0204CountPrimes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1244DesignALeaderboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0036ValidSudoku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0939MinimumAreaRectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0974SubarraySumsDivisibleByK.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,15 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,7 +192,8 @@
       <workItem from="1596836775267" duration="40733000" />
       <workItem from="1597093440976" duration="34017000" />
       <workItem from="1597330915171" duration="14421000" />
-      <workItem from="1597378208308" duration="48839000" />
+      <workItem from="1597378208308" duration="57521000" />
+      <workItem from="1597724833006" duration="1249000" />
     </task>
     <servers />
   </component>
