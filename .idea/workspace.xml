@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0036ValidSudoku.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0939MinimumAreaRectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0974SubarraySumsDivisibleByK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0091DecodeWays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0300LongestIncreasingSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0957PrisonCellsAfterNDays.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,13 +125,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,7 +195,8 @@
       <workItem from="1597093440976" duration="34017000" />
       <workItem from="1597330915171" duration="14421000" />
       <workItem from="1597378208308" duration="57521000" />
-      <workItem from="1597724833006" duration="1249000" />
+      <workItem from="1597724833006" duration="1762000" />
+      <workItem from="1597781774839" duration="15349000" />
     </task>
     <servers />
   </component>
@@ -252,10 +255,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="595" y="319" width="540" height="524" key="StructurePopup/0.23.1920.1057@0.23.1920.1057" timestamp="1597687387306" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597689612314">
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597793950428">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597689612314" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597793950428" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
