@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0140WordBreakII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0472ConcatenatedWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0647PalindromicSubstrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0139WordBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0139WordBreak.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +194,7 @@
       <workItem from="1597330915171" duration="14421000" />
       <workItem from="1597378208308" duration="57521000" />
       <workItem from="1597724833006" duration="1762000" />
-      <workItem from="1597781774839" duration="29000000" />
+      <workItem from="1597781774839" duration="33200000" />
     </task>
     <servers />
   </component>
