@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0091DecodeWays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0300LongestIncreasingSubsequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0957PrisonCellsAfterNDays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0140WordBreakII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0472ConcatenatedWords.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0139WordBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0139WordBreak.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +196,7 @@
       <workItem from="1597330915171" duration="14421000" />
       <workItem from="1597378208308" duration="57521000" />
       <workItem from="1597724833006" duration="1762000" />
-      <workItem from="1597781774839" duration="15349000" />
+      <workItem from="1597781774839" duration="29000000" />
     </task>
     <servers />
   </component>
@@ -239,9 +239,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="896" y="134" key="#Project_Structure" timestamp="1597103003628">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="656" y="131" key="#Project_Structure" timestamp="1597900032281">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
+    <state x="656" y="131" key="#Project_Structure/0.23.1680.1027@0.23.1680.1027" timestamp="1597900032281" />
     <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1597103003628" />
     <state x="1253" y="274" key="#com.intellij.ide.util.MemberChooser" timestamp="1597686940071">
       <screen x="0" y="23" width="1920" height="1057" />
@@ -255,10 +256,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="595" y="319" width="540" height="524" key="StructurePopup/0.23.1920.1057@0.23.1920.1057" timestamp="1597687387306" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597793950428">
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1597857138124">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597793950428" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597857138124" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
