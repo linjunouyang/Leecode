@@ -18,7 +18,6 @@ public class _0647PalindromicSubstrings {
 
         for (int i = 1; i < s.length(); i++) {
             dp[i] = dp[i- 1] + 1;
-            dp[i] +
             for (int j = i - 1; j >= 0; j--) {
                 if (isPalindromic(s, j, i)) {
                     dp[i]++;
@@ -55,8 +54,6 @@ public class _0647PalindromicSubstrings {
      * Time complexity: O(n ^ 2)
      * Space complexity: O(n ^ 2)
      *
-     * @param s
-     * @return
      */
     public int countSubstrings12(String s) {
         int n = s.length();
