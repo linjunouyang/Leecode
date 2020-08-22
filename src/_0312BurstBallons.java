@@ -1,3 +1,8 @@
+/**
+ * 无后效性：
+ * 1）在推导后面状态的时候，我们只关心前面阶段的状态值，不关心这个状态是怎么一步步推导出来的
+ * 2）某阶段状态一旦确定，就不受之后状态决策的影响
+ */
 public class _0312BurstBallons {
     /**
      * -> Intuition: Backtracking: O(n!)
@@ -100,19 +105,19 @@ public class _0312BurstBallons {
      * dp[i][j] = max(nums[i] * nums[k] * nums[j] + dp[i][k] + dp[k][j]) (k in (i+1,j))
      *
      * a) Bottom-up approaches always starts from the base cases and builds upward
-     * b) Base-case is: when left+1 == right, then return 0. A.k.a. there are no balloons in the middle to pop.
-     * So these base case values are already stored in our DP array!
+     * b) Base-case is: when left + 1 == right, then return 0. A.k.a. there are no balloons in the middle to pop.
+     * So these base case value 0 is already stored in our DP array!
      * c) The next case is when we have only 1 balloon between left and right.
      * k represents the distance between left and right, and k = 2 means that there is one balloon between left and right
-     * d) So first we iterate through the entire array and find every result when there is just 1 ballon between left and right,
+     * d) So first we iterate through the entire array and find every result when there is just 1 balloon between left and right,
      * and when that's finished, increase the distance k between left and right
-     * e) Notice that dp line assigns dp[left][right] to nums[left] * nums[i] * nums[right] + dp[left][i] + dp[i][right])
-     * f) dp[left][i] and dp[i][right]) when k=2 are equal to the base cases! Equals 0!
+     * e) Notice that dp[left][right] = nums[left] * nums[i] * nums[right] + dp[left][i] + dp[i][right])
+     * when k=2 -> i = left + 1, dp[left][i] and dp[i][right] equal the base cases value 0.
      * We are always referencing values from the previous iterations.
-     * g) Keep increasing the number of balloons in between left and right, until we reach the final case left = 0 and right=n-1
+     * f) Keep increasing the number of balloons in between left and right, until we reach the final case left = 0 and right=n-1
      *
      * Time complexity: O(n ^ 3)
-     * Space complexity:
+     * Space complexity: O(n ^ 2)
      */
     public int maxCoins2(int[] iNums) {
         int[] nums = new int[iNums.length + 2];
