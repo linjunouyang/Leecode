@@ -5,6 +5,9 @@ public class _0097InterleavingString {
     /**
      * 1. Recursion with Memoization (DFS)
      *
+     * When thinking in recursion, just focus on current single step
+     * put all the remaining work to subsequent recursive calls
+     *
      * Without Memoization, time complexity: O(2 ^ (m + n))
      * Recursion with memo is kind of top-down dp?
      *
@@ -46,7 +49,7 @@ public class _0097InterleavingString {
     }
 
     /**
-     * 3. DP
+     * 3. DP (bottom up)
      *
      * dp[i][j]: whether s3's first (i + j) chars is the interleaving of s1's first i chars and s2's first j chars
      * dp[i][j] = (dp[i - 1][j] && s3[i + j - 1] == s1[i-1]) || (dp[i][j - 1] && s2[j - 1] == s3[i + j - 1])
