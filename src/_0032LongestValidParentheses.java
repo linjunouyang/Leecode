@@ -70,7 +70,7 @@ public class _0032LongestValidParentheses {
                 // matches found
                 dp[i] = 2+ dp[i-1];
                 // add matches from previous
-                // (())
+                // ()(())
                 if(i-dp[i]>=1) {
                     dp[i] += dp[i-dp[i]];
                 }
