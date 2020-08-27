@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0698PartitionToKEqualSumSubsets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1235MaximumProfitInJobScheduling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0124BinaryTreeMaximumPathSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0410SplitArrayLargestSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0523ContinuousSubarraySum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0032LongestValidParentheses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0032LongestValidParentheses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0145BinaryTreePostorderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0145BinaryTreePostorderTraversal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -128,15 +129,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,6 +202,8 @@
       <workItem from="1597963795503" duration="599000" />
       <workItem from="1597964479321" duration="38949000" />
       <workItem from="1598395620139" duration="5933000" />
+      <workItem from="1598418134131" duration="14000" />
+      <workItem from="1598460320086" duration="13215000" />
     </task>
     <servers />
   </component>
@@ -245,11 +246,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="131" key="#Project_Structure" timestamp="1597900032281">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="896" y="134" key="#Project_Structure" timestamp="1598461042921">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="656" y="131" key="#Project_Structure/0.23.1680.1027@0.23.1680.1027" timestamp="1597900032281" />
-    <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1597103003628" />
+    <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1598461042921" />
     <state x="1253" y="274" key="#com.intellij.ide.util.MemberChooser" timestamp="1597686940071">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
