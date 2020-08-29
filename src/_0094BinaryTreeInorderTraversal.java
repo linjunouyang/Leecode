@@ -65,8 +65,7 @@ public class _0094BinaryTreeInorderTraversal {
     is provided by Deque interface and its implementations,
     which should be used in preference to this class.
 
-    Time complexity:
-    O(n)
+    Time complexity: O(n)
 
     Space complexity:
     worst : O(n) for left-skewed tree.
@@ -74,8 +73,6 @@ public class _0094BinaryTreeInorderTraversal {
 
     Runtime: 0 ms, faster than 100.00% of Java online submissions for Binary Tree Inorder Traversal.
     Memory Usage: 38.2 MB, less than 5.11% of Java online submissions for Binary Tree Inorder Traversal.
-
-
     */
     public List<Integer> inorderTraversal2(TreeNode root) {
         List<Integer> res= new ArrayList<>();
