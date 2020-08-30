@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Tree/_0099RecoverBinarySearchTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0116PopulatingNextRightPointersInEachNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0449SerializeAndDeserializeBST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1110DeleteNodesAndReturnForest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0094BinaryTreeInorderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0094BinaryTreeInorderTraversal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tree/_0099RecoverBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tree/_0099RecoverBinarySearchTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +203,7 @@
       <workItem from="1597964479321" duration="38949000" />
       <workItem from="1598395620139" duration="5933000" />
       <workItem from="1598418134131" duration="14000" />
-      <workItem from="1598460320086" duration="24103000" />
+      <workItem from="1598460320086" duration="37236000" />
     </task>
     <servers />
   </component>
@@ -261,11 +263,11 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="595" y="319" width="540" height="524" key="StructurePopup/0.23.1920.1057@0.23.1920.1057" timestamp="1597687387306" />
-    <state x="1022" y="251" width="670" height="657" key="search.everywhere.popup" timestamp="1598140458523">
-      <screen x="0" y="23" width="1680" height="1027" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1598726546629">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1022" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1598140458523" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597857138124" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1598726546629" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,6 +5,20 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
+/**
+ *
+ * 实现二叉树的前序（preorder）、中序（inorder）、后序（postorder）遍历有两个常用的方法：
+ * 一是递归(recursive)，二是使用栈实现的迭代版本(stack+iterative)。
+ * 这两种方法都是O(n)的空间复杂度（递归本身占用stack空间或者用户自定义的stack），
+ *
+ * Morris Traversal方法可以做到这两点，与前两种方法的不同在于该方法只需要O(1)空间，而且同样可以在O(n)时间内完成。
+ *
+ * 要使用O(1)空间进行遍历，最大的难点在于，遍历到子节点的时候怎样重新返回到父节点（假设节点中没有指向父节点的p指针），
+ * 由于不能用栈作为辅助空间。为了解决这个问题，Morris方法用到了线索二叉树（threaded binary tree）的概念。
+ * 在Morris方法中不需要为每个节点额外分配指针指向其前驱（predecessor）和后继节点（successor），
+ * 只需要利用叶子节点中的左右空指针指向某种顺序遍历下的前驱节点或后继节点就可以了。
+ *
+ */
 public class _0099RecoverBinarySearchTree {
     class TreeNode {
           int val;
@@ -22,6 +36,27 @@ public class _0099RecoverBinarySearchTree {
     /**
      * 1. In-order + identify reversion, swap
      *
+     * adjacent: ... _ < _ < A > B < _ < _ ...
+     *                       ^^^^^
+     *                       drop #1
+     *
+     * not adjacent: ... _ < _ < A > X < _ < Y > B < _ < _ ... (X may be the same as Y, but it's irrelevant)
+     *                           ^^^^^       ^^^^^
+     *                           drop #1     drop #2
+     *
+     * When they are not consecutive, the first time we meet pre.val > root.val
+     * the first node is the pre node, since root should be traversal ahead of pre,
+     * pre should be at least at small as root.
+     *
+     * The second time we meet pre.val > root.val
+     * the second node is the root node, since we are now looking for a node to replace with out first node,
+     * which is found before.
+     *
+     * When they are consecutive, which means the case pre.val > cur.val will appear only once.
+     * We need to take case this case without destroy the previous analysis.
+     * So the first node will still be pre, and the second will be just set to root.
+     * Once we meet this case again, the first node will not be affected.
+     *
      * Time: O(n)
      * Space: O(n)
      */
@@ -31,18 +66,17 @@ public class _0099RecoverBinarySearchTree {
 
         while (!stack.isEmpty() || root != null) {
             while (root != null) {
-                stack.add(root);
+                stack.push(root);
                 root = root.left;
             }
             root = stack.pop();
 
             if (last != null && root.val < last.val) {
-                y = root;
+                // if you put y = root before x, then you break when x != null
                 if (x == null) {
                     x = last;
-                } else {
-                    break;
                 }
+                y = root;
             }
             last = root;
 
@@ -107,8 +141,8 @@ public class _0099RecoverBinarySearchTree {
 
                     // check for the swapped nodes
                     if (last != null && curr.val < last.val) {
-                        y = curr;
                         if (x == null) x = last;
+                        y = curr;
                     }
                     last = curr;
 
