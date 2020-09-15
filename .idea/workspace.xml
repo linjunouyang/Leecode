@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0002AddTwoNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0017LetterCombinationsOfAPhoneNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0022GenerateParentheses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0079WordSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0093RestoreIPAddresses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0117PopulatingNextRightPointersInEachNodeII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0126WordLadderII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0206ReverseLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0211DesignAddAndSearchWordsDataStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0212WordSearchII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0450DeleteNodeInABST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0759EmployeeFreeTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0834SumOfDistancesInTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0979DistributeCoinsInBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0024SwapNodesInPairs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0034FindFirstAndLastPositionOfElementInSortedArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0050PowXn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0083RemoveDuplicatesFromSortedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0203RemoveLinkedListElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0430FlattenAMultilevelDoublyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0445AddTwoNumbersII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0528RandomPickWithWeight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1283FindTheSmallestDivisorGivenAThreshold.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +216,7 @@
       <workItem from="1599280449660" duration="25809000" />
       <workItem from="1599551134925" duration="19000" />
       <workItem from="1599596511910" duration="4221000" />
-      <workItem from="1599942642199" duration="1353000" />
+      <workItem from="1599942642199" duration="14300000" />
     </task>
     <servers />
   </component>
@@ -280,11 +276,11 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="595" y="319" width="540" height="524" key="StructurePopup/0.23.1920.1057@0.23.1920.1057" timestamp="1597687387306" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1598726546629">
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1600149079407">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1022" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1598140458523" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1598726546629" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1600149079407" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
