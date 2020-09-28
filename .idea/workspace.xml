@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0162FindPeakElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0278FirstBadVersion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0378KthSmallestElementInASortedMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0852PeakIndexInAMountainArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1095FindInMountainArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1060MissingElementInSortedArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +206,7 @@
       <workItem from="1599551134925" duration="19000" />
       <workItem from="1599596511910" duration="4221000" />
       <workItem from="1599942642199" duration="18819000" />
-      <workItem from="1600994152571" duration="3461000" />
+      <workItem from="1600994152571" duration="4169000" />
     </task>
     <servers />
   </component>
