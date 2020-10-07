@@ -76,31 +76,31 @@ public class _0410SplitArrayLargestSum {
      */
     public int splitArray22(int[] nums, int m) {
         int L = nums.length;
-        int[] S = new int[L+1];
-        S[0]=0;
-        for(int i=0; i<L; i++)
-            S[i+1] = S[i]+nums[i];
-
-        int[] dp = new int[L];
-        for (int i=0; i<L; i++) {
-            dp[i] = S[i + 1];
+        int[] prefixSums = new int[L+1];
+        prefixSums[0] = 0;
+        for (int i = 0; i < L; i++) {
+            prefixSums[i+1] = prefixSums[i] + nums[i];
         }
 
-        for(int s=2; s<=m; s++)
-        {
-            for(int i = L - 1; i >= s - 1; i--)
-            {
-                dp[i]=Integer.MAX_VALUE;
-                for(int j=i-1; j>=s-2; j--)
-                {
+        int[] dp = new int[L];
+        for (int i = 0; i < L; i++) {
+            // dividing nums[0..i] into 1 part
+            dp[i] = prefixSums[i + 1];
+        }
+
+        for (int s = 2; s <= m; s ++)  {
+            for (int i = L - 1; i >= s - 1; i--) {
+                dp[i] = Integer.MAX_VALUE;
+                for(int j = i-1; j >= s-2; j--) {
                     // faster than reversed j order
                     // as j becomes smaller, dp[j] becomes smaller
                     // but last subarray becomes bigger
-                    int t = Math.max(dp[j], S[i+1]-S[j+1]);
-                    if(t<=dp[i])
+                    int t = Math.max(dp[j], prefixSums[i+1] - prefixSums[j+1]);
+                    if (t <= dp[i]) {
                         dp[i]=t;
-                    else
+                    } else {
                         break;
+                    }
                 }
             }
         }
@@ -109,7 +109,7 @@ public class _0410SplitArrayLargestSum {
     }
 
     /**
-     * 3. Greedy + Binary Search
+     * 3. Greedy + Binary Search the answer
      *
      * Explanation:
      * Solution comment
@@ -152,9 +152,10 @@ public class _0410SplitArrayLargestSum {
             max = Math.max(num, max);
             sum += num;
         }
-        if (m == 1) return (int)sum;
+
         // binary search
-        long l = max; long r = sum;
+        long l = max;
+        long r = sum;
         while (l < r) {
             long mid = (l + r)/ 2;
             if (valid(mid, nums, m)) {
@@ -175,7 +176,7 @@ public class _0410SplitArrayLargestSum {
     public boolean valid(long target, int[] nums, int m) {
         int count = 1;
         long total = 0;
-        for(int num : nums) {
+        for (int num : nums) {
             total += num;
             if (total > target) {
                 total = num;
