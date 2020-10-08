@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0153FindMinimumInRotatedSortedArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0437PathSumIII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0658FindKClosestElements.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1011CapacityToShipPackagesWithinDDays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0020ValidParentheses.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0937ReorderDataInLogFiles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0410SplitArrayLargestSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0410SplitArrayLargestSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0437PathSumIII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0437PathSumIII.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +128,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -202,7 +211,8 @@
       <workItem from="1600994152571" duration="6062000" />
       <workItem from="1601352986172" duration="4611000" />
       <workItem from="1601938419637" duration="15424000" />
-      <workItem from="1602103908248" duration="2422000" />
+      <workItem from="1602103908248" duration="7399000" />
+      <workItem from="1602120377559" duration="2208000" />
     </task>
     <servers />
   </component>

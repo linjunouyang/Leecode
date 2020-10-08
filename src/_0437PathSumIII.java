@@ -31,7 +31,7 @@ public class _0437PathSumIII {
     }
 
     /**
-     * 2. Prefix Sum, DFS,
+     * 2. Prefix Sum, DFS, backtracking
      *
      * how you can keep track of a sequence of sums in a 1D hash table, when a tree can have multiple branches,
      * how do you keep track of duplicate sums on different branches of the tree?
