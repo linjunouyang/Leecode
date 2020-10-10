@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Notice
  * It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array)
@@ -20,6 +22,10 @@ public class _0238ProductOfArrayExceptSelf {
      * Space: O(1)
      */
     public int[] productExceptSelf(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return null;
+        }
+
         int len = nums.length;
         int[] answer = new int[len];
 
@@ -46,5 +52,36 @@ public class _0238ProductOfArrayExceptSelf {
         }
 
         return answer;
+    }
+
+    public int[] productExceptSelf2(int[] nums) {
+        int len = nums.length;
+        if (len == 2) { return new int[] {nums[1], nums[0]}; }
+        int product = 1, zeroCount = 0, index = 0, zeroIndex = 0;
+        for (int num: nums) {
+            if (num == 0) {
+                zeroCount++;
+                if (zeroCount > 1) {
+                    product = 0;
+                    break;
+                }
+                zeroIndex = index;
+            } else { product *= num; }
+            index++;
+        }
+
+        int[] result = new int[len];
+
+        // If there are one or more zeros in the array
+        if (zeroCount > 0) {
+            Arrays.fill(result, 0);
+            if (product == 0) { return result; }
+            result[zeroIndex] = product;
+        } else {
+            for (int i = 0; i < len; i++) {
+                result[i] = product/nums[i];
+            }
+        }
+        return result;
     }
 }
