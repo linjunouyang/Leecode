@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0031NextPermutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0054SpiralMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0394DecodeString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0415AddStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0420StrongPasswordChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1192CriticalConnectionsInANetwork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1249MinimumRemoveToMakeValidParentheses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0238ProductOfArrayExceptSelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0238ProductOfArrayExceptSelf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +215,7 @@
       <workItem from="1601352986172" duration="4611000" />
       <workItem from="1601938419637" duration="15424000" />
       <workItem from="1602103908248" duration="7399000" />
-      <workItem from="1602120377559" duration="7308000" />
+      <workItem from="1602120377559" duration="20016000" />
     </task>
     <servers />
   </component>
@@ -283,11 +287,11 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="550" y="196" key="new project wizard/0.23.1920.1057@0.23.1920.1057" timestamp="1601420243324" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1600149079407">
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1602435522145">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1022" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1598140458523" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1600149079407" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1602435522145" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
