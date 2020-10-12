@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0054SpiralMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0394DecodeString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0415AddStrings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0420StrongPasswordChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1192CriticalConnectionsInANetwork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1249MinimumRemoveToMakeValidParentheses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -215,7 +207,7 @@
       <workItem from="1601352986172" duration="4611000" />
       <workItem from="1601938419637" duration="15424000" />
       <workItem from="1602103908248" duration="7399000" />
-      <workItem from="1602120377559" duration="20016000" />
+      <workItem from="1602120377559" duration="20310000" />
     </task>
     <servers />
   </component>
