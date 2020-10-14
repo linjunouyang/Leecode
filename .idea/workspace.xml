@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0322ReconstructItinerary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0371SumOfTwoIntegers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0785IsGraphBipartite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +210,7 @@
       <workItem from="1601352986172" duration="4611000" />
       <workItem from="1601938419637" duration="15424000" />
       <workItem from="1602103908248" duration="7399000" />
-      <workItem from="1602120377559" duration="27912000" />
+      <workItem from="1602120377559" duration="30824000" />
     </task>
     <servers />
   </component>
