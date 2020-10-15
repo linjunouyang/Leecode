@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0785IsGraphBipartite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0269AlienDictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0797AllPathsFromSourceToTarget.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +211,7 @@
       <workItem from="1601352986172" duration="4611000" />
       <workItem from="1601938419637" duration="15424000" />
       <workItem from="1602103908248" duration="7399000" />
-      <workItem from="1602120377559" duration="30824000" />
+      <workItem from="1602120377559" duration="36677000" />
     </task>
     <servers />
   </component>
@@ -282,11 +283,11 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="550" y="196" key="new project wizard/0.23.1920.1057@0.23.1920.1057" timestamp="1601420243324" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1602435522145">
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1602734858359">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1022" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1598140458523" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1602435522145" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1602734858359" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
