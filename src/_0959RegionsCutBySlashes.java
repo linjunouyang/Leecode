@@ -138,7 +138,7 @@ public class _0959RegionsCutBySlashes {
     // ? why bfs time limit exceeded?
 
     /**
-     * 2. Split one cell into 4 parts + Union Find
+     * 2. Split one cell into 4 parts + Union Find (probably not the best one)
      *
      * 1st solution upscaled grid to 9N^2 parts, while this one split grid into 4N^2 parts.
      * In that solution, cut path occupy some pixel. In this solution, it doesn't.
@@ -208,7 +208,87 @@ public class _0959RegionsCutBySlashes {
     }
 
     /**
-     * 3. Euler's Formula + Union Find
+     * 3. Space efficient Union Find
+     *
+     * https://leetcode.com/problems/regions-cut-by-slashes/discuss/279828/Java-union-find-beats-99.7.-Easy-to-understand-and-with-explanation.
+     */
+    public int regionsBySlashes3(String[] grid) {
+        int n = grid.length + 1;
+        UnionFind uf = new UnionFind(n * n);
+
+        // Union nodes on boundaries (top, left, right, bottom)
+        for (int col = 1; col < n; col++) {
+            uf.union(0, col);
+        }
+
+        for (int row = 1; row < n; row++) {
+            uf.union(0, n * row);
+        }
+
+        for (int row = 1; row < n; row++) {
+            uf.union(0, n * row - 1);
+        }
+
+        for (int col = 1; col < n; col++) {
+            uf.union(0, (n - 1) * n + col);
+        }
+
+        int ans = 1;
+
+        for(int i =0; i < grid.length; i++) {
+            for(int j = 0; j < grid[i].length(); j++) {
+                char symbol = grid[i].charAt(j);
+                if(symbol == '\\') {
+                    int node1 = i * n + j;
+                    int node2 = (i + 1) * n + j + 1;
+                    if(uf.find(node1) == uf.find(node2)) {
+                        ans++;
+                    }
+                    uf.union(node1, node2);
+                } else if (symbol == '/') {
+                    int node1 = i * n + j + 1;
+                    int node2 = (i + 1) * n + j;
+                    if (uf.find(node1) == uf.find(node2)) {
+                        ans++;
+                    }
+                    uf.union(node1, node2);
+                }
+            }
+        }
+
+        return ans;
+    }
+
+    class UnionFind {
+        private int size;
+        private int[] parent;
+
+        public UnionFind(int n) {
+            size = n;
+            parent = new int[n];
+            for (int i = 0; i < n; i++) {
+                parent[i] = i;
+            }
+        }
+
+        public int find(int x) {
+            if (x != parent[x]) {
+                parent[x] = find(parent[x]);
+            }
+            return parent[x];
+        }
+
+        public void union(int x, int y) {
+            int xRoot = find(x);
+            int yRoot = find(y);
+            parent[yRoot] = xRoot;
+        }
+
+    }
+
+
+    /**
+     * 4. Euler's Formula + Union Find
      * https://leetcode.com/problems/regions-cut-by-slashes/discuss/205738/Using-Euler's-Formula-(V-E-%2B-F-2)
      */
 }
