@@ -129,5 +129,10 @@ public class _0310MinimumHeightTrees {
         return res;
     }
 
+    /**
+     * Other two solutions:
+     * https://leetcode.com/problems/minimum-height-trees/discuss/76052/Two-O(n)-solutions
+     */
+
 
 }
