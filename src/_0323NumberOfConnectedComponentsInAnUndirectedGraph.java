@@ -4,9 +4,13 @@ public class _0323NumberOfConnectedComponentsInAnUndirectedGraph {
     /**
      * 1. DFS or BFS
      *
+     * Could speed up a little bit:
+     *  mark the node as visited when you add it to the queue, not when it's popped.
+     *  Otherwise you might add nodes multiple times to the queue
+     *
      * Time complexity:
      * graph construction: O(E)?
-     * bfs/dfs: O(V + E)
+     * bfs/dfs: O(E)
      *
      * Space:
      * graph: O(V + E)
