@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_1162AsFarFromLandAsPossible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1042FlowerPlantingWithNoAdjacent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_1130MinimumCostTreeFromLeafValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1130MinimumCostTreeFromLeafValues.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +214,7 @@
       <workItem from="1601938419637" duration="15424000" />
       <workItem from="1602103908248" duration="7399000" />
       <workItem from="1602120377559" duration="51869000" />
-      <workItem from="1603323299501" duration="6651000" />
+      <workItem from="1603323299501" duration="9168000" />
     </task>
     <servers />
   </component>
@@ -285,11 +286,11 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="550" y="196" key="new project wizard/0.23.1920.1057@0.23.1920.1057" timestamp="1601420243324" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1602734858359">
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1603489316140">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="1022" y="251" width="670" height="657" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1598140458523" />
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1602734858359" />
+    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1603489316140" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

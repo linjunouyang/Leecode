@@ -145,7 +145,6 @@ public class _1130MinimumCostTreeFromLeafValues {
      * @return
      */
     public int mctFromLeafValues3(int[] arr) {
-        public int mctFromLeafValues(int[] arr) {
             int res = 0;
             List<Integer> nums = new ArrayList<>();
             for (int a : arr) nums.add(a);
@@ -163,7 +162,6 @@ public class _1130MinimumCostTreeFromLeafValues {
                 else nums.remove(l);
             }
             return res;
-        }
     }
 
     /**
