@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_1042FlowerPlantingWithNoAdjacent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0997FindTheTownJudge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1130MinimumCostTreeFromLeafValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1130MinimumCostTreeFromLeafValues.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/lemonade/Documents/CS61b/LeetCode/src/Tree/_226InvertBinaryTree.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -127,15 +127,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -214,7 +212,8 @@
       <workItem from="1601938419637" duration="15424000" />
       <workItem from="1602103908248" duration="7399000" />
       <workItem from="1602120377559" duration="51869000" />
-      <workItem from="1603323299501" duration="9168000" />
+      <workItem from="1603323299501" duration="11008000" />
+      <workItem from="1604787226348" duration="1070000" />
     </task>
     <servers />
   </component>
