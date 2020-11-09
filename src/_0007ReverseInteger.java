@@ -20,6 +20,11 @@ public class _0007ReverseInteger {
      * The test condition works here because the edge cases mentioned above won't happen due to the fact that the input itself is a signed integer.
      * If the input is something else, say a string (see String to Integer (atoi)), the test condition above will fail the edge cases.
      *
+     * Suppose a = Integer.MAX_VALUE + 1;
+     * a = -2147483648
+     * a - 8 = 2147483640
+     * (a-8)/10 = 214748364
+     *
      * Time: O(log10 x)
      * Space: O(1)
      *
