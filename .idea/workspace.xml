@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0008StringToInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0547FriendCircles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0007ReverseInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0007ReverseInteger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +36,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -214,7 +213,8 @@
       <workItem from="1602103908248" duration="7399000" />
       <workItem from="1602120377559" duration="51869000" />
       <workItem from="1603323299501" duration="11008000" />
-      <workItem from="1604787226348" duration="9669000" />
+      <workItem from="1604787226348" duration="9999000" />
+      <workItem from="1606071883796" duration="1660000" />
     </task>
     <servers />
   </component>
@@ -257,11 +257,12 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="896" y="134" key="#Project_Structure" timestamp="1598461042921">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="656" y="133" key="#Project_Structure" timestamp="1606071906484">
+      <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="656" y="131" key="#Project_Structure/0.23.1680.1027@0.23.1680.1027" timestamp="1597900032281" />
     <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1598461042921" />
+    <state x="656" y="133" key="#Project_Structure/0.25.1680.1025/-89.-1055.1920.1055@0.25.1680.1025" timestamp="1606071906484" />
     <state x="1253" y="274" key="#com.intellij.ide.util.MemberChooser" timestamp="1597686940071">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
