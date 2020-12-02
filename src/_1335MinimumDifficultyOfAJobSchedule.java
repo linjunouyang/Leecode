@@ -129,6 +129,12 @@ public class _1335MinimumDifficultyOfAJobSchedule {
     }
 
     /**
+     * 3. Monolithic stack?
+     *
+     * https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/discuss/494187/O(n*d)-time-and-O(n)-space-solution
+     *https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/discuss/490316/JavaC%2B%2BPython3-DP-O(nd)-Solution
+     *https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/discuss/796192/Java.-O(nd)-time-O(n)-space
+     *
      * Firstly we have the basic O(nnd) DP solution:
      * f[i][j] = min{f[i-1][k] + max(val[k+1 .. j])}, i-2 <= k < j
      * where f[i][j] is the minimum difficulty for first j jobs done in i days, and val=jobDifficulty
