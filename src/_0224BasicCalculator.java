@@ -57,7 +57,7 @@ public class _0224BasicCalculator {
             }
         }
 
-        result += sign * num;
+        result += sign * num; // for cases like 1 + 1
         return result;
     }
 
