@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/_1209RemoveAllAdjacentDuplicatesInStringII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -215,7 +216,7 @@
       <workItem from="1604787226348" duration="9999000" />
       <workItem from="1606071883796" duration="2307000" />
       <workItem from="1606679092500" duration="10209000" />
-      <workItem from="1606936813652" duration="23567000" />
+      <workItem from="1606936813652" duration="28064000" />
     </task>
     <servers />
   </component>
