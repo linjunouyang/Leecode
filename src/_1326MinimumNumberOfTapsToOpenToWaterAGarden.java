@@ -51,9 +51,9 @@ public class _1326MinimumNumberOfTapsToOpenToWaterAGarden {
         // ith: using taps after i that can cover i, what is the furthest we can reach
         int[] arr = new int[n + 1];
         for (int i = 0; i < ranges.length; i++) {
-            if (ranges[i] == 0) {
-                continue;
-            }
+//            if (ranges[i] == 0) {
+//                continue;
+//            }
             int left = Math.max(0, i - ranges[i]);
             arr[left] = Math.max(arr[left], i + ranges[i]);
         }
