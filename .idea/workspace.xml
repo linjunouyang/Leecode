@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0289GameOfLife.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0412FizzBuzz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0695MaxAreaOfIsland.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0412FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0412FizzBuzz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +217,9 @@
       <workItem from="1604787226348" duration="9999000" />
       <workItem from="1606071883796" duration="2307000" />
       <workItem from="1606679092500" duration="10209000" />
-      <workItem from="1606936813652" duration="36700000" />
+      <workItem from="1606936813652" duration="37561000" />
+      <workItem from="1608001099631" duration="209000" />
+      <workItem from="1608339648698" duration="793000" />
     </task>
     <servers />
   </component>

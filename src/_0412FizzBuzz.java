@@ -55,6 +55,9 @@ public class _0412FizzBuzz {
      * https://stackoverflow.com/questions/13604703/how-do-i-define-a-method-which-takes-a-lambda-as-a-parameter-in-java-8
      * Use lambda expression in method
      *
+     * Use LinkedHashSet / ArrayList / LinkedHashMap instead to keep the insertion order.
+     * And the insertion order also defines the priorities of different rules, which will guarantee the result is what we expected.
+     *
      */
     interface Rule{
         boolean apply(int i);
