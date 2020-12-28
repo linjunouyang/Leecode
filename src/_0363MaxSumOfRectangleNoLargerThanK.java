@@ -8,6 +8,17 @@ public class _0363MaxSumOfRectangleNoLargerThanK {
      * This solution also solves follow-up:
      * What if the number of rows is much larger than the number of columns?
      *
+     *
+     * Operations which work on a single element are all O(ln n) comparisons except first and last which are O(1) comparisons or O(ln N) node search time.
+     *
+     * comparator(), iterator(), clear(), first(), isEMpty(), size(), last(), pollFirst(), pollLast() are O(1)
+     * add(), ceiling(), contains(), floor(), headSet(), higher(), lower(), remove(), subSet(), tailSet() are O(ln N)
+     * clone(), equals(), hashCode(), toArray() and toString() are O(n)
+     *
+     * Why using treeset for binarysearch?
+     * we keep adding values (O(n) if using list) to the search range.
+     *
+     *
      * Time:
      * O(cols * cols * row)
      * Space:

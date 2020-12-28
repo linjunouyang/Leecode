@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0363MaxSumOfRectangleNoLargerThanK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0227BasicCalculatorII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0363MaxSumOfRectangleNoLargerThanK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0363MaxSumOfRectangleNoLargerThanK.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,13 +128,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,7 +225,8 @@
       <workItem from="1608589434129" duration="521000" />
       <workItem from="1608751519421" duration="4386000" />
       <workItem from="1608795722932" duration="15000" />
-      <workItem from="1609132726453" duration="1237000" />
+      <workItem from="1609132726453" duration="1777000" />
+      <workItem from="1609184748716" duration="1718000" />
     </task>
     <servers />
   </component>
