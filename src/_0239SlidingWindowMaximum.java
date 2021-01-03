@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 
+// todo: other solutions
 public class _0239SlidingWindowMaximum {
     /**
      * 2. Deque <Monotonic Queue>
