@@ -121,7 +121,10 @@ public class _0145BinaryTreePostorderTraversal {
 
             if (cur.right == null || pre == cur.right) {
                 stack.pop();
+
+                // Do you work
                 ans.add(cur.val);
+
                 pre = cur;
                 // 此处为了跳过下一次循环的访问左子节点的过程，直接进入栈的弹出阶段，
                 // 因为但凡在栈中的节点，它们的左子节点都肯定被经过且已放入栈中
