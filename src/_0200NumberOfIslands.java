@@ -1,5 +1,3 @@
-package BFS;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -18,7 +16,7 @@ class Map {
     final static char WATER = '0';
 }
 
-public class _200NumberOfIslands {
+public class _0200NumberOfIslands {
 
     /**
      * BFS
