@@ -26,15 +26,12 @@ public class _0253MeetingRoomsII {
      * O(n) for the remove(Object) and contains(Object) methods
      * O(1) for the retrieval methods (peek, element, and size)
      *
-     * Time complexity: O(NlogN)
+     * Time: O(NlogN)
      * sorting: O(NlogN)
      *
-     * Space commplexity: O(N)
-     *
+     * Space: O(N)
      */
-
     public int minMeetingRooms(int[][] intervals) {
-
         // Check for the base case. If there are no intervals, return 0
         if (intervals.length == 0) {
             return 0;
@@ -64,7 +61,6 @@ public class _0253MeetingRoomsII {
 
         // Iterate over remaining intervals
         for (int i = 1; i < intervals.length; i++) {
-
             // If the room due to free up the earliest is free, assign that room to this meeting.
             if (intervals[i][0] >= allocator.peek()) {
                 allocator.poll();
@@ -112,11 +108,11 @@ public class _0253MeetingRoomsII {
 
         while (startPointer < intervals.length) {
             if (start[startPointer] >= end[endPointer]) {
-                rooms--;
                 endPointer++;
+            } else {
+                rooms++;
             }
 
-            rooms++;
             startPointer++;
         }
 
@@ -146,25 +142,26 @@ public class _0253MeetingRoomsII {
      * Keep in mind treemap insertion is log(n) time for each element (nlogn to populate with n items)
      *
      * 九章算法的扫描线算法差不多，只不过用的是List(unordered)，所以需要Collections.sort来排序
-     *
      * ----
-     *
      * My understanding: this method is a bit like Valid Parentheses:
      * we need to pair an open time of meeting with exactly a close time of meeting followed by it.
      * So example 1(start), 2(start),10(end),12(end), 14(start),15(end) -
      * > open, open, close, close, open, close.
      * We can easily see there are two consecutive open, we need 2 meeting rooms.
-     *
      * ____
-     *
      * Related: 56, 57, 252, 253, 729, 731, 732
+     *
+     * ][  2.9 3
+     * )[  -1, +1
+     * ](  -1, +1
+     * )(  -1, -1
      *
      * Time complexity:
      * @param intervals
      * @return
      */
     public int minMeetingRooms3(int[][] intervals) {
-        Map<Integer, Integer> changes = new TreeMap<>();
+        TreeMap<Integer, Integer> changes = new TreeMap<>();
         for (int[] i : intervals) {
             changes.put(i[0], changes.getOrDefault(i[0], 0) + 1);
             changes.put(i[1], changes.getOrDefault(i[1], 0) - 1);
