@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0572SubtreeOfAnotherTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0640SolveTheEquation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0780ReachingPoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0945MinimumIncrementToMakeArrayUnique.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0253MeetingRoomsII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0253MeetingRoomsII.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +226,7 @@
       <workItem from="1609132726453" duration="1777000" />
       <workItem from="1609184748716" duration="2623000" />
       <workItem from="1609271765888" duration="1768000" />
-      <workItem from="1609570139608" duration="29989000" />
+      <workItem from="1609570139608" duration="35195000" />
     </task>
     <servers />
   </component>
@@ -264,7 +263,6 @@
     <state x="656" y="133" key="#Project_Structure" timestamp="1606071906484">
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
-    <state x="896" y="134" key="#Project_Structure/0.23.1920.1057@0.23.1920.1057" timestamp="1598461042921" />
     <state x="656" y="133" key="#Project_Structure/0.25.1680.1025/-89.-1055.1920.1055@0.25.1680.1025" timestamp="1606071906484" />
     <state x="1005" y="294" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602103744043">
       <screen x="0" y="23" width="1920" height="1057" />
@@ -274,10 +272,11 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="219" y="211" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1602103965499" />
-    <state x="550" y="196" key="new project wizard" timestamp="1601420243324">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="550" y="198" key="new project wizard" timestamp="1611269163867">
+      <screen x="0" y="25" width="1920" height="1055" />
     </state>
     <state x="550" y="196" key="new project wizard/0.23.1920.1057@0.23.1920.1057" timestamp="1601420243324" />
+    <state x="550" y="198" key="new project wizard/0.25.1920.1055@0.25.1920.1055" timestamp="1611269163867" />
     <state x="1034" y="-820" width="670" height="675" key="search.everywhere.popup" timestamp="1606947978849">
       <screen x="-134" y="-1055" width="1920" height="1055" />
     </state>
