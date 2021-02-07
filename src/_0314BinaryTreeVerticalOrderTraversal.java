@@ -63,4 +63,14 @@ public class _0314BinaryTreeVerticalOrderTraversal {
             }
         }
     }
+
+    /**
+     * 2. DFS
+     *
+     * w: width of binary tree
+     * h: height of tree
+     * Time: O(w * hlogh)
+     *
+     * completely skewed: O(n)
+     */
 }
