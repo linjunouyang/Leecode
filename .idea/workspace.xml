@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0169MajorityElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0229MajorityElementII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0581ShortestUnsortedContinuousSubarray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0844BackspaceStringCompare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +236,7 @@
       <workItem from="1612325749137" duration="8000" />
       <workItem from="1612377538135" duration="11181000" />
       <workItem from="1612553177466" duration="1925000" />
-      <workItem from="1612671392770" duration="17635000" />
+      <workItem from="1612671392770" duration="23641000" />
     </task>
     <servers />
   </component>
