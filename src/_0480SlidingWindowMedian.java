@@ -14,7 +14,9 @@ public class _0480SlidingWindowMedian {
      */
 
     /**
-     * 1. Max Heap + Min Heap
+     * 2. Max Heap + Min Heap
+     *
+     * Avoid integer overflow by converting to long
      *
      * Time: O(n k)
      * Space: O(k)
@@ -64,6 +66,9 @@ public class _0480SlidingWindowMedian {
      * TreeSet: store index, and define custom comparator
      * https://leetcode.com/problems/sliding-window-median/discuss/96346/Java-using-two-Tree-Sets-O(n-logk)
      *
+     * Avoid Integer overflow during comparison using Integer.compare
+     *
+     *
      * Time: O(n logk)
      * Space: O(k)
      */
@@ -96,6 +101,7 @@ public class _0480SlidingWindowMedian {
             if (i >= k - 1) {
                 int start = i - k + 1;
                 if (k % 2 == 0) {
+                    // Notice we store INDEX in TreeSet, but using ARRAY NUM to calculate median
                     medians[start] = ((long) nums[smaller.last()] + nums[bigger.first()]) / 2.0;
                 } else {
                     medians[start] = nums[smaller.last()];

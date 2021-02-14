@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0480SlidingWindowMedian.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0286WallsAndGates.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0480SlidingWindowMedian.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0480SlidingWindowMedian.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +235,7 @@
       <workItem from="1612325749137" duration="8000" />
       <workItem from="1612377538135" duration="11181000" />
       <workItem from="1612553177466" duration="1925000" />
-      <workItem from="1612671392770" duration="29593000" />
+      <workItem from="1612671392770" duration="32716000" />
     </task>
     <servers />
   </component>
@@ -272,23 +273,17 @@
       <screen x="0" y="25" width="1680" height="1025" />
     </state>
     <state x="656" y="133" key="#Project_Structure/0.25.1680.1025/-89.-1055.1920.1055@0.25.1680.1025" timestamp="1606071906484" />
-    <state x="1005" y="294" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602103744043">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="566" y="-757" key="#com.intellij.ide.util.MemberChooser" timestamp="1613259704546">
+      <screen x="-134" y="-1055" width="1920" height="1055" />
     </state>
-    <state x="1005" y="294" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1602103744043" />
-    <state x="219" y="211" key="SettingsEditor" timestamp="1602103965499">
-      <screen x="0" y="23" width="1920" height="1057" />
-    </state>
-    <state x="219" y="211" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1602103965499" />
+    <state x="566" y="-757" key="#com.intellij.ide.util.MemberChooser/0.25.1680.1025/-134.-1055.1920.1055@-134.-1055.1920.1055" timestamp="1613259704546" />
     <state x="550" y="198" key="new project wizard" timestamp="1611269163867">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
-    <state x="550" y="196" key="new project wizard/0.23.1920.1057@0.23.1920.1057" timestamp="1601420243324" />
     <state x="550" y="198" key="new project wizard/0.25.1920.1055@0.25.1920.1055" timestamp="1611269163867" />
     <state x="1034" y="-820" width="670" height="675" key="search.everywhere.popup" timestamp="1606947978849">
       <screen x="-134" y="-1055" width="1920" height="1055" />
     </state>
-    <state x="1168" y="258" width="670" height="676" key="search.everywhere.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1603489316140" />
     <state x="1034" y="-820" width="670" height="675" key="search.everywhere.popup/0.25.1680.1025/-134.-1055.1920.1055@-134.-1055.1920.1055" timestamp="1606947978849" />
   </component>
   <component name="XDebuggerManager">
