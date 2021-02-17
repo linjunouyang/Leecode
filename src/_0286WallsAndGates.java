@@ -17,8 +17,6 @@ public class _0286WallsAndGates {
      * Start BFS from ALL gates at the same time
      * distance update from Integer.MAX_VALUE to other values act as marking visited
      *
-     *
-     *
      * Time complexity : O(mn)O(mn).
      *
      * If you are having difficulty to derive the time complexity, start simple.

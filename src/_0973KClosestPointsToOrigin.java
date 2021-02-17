@@ -46,9 +46,6 @@ public class _0973KClosestPointsToOrigin {
      * Time complexity: nlogK
      * Space complexity: O(K)
      *
-     * Runtime: 25 ms, faster than 61.60% of Java online submissions for K Closest Points to Origin.
-     * Memory Usage: 59.8 MB, less than 72.67% of Java online submissions for K Closest Points to Origin.
-     *
      * @param points
      * @param K
      * @return
@@ -92,32 +89,77 @@ public class _0973KClosestPointsToOrigin {
      *
      * Space complexity:
      * O(1)
-     *
-     *
-     * @param points
-     * @param K
-     * @return
      */
     public int[][] kClosest2(int[][] points, int K) {
-        int len = points.length;
-        int l = 0;
-        int r = len - 1;
+        int left = 0;
+        int right = points.length - 1;
 
-        while (l <= r) {
-            int mid = helper(points, l, r);
-
-            if (mid == K-1) {
+        while (left < right) {
+            int pivotIdx = partition(points, left, right);
+            if (pivotIdx == K - 1) {
                 break;
-            }
-
-            if (mid < K-1) {
-                l = mid + 1;
+            } else if (pivotIdx > K - 1) {
+                right = pivotIdx - 1;
             } else {
-                r = mid - 1;
+                left = pivotIdx + 1;
             }
         }
 
-        return Arrays.copyOfRange(points, 0, K);
+        int[][] res = new int[K][2];
+        for (int i = 0; i < K; i++) {
+            res[i] = points[i];
+        }
+        return res;
+    }
+
+    // lomuto scheme
+    private int partition(int[][] points, int left, int right) {
+        // Random version
+//        int pivot = left + (int)(Math.random() * (right - left + 1));
+//        swap(points, pivot, right);
+
+        int smallerEnd = left; // not 0
+        for (int i = left; i < right; i++) {
+            if (closer(points[i], points[right])) {
+                swap(points, i, smallerEnd);
+                smallerEnd++;
+            }
+        }
+        swap(points, right, smallerEnd);
+
+        return smallerEnd;
+    }
+
+    private int partition2(int[][] points, int left, int right) {
+        int pivot = left;
+        while (left <= right) {
+            while (left <= right && closer(points[left], points[pivot])) {
+                left++;
+            }
+
+            while (left <= right && closer(points[pivot], points[right])) {
+                right--;
+            }
+
+            if (left <= right) {
+                swap(points, left, right);
+            }
+        }
+
+        // left <= right guarantees 1 not bigger element + ALL bigger element
+        // and right current points to the [1 not bigger element
+        swap(points, pivot, right); // don't forget about this
+        return right;
+    }
+
+    private void swap(int[][] points, int i, int j) {
+        int[] temp = points[i];
+        points[i] = points[j];
+        points[j] = temp;
+    }
+
+    private boolean closer(int[] p1, int[] p2) {
+        return p1[0] * p1[0] + p1[1] * p1[1] <= p2[0] * p2[0] + p2[1] * p2[1];
     }
 
     /**

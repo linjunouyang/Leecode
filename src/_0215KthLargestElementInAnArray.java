@@ -46,18 +46,14 @@ public class _0215KthLargestElementInAnArray {
      */
     public int findKthLargest2(int[] nums, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-
         for (int num : nums) {
             pq.offer(num);
-
             if (pq.size() > k) {
                 pq.poll();
             }
         }
-
         return pq.peek();
     }
-
 
     /**
      * 3. Quick select
@@ -183,5 +179,60 @@ public class _0215KthLargestElementInAnArray {
         int tmp = nums[i];
         nums[i] = nums[j];
         nums[j] = tmp;
+    }
+
+    /**
+     * 3.1 Quick select without Random
+     */
+    public int findKthLargest31(int[] nums, int k) {
+        k = nums.length - k;
+        int lo = 0;
+        int hi = nums.length - 1;
+        while (lo < hi) {
+            int pivotIdx = partition31(nums, lo, hi);
+            if (pivotIdx < k) {
+                lo = pivotIdx + 1;
+            } else if (pivotIdx > k) {
+                hi = pivotIdx - 1;
+            } else {
+                break;
+            }
+        }
+        return nums[k];
+    }
+
+    private int partition31(int[] nums, int start, int end) {
+//        int pivot = start + (int)(Math.random() * (end - start + 1));
+//        swap(nums, end, pivot);
+//        pivot = end;
+//
+//        int smallerEnd = start;
+//        for (int i = smallerEnd; i < end; i++) {
+//            if (nums[i] <= nums[pivot]) { // = needed to for equal array
+//                swap(nums, smallerEnd, i);
+//                smallerEnd++;
+//            }
+//        }
+//        swap(nums, smallerEnd, end);
+//        return smallerEnd;
+
+        // If no random, then int pivot = start;
+        int pivot = start + (int)(Math.random() * (end - start + 1));
+        swap(nums, start, pivot);
+        pivot = start;
+
+        while (start <= end) {
+            while (start <= end && nums[start] <= nums[pivot]) {
+                start++;
+            }
+            while (start <= end && nums[end] >= nums[pivot]) {
+                end--;
+            }
+            if (start <= end){
+                swap(nums, start, end);
+            }
+        }
+        swap(nums, end, pivot);
+        return end;
     }
 }

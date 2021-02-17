@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Map;
 
 /**
  * Notice:
@@ -45,7 +46,7 @@ public class _0347TopKFrequentElements {
         }
 
         // num -> occurence
-        Map<Integer, Integer> numCount = new HashMap<>();
+        HashMap<Integer, Integer> numCount = new HashMap<>();
         for (int num : nums) {
             int val = numCount.getOrDefault(num, 0);
             numCount.put(num, val + 1);
@@ -116,7 +117,7 @@ public class _0347TopKFrequentElements {
      * Space complexity: O(n)
      */
     int[] unique;
-    Map<Integer, Integer> count;
+    HashMap<Integer, Integer> count;
 
     public int[] topKFrequent2(int[] nums, int k) {
         // build hash map : character and how often it appears O(n)
@@ -221,12 +222,13 @@ public class _0347TopKFrequentElements {
      */
     public int[] topKFrequent3(int[] nums, int k) {
         // num -> frequency
-        Map<Integer, Integer> frequencyMap = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> frequencyMap = new HashMap<Integer, Integer>();
         for (int n : nums) {
             frequencyMap.put(n, frequencyMap.getOrDefault(n, 0) + 1);
         }
 
         // corner case: if there is only one number in nums, we need the bucket has index 1.
+        // frequency -> list of numbers that have same frequency
         List<Integer>[] bucket = new List[nums.length + 1];
         for (int key : frequencyMap.keySet()) {
             int frequency = frequencyMap.get(key);
@@ -239,7 +241,7 @@ public class _0347TopKFrequentElements {
         int[] res = new int[k];
         int i = k - 1;
 
-        for (int pos = bucket.length - 1; i >= 0 && pos >= 0; pos--) {
+        for (int pos = bucket.length - 1; i >= 0; pos--) {
             if (bucket[pos] != null) {
                 List<Integer> list = bucket[pos];
                 int j = list.size() - 1;
@@ -252,5 +254,83 @@ public class _0347TopKFrequentElements {
         }
 
         return res;
+    }
+
+    /**
+     * 4. Quick select (new version)
+     */
+    public int[] topKFrequent4(int[] nums, int k) {
+        HashMap<Integer, Integer> numToCount = new HashMap<>();
+        for (int num : nums) {
+            int oldCount = numToCount.getOrDefault(num, 0);
+            numToCount.put(num, oldCount + 1);
+        }
+
+        int[] unique = new int[numToCount.size()];
+        int i = 0;
+        for (int num : numToCount.keySet()) {
+            unique[i] = num;
+            i++;
+        }
+
+        int left = 0;
+        int right = unique.length - 1;
+        while (left <= right) {
+            int pivotIdx = partition(unique, numToCount, left, right);
+            if (pivotIdx == unique.length - k) {
+                break;
+            } else if (pivotIdx < unique.length - k) {
+                left = pivotIdx + 1;
+            } else {
+                right = pivotIdx - 1;
+            }
+        }
+
+        int[] res = new int[k];
+        for (i = 0; i < k; i++) {
+            res[i] = unique[unique.length - 1 - i];
+        }
+
+        return res;
+    }
+
+    private int partition(int[] nums, HashMap<Integer, Integer> numToCount, int left, int right) {
+        // right as pivot
+        int lessFrequentEnd = left;
+        for (int i = left; i < right; i++) {
+            if (numToCount.get(nums[i]) < numToCount.get(nums[right])) {
+                swap(nums, i, lessFrequentEnd);
+                lessFrequentEnd++;
+            }
+        }
+        swap(nums, lessFrequentEnd, right);
+        return lessFrequentEnd;
+    }
+
+    private int partition2(int[] nums, HashMap<Integer, Integer> numToCount, int left, int right) {
+        // left as pivot
+        int pivot = left;
+        while (left <= right) {
+            while (left <= right && numToCount.get(nums[left]) <= numToCount.get(nums[pivot])) {
+                left++;
+            }
+
+            while (left <= right && numToCount.get(nums[right]) >= numToCount.get(nums[pivot])) {
+                right--;
+            }
+
+            if (left <= right) {
+                swap(nums, left, right);
+            }
+        }
+
+        swap(nums, pivot, right);
+        return right;
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
 }
