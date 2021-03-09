@@ -4,8 +4,8 @@ public class _0437PathSumIII {
     /**
      * 1. Backtracking
      *
-     * Time:
-     * Space:
+     * Time: T(n) = 4T(n/2) + O(1) -> n^2
+     * Space: O(h) (could -> O(n))
      */
     public int pathSum(TreeNode root, int sum) {
         return backtrack(root, sum, 0, false);
@@ -31,7 +31,7 @@ public class _0437PathSumIII {
     }
 
     /**
-     * 2. Prefix Sum, DFS, backtracking
+     * 2. Prefix Sum, DFS (pre-order), backtracking
      *
      * how you can keep track of a sequence of sums in a 1D hash table, when a tree can have multiple branches,
      * how do you keep track of duplicate sums on different branches of the tree?
@@ -52,7 +52,7 @@ public class _0437PathSumIII {
     }
 
     /**
-     * find all paths ended with current node, whose sum equal to target.
+     * find all paths (whose sum = target) ended in current subtree
      */
     public int helper(TreeNode root, int currSum, int target, HashMap<Integer, Integer> preSum) {
         if (root == null) {
@@ -62,8 +62,8 @@ public class _0437PathSumIII {
         currSum += root.val;
 
         /**
-         * [1], 0
-         * correct: currSum = 1, res = 0
+         * tree = [1], target = 0 -> currSum = 1
+         * correct: res = 0, preSum.put(1, 1)
          * wrong: preSum.put(1, 1), res = 1
          */
         int res = preSum.getOrDefault(currSum - target, 0);

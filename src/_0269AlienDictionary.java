@@ -45,8 +45,8 @@ public class _0269AlienDictionary {
      */
     public String alienOrder(String[] words) {
         // Step 0: Create data structures and find all unique letters.
-        Map<Character, List<Character>> adjList = new HashMap<>();
-        Map<Character, Integer> counts = new HashMap<>();
+        HashMap<Character, List<Character>> adjList = new HashMap<>();
+        HashMap<Character, Integer> counts = new HashMap<>();
         for (String word : words) {
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
@@ -126,7 +126,7 @@ public class _0269AlienDictionary {
      */
     public String alienOrder2(String[] words) {
         // Step 0: Put all unique letters into reverseAdjList as keys.
-        Map<Character, List<Character>> reverseAdjList = new HashMap<>();
+        HashMap<Character, List<Character>> reverseAdjList = new HashMap<>();
         for (String word : words) {
             for (char c : word.toCharArray()) {
                 reverseAdjList.putIfAbsent(c, new ArrayList<>());
@@ -150,7 +150,7 @@ public class _0269AlienDictionary {
             }
         }
 
-        Map<Character, Boolean> seen = new HashMap<>();
+        HashMap<Character, Boolean> seen = new HashMap<>();
         StringBuilder output = new StringBuilder();
         // Step 2: DFS to build up the output list.
         for (Character c : reverseAdjList.keySet()) {
@@ -167,7 +167,7 @@ public class _0269AlienDictionary {
     }
 
     // Return true iff no cycles detected.
-    private boolean dfs(Map<Character, List<Character>> reverseAdjList, Character c, Map<Character, Boolean> seen, StringBuilder output) {
+    private boolean dfs(HashMap<Character, List<Character>> reverseAdjList, Character c, HashMap<Character, Boolean> seen, StringBuilder output) {
         if (seen.containsKey(c)) {
             return seen.get(c); // If this node was grey (false), a cycle was detected.
         }

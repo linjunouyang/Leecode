@@ -5,15 +5,10 @@
  */
 public class _0344ReverseString {
     /**
-     * 1. Two Pointers
+     * 1. Iterative two pointers
      *
      * Time complexity: O(n)
      * Space complexity: O(1)
-     *
-     * Runtime: 1 ms, faster than 100.00% of Java online submissions for Reverse String.
-     * Memory Usage: 52.5 MB, less than 5.33% of Java online submissions for Reverse String.
-     *
-     * @param s
      */
     public void reverseString(char[] s) {
         if (s == null) {
@@ -34,4 +29,11 @@ public class _0344ReverseString {
             right--;
         }
     }
+
+    /**
+     * 2. Recursive two pointers
+     *
+     * Time: O(n)
+     * Space: O(n)
+     */
 }

@@ -1,11 +1,14 @@
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-
+// 1 <= n <= 8
 public class _0095UniqueBinarySearchTreesII {
     /**
      * 1. Recursion (pre-order)
+     *
+     * duplicate re-computation for cases like
+     *      y                         x
+     *    x                              y
+     *     ! (x < i < y)               ! (x < i < y)
      *
      * I was stuck at recursion definition (what to return, how to keep track of root)
      *
@@ -15,43 +18,83 @@ public class _0095UniqueBinarySearchTreesII {
      *
      * Space complexity: Gn trees, n elements each -> O(4^n / n^0.5)
      *
-     * Binomial coefficients: the coefficient of X^k term in the polynomial expansion of the binomial power (1+x)^n
-     * https://en.wikipedia.org/wiki/Binomial_coefficient
+     * Binomial coefficients: https://en.wikipedia.org/wiki/Binomial_coefficient
+     * the coefficient of X^k term in the polynomial expansion of the binomial power (1+x)^n
      * (n) = (n!) / (k!(n-k)!)
      * (k)
-     *
      */
-    public ArrayList<TreeNode> generateTrees(int n) {
-        return generate(1, n);
+    public List<TreeNode> generateTrees(int n) {
+        List<TreeNode> trees = generateTreeHelper(1, n);
+        return trees;
     }
 
-    private ArrayList<TreeNode> generate(int start, int end){
-        ArrayList<TreeNode> rst = new ArrayList<TreeNode>();
+    // generate trees using all values in [min, max], return the list of roots
+    private List<TreeNode> generateTreeHelper(int min, int max) {
+        List<TreeNode> roots = new ArrayList<>();
 
-        if(start > end){
-            rst.add(null);
-            return rst;
+        if (min > max) {
+            roots.add(null);
+            return roots;
         }
 
-        for(int i=start; i<=end; i++){
-            ArrayList<TreeNode> left = generate(start, i-1);
-            ArrayList<TreeNode> right = generate(i+1, end);
-            for(TreeNode l: left){
-                for(TreeNode r: right){
-                    // should new a root here because it need to
-                    // be different for each tree
-                    TreeNode root = new TreeNode(i);
-                    root.left = l;
-                    root.right = r;
-                    rst.add(root);
+        for (int rootVal = min; rootVal <= max; rootVal++) {
+            // we can't initialize root here because it need to
+            // be different for each tree
+            List<TreeNode> leftRoots = generateTreeHelper(min, rootVal - 1);
+            List<TreeNode> rightRoots = generateTreeHelper(rootVal + 1, max);
+            for (TreeNode leftRoot : leftRoots) {
+                for (TreeNode rightRoot : rightRoots) {
+                    TreeNode root = new TreeNode(rootVal);
+                    root.left = leftRoot;
+                    root.right = rightRoot;
+                    roots.add(root);
                 }
             }
         }
-        return rst;
+
+        return roots;
+    }
+
+    // using memoization and deep copy
+    private List<TreeNode> generateTreeHelper11(int min, int max, HashMap<String, List<TreeNode>> rangeToTrees) {
+        List<TreeNode> roots = new ArrayList<>();
+
+        if (min > max) {
+            roots.add(null);
+            return roots;
+        }
+
+        String range = min + "," + max;
+        if (rangeToTrees.containsKey(range)) {
+            return rangeToTrees.get(range);
+        }
+
+        for (int rootVal = min; rootVal <= max; rootVal++) {
+            // we can't initialize root here because it need to
+            // be different for each tree
+            List<TreeNode> leftRoots = generateTreeHelper11(min, rootVal - 1, rangeToTrees);
+            List<TreeNode> rightRoots = generateTreeHelper11(rootVal + 1, max, rangeToTrees);
+            for (TreeNode leftRoot : leftRoots) {
+                for (TreeNode rightRoot : rightRoots) {
+                    TreeNode root = new TreeNode(rootVal);
+                    root.left = clone(leftRoot);
+                    root.right = clone(rightRoot);
+                    roots.add(root);
+                }
+            }
+        }
+
+        rangeToTrees.put(range, roots);
+        return roots;
     }
 
     /**
      * 2. Dynamic Programming (bottom-up)
+     *
+     * we could turn 1) into iterative DP
+     * i > j: null (getOrDefault a empty list, add null to it)
+     * i = j: i (special processing before iteration)
+     * dp[i, j] = sum of (dp[i, x-1] combined with dp[x+1, j])  (i <= x <= j)
      *
      * Observation:
      * for same length ranges, all the possible structures are the same
@@ -61,7 +104,6 @@ public class _0095UniqueBinarySearchTreesII {
      *
      * Time complexity:
      * Space complexity:
-     *
      */
     public List<TreeNode> generateTrees2(int n) {
         ArrayList<TreeNode>[] dp = new ArrayList[n + 1];
@@ -70,7 +112,6 @@ public class _0095UniqueBinarySearchTreesII {
             return dp[0];
         }
         dp[0].add(null);
-        //长度为 1 到 n
         for (int len = 1; len <= n; len++) {
             dp[len] = new ArrayList<TreeNode>();
             //将不同的数字作为根节点，只需要考虑到 len
@@ -81,7 +122,6 @@ public class _0095UniqueBinarySearchTreesII {
                     for (TreeNode rightTree : dp[right]) {
                         TreeNode treeRoot = new TreeNode(root);
                         treeRoot.left = leftTree;
-                        //克隆右子树并且加上偏差
                         treeRoot.right = clone(rightTree, root);
                         dp[len].add(treeRoot);
                     }
@@ -104,7 +144,7 @@ public class _0095UniqueBinarySearchTreesII {
     /**
      * 3. Dynamic Programming (bottom up)
      *
-     * Think about insertion.
+     * Think about inserting i into all the trees of range [i + 1, n]
      * Where to insert
      * 1) as root
      * 2) as right child all the way down
@@ -132,17 +172,17 @@ public class _0095UniqueBinarySearchTreesII {
                 root.right = node;
                 next.add(root);
 
-                /* Other Cases: put n on root.left, root.left.left, root.left....left,
-                 * the root of the new tree is still @node,
-                 * i put on insertParent.left,
-                 * and the original left tree of the insertParent is set as the right subtree of the new node since i is small than values in the subtree.
+                /* Other Cases: put n on root.left, root.left.left, root.left....left (xNode.left)
+                 * the root of the new tree is still xNode
+                 * xNode.left becomes i's right subtree
+                 * i becomes xNode.left
                  */
                 TreeNode insertParent = node;
                 while (insertParent != null) {
                     /* Step 1: generate a new tree from the @node tree */
                     TreeNode cRoot = new TreeNode(node.val);
                     //clone left subtree since we need to change it by inserting i
-                    cRoot.left = treeCopy(node.left);
+                    cRoot.left = clone(node.left);
                     // reusing the right tree since it is fixed
                     cRoot.right = node.right;
 
@@ -170,30 +210,35 @@ public class _0095UniqueBinarySearchTreesII {
     }
 
 
-    private TreeNode treeCopy(TreeNode root) {
+    private TreeNode clone(TreeNode root) {
         if (root == null) {
-            return root;
+            return null;
         }
 
-        TreeNode newRoot = new TreeNode(root.val);
-        ArrayDeque<TreeNode[]> stack = new ArrayDeque<>();
-        stack.push(new TreeNode[]{root, newRoot});
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        TreeNode cloneRoot = new TreeNode(root.val);
+        queue.offer(root);
+        queue.offer(cloneRoot);
 
-        while (!stack.isEmpty()) {
-            TreeNode[] pair = stack.pop();
-            pair[1].val = pair[0].val;
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            TreeNode cloneNode = queue.poll();
 
-            if (pair[0].right != null) {
-                pair[1].right = new TreeNode(0);
-                stack.push(new TreeNode[]{pair[0].right, pair[1].right});
+            if (node.left != null) {
+                TreeNode cloneLeft = new TreeNode(node.left.val);
+                cloneNode.left = cloneLeft;
+                queue.offer(node.left);
+                queue.offer(cloneLeft);
             }
 
-            if (pair[0].left != null) {
-                pair[1].left = new TreeNode(0);
-                stack.push(new TreeNode[]{pair[0].left, pair[1].left});
+            if (node.right != null) {
+                TreeNode cloneRight = new TreeNode(node.right.val);
+                cloneNode.right = cloneRight;
+                queue.offer(node.right);
+                queue.offer(cloneRight);
             }
         }
 
-        return newRoot;
+        return cloneRoot;
     }
 }

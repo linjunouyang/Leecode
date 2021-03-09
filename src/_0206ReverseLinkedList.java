@@ -55,9 +55,13 @@ public class _0206ReverseLinkedList {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode p = reverseList(head.next);
-        head.next.next = head;
+        ListNode reversedHead = reverseList(head.next);
+        // head.next actually becomes reversedTail
+        ListNode reversedTail = head.next;
+        // (in sub-problems, we didn't change the cur head's next pointer)
+        // this will make 'head'  as the new reversedTail
+        reversedTail.next = head;
         head.next = null;
-        return p;
+        return reversedHead;
     }
 }

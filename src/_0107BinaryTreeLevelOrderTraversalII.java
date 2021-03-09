@@ -3,16 +3,14 @@ import java.util.*;
 public class _0107BinaryTreeLevelOrderTraversalII {
 
     /**
-     * 1. Queue, Level Order Traversal, BFS
-     *
-     * Time complexity: O(n)
-     * Space complexity: O(n)
+     * 1. BFS Iteration
      *
      * Note: the returned object is of interface List, which doesn't support addFirst
      * but list interface has another method:
-     * add(int index, E element)
-     * Inserts the specified element at the specified position in this list
+     * add(int index, E element): Inserts the specified element at the specified position
      *
+     * Time: O(n)
+     * Space: O(n)
      */
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         // You can declare it as LinkedList
@@ -52,10 +50,8 @@ public class _0107BinaryTreeLevelOrderTraversalII {
     /**
      * 2 DFS, Recursion
      *
-     * Time complexity:
-     * O(n)
-     *
-     * Space complexity:
+     * Time: O(n)
+     * Space:
      * O(lgn) for balanced trees
      * O(n) for unbalanced trees
      */

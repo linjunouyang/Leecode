@@ -1,28 +1,10 @@
 import java.util.*;
 
 public class _0104MaximumDepthOfBinaryTree {
-    /*
-    1. Recursion, DFS.
-
-    Time complexity: O(N)
-    Space complexity:
-    Completely unbalanced tree (left-skewed): the recursion call would occur N times,
-    the call stack storage would be O(N).
-    Completely balanced tree: O(logN)
-
-    * reduce recursive calls to null root nodes
-    public int maxDepth(TreeNode root) {
-       if (root == null) {
-          return 0;
-       }
-       return depth(root);
-    }
-
-    private int depth(TreeNode root) {
-        int left = root.left == null ? 0 : depth(root.left);
-        int right = root.right == null ? 0 : depth(root.right);
-        return 1 + Math.max(left, right);
-    }
+    /**
+     * 1. Recursive DFS
+     *
+     * Time: O(n). Space: O(h)
      */
     public int maxDepth(TreeNode root) {
         if (root == null) {
@@ -33,6 +15,22 @@ public class _0104MaximumDepthOfBinaryTree {
             return Math.max(left_height, right_height) + 1;
         }
     }
+
+    public int maxDepth11(TreeNode root) {
+        return depthHelper(root, 1);
+    }
+
+    private int depthHelper(TreeNode root, int curDepth) {
+        if (root == null) {
+            return curDepth - 1;
+        }
+
+        int leftDepth = depthHelper(root.left, curDepth + 1);
+        int rightDepth = depthHelper(root.right, curDepth + 1);
+        return Math.max(leftDepth, rightDepth);
+    }
+
+
 
     /*
     2. Iteration, DFS.
@@ -86,11 +84,8 @@ public class _0104MaximumDepthOfBinaryTree {
     /*
     3. Iteration, BFS
 
-    Time complexity: O(N), N: number of nodes
-    Space complexity:
-    Balanced tree: O(N), N: number of nodes
-    Skewed tree: O(1)
-
+    Time complexity: O(n)
+    Space complexity: O(n)
     -------
     Collection interface -> Queue interface
     Implementation: ArrayDeque, LinkedList, PriorityQueue
@@ -102,15 +97,13 @@ public class _0104MaximumDepthOfBinaryTree {
     although some implementations, such as LinkedList, do not prohibit insertion of null.
     Even in the implementations that permit it, null should not be inserted into a Queue,
     null : a special return value by the poll to indicate that the queue contains no elements.
-
-
      */
     public int maxDepth3(TreeNode root) {
         if (root == null) {
             return 0;
         }
 
-        Queue<TreeNode> queue = new LinkedList<>();
+        Deque<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
 
         int count = 0;

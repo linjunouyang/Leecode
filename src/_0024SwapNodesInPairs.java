@@ -1,6 +1,6 @@
 public class _0024SwapNodesInPairs {
     /**
-     * 1. Iteration
+     * 1. Dummy Node + Iteration
      *
      * Time: O(n)
      * Space: O(1)
@@ -38,13 +38,11 @@ public class _0024SwapNodesInPairs {
             return head;
         }
 
-        ListNode first = head;
+        ListNode restHead = swapPairs(head.next.next);
+
         ListNode second = head.next;
-        ListNode after = second.next;
-
-        first.next = swapPairs(after);
-        second.next = first;
-
+        second.next = head;
+        head.next = restHead;
         return second;
     }
 }

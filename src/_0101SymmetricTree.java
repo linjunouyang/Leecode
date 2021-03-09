@@ -1,17 +1,13 @@
-package Tree;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class _101SymmetricTree {
+public class _0101SymmetricTree {
     /**
      * 1. Recursion
      *
-     *
      * Time complexity: O(n)
-     * Runtime: 1 ms, faster than 40.13% of Java online submissions for Symmetric Tree.
      *
      * Space complexity:
      * O(lgn) for balanced trees
@@ -24,11 +20,6 @@ public class _101SymmetricTree {
      *           3     3
      *          /       \
      *         4        4
-     *
-     * Memory Usage: 38.6 MB, less than 74.16% of Java online submissions for Symmetric Tree.
-     *
-     * @param root
-     * @return
      */
     public boolean isSymmetric(TreeNode root) {
         if (root == null) {
@@ -53,14 +44,13 @@ public class _101SymmetricTree {
     /**
      * 2. Iteration
      *
-     * Time complexity: O(n)
+     * Time: O(n)
      *
-     * Space complexity: O(lgn)
+     * Space: O(lgn)
      *
      * ArrayDeque cannot hold null, while stack can hold null
      * stack version
      * https://leetcode.com/problems/symmetric-tree/discuss/33054/Recursive-and-non-recursive-solutions-in-Java
-     *
      */
     public boolean isSymmetric2(TreeNode root) {
         if (root == null) {
@@ -124,9 +114,7 @@ public class _101SymmetricTree {
             q.add(right.right);
             q.add(left.right);
             q.add(right.left);
-
         }
         return true;
-
     }
 }

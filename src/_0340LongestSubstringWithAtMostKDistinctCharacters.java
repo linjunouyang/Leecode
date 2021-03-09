@@ -10,56 +10,10 @@ import java.util.Map;
  */
 public class _0340LongestSubstringWithAtMostKDistinctCharacters {
     /**
-     * 1. Sliding Window for ASCII
+     * 1. Sliding Window
      *
      * Time complexity: O(n)
      * Space complexity: O(1)
-     *
-     * Runtime: 4 ms, faster than 75.89% of Java online submissions for Longest Substring with At Most K Distinct Characters.
-     * Memory Usage: 42.7 MB, less than 6.38% of Java online submissions for Longest Substring with At Most K Distinct Characters.
-     *
-     *
-     * @param s
-     * @param k
-     * @return
-     */
-    public int lengthOfLongestSubstringKDistinct(String s, int k) {
-        int[] count = new int[256];
-
-        int left = 0;
-        int maxLength = 0;
-        int distinct = 0;
-
-        for (int right = 0; right < s.length(); right++) {
-            if (count[s.charAt(right)]++ == 0) {
-                distinct++;
-            }
-
-            while (left < s.length()  && distinct > k) {
-                count[s.charAt(left)]--;
-
-                if (count[s.charAt(left)] == 0) {
-                    distinct--;
-                }
-
-                left++;
-            }
-
-            maxLength = Math.max(maxLength, right - left + 1);
-        }
-
-        return maxLength;
-    }
-
-    /**
-     * 2. Sliding Window for Unicode
-     *
-     * Time complexity: O(n)
-     * Space complexity: O(1)
-     *
-     * @param s
-     * @param k
-     * @return
      */
     public int lengthOfLongestSubstringKDistinct2(String s, int k) {
         Map<Character, Integer> map = new HashMap<>();

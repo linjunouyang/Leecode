@@ -5,11 +5,15 @@ import java.util.*;
  *
  * A good visualization:
  * https://leetcode.com/problems/binary-tree-maximum-path-sum/discuss/603423/Python-Recursion-stack-thinking-process-diagram
- *
  */
 public class _0124BinaryTreeMaximumPathSum {
     /**
      * 1. Recursion, Post-order traversal
+     *
+     * It's like divide and conquer, in the combine phase
+     * instead of simply adding or subtracting, we use 0 as a threshold to filter results from sub-problems
+     * At each level, we calculate the max that we could find in this subarea and update global max if possible
+     * and we also need to inform parent: what's the biggest contribution I can give to you.
      *
      * How to avoid global variable?
      * 1) Make max int[1]
@@ -25,83 +29,82 @@ public class _0124BinaryTreeMaximumPathSum {
      * Time: O(n)
      * Space: O(n)
      */
-    int maxValue;
-
     public int maxPathSum(TreeNode root) {
-        maxValue = Integer.MIN_VALUE;
-        maxPathDown(root);
-        return maxValue;
+        int[] max = new int[]{Integer.MIN_VALUE}; // max might be negative
+        maxPathHelper(root, max);
+        return max[0];
     }
 
     /**
-     *  (1) computes the maximum path sum with the input node as the highest node, update maximum if necessary
-     *  (2) returns the maximum sum of the path that can be extended to input node's parent
-     *
-     *  Notice that the returned is not the final result, but it will contribute to / affect final result
+     * (1) computes the maximum path sum with the input node as the highest node, update maximum if necessary
+     * (2) returns the maximum sum of the path that can be extended to input node's parent
      */
-    private int maxPathDown(TreeNode node) {
-        if (node == null) {
+    private int maxPathHelper(TreeNode root, int[] max) {
+        if (root == null) {
             return 0;
         }
-        int left = Math.max(0, maxPathDown(node.left));
-        int right = Math.max(0, maxPathDown(node.right));
-        /**
-         * 1) left + right + node
-         * 2) left + node
-         * 3) right + node
-         * 4) node
-         */
-        maxValue = Math.max(maxValue, left + right + node.val);
-        /**
-         * 1) left + node
-         * 2) right + node
-         * 3) node (left = right = 0)
-         */
-        return Math.max(left, right) + node.val;
+
+        // we only care about GAINS from subtrees
+        int left = Math.max(0, maxPathHelper(root.left, max));
+        int right = Math.max(0, maxPathHelper(root.right, max));
+
+        // compare max with max path sum within this subtree
+        max[0] = Math.max(max[0], left + root.val + right);
+
+        // Tell parent: what is the max contribution we can give
+        return root.val + Math.max(left, right);
     }
 
     /**
      * 2. Iteration
      *
+     * hashmap.get:
+     * More formally, if this map contains a mapping from a key k to a value v such that (key==null ? k==null : key.equals(k)),
+     * then this method returns v;
+     * otherwise it returns null. (There can be at most one such mapping.)
+     *
+     * A return value of null does not necessarily indicate that the map contains no mapping for the key;
+     * it's also possible that the map explicitly maps the key to null.
+     * The containsKey operation may be used to distinguish these two cases.
+     *
      * Time: O(n)
      * Space: O(n)
      */
     public int maxPathSum2(TreeNode root) {
-        /**
-         * Problem related variables, data structure
-         */
-        int result = Integer.MIN_VALUE;
-        Map<TreeNode, Integer> maxRootPath = new HashMap<>(); // node -> max path that's up-extendable
-        maxRootPath.put(null, 0);
+        if (root == null) {
+            return 0;
+        }
 
-        Deque<TreeNode> stack = new ArrayDeque<>(); // all the root we haven't visited
-        TreeNode cur = root;
-        TreeNode pre = null;
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        // node -> max contribution to its parent / max path that can be extended to parent
+        HashMap<TreeNode, Integer> nodeToMax = new HashMap<>();
+        int max = Integer.MIN_VALUE;
+        TreeNode curr = root;
+        TreeNode prev = null;
 
-        while (cur != null || !stack.isEmpty()) {
-            while (cur != null) {
-                stack.push(cur);
-                cur = cur.left;
+        while (!stack.isEmpty() || curr != null) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
             }
 
-            cur = stack.peek();
+            curr = stack.peek();
 
-            if (cur.right == null || pre == cur.right) {
-                cur = stack.pop();
+            if (curr.right == null || prev == curr.right) {
+                curr = stack.pop();
 
-                // Problem specific handling
-                int left = Math.max(maxRootPath.get(cur.left), 0);
-                int right = Math.max(maxRootPath.get(cur.right), 0);
-                maxRootPath.put(cur, Math.max(left, right) + cur.val);
-                result = Math.max(left + right + cur.val, result);
+                int left = Math.max(0, nodeToMax.getOrDefault(curr.left, 0));
+                int right = Math.max(0, nodeToMax.getOrDefault(curr.right, 0));
+                max = Math.max(max, left + right + curr.val);
+                nodeToMax.put(curr, Math.max(left, right) + curr.val);
 
-                pre = cur;
-                // 此处为了跳过下一次循环的访问左子节点的过程
-                cur = null;
+                prev = curr;
+                curr = null;
             } else {
-                cur = cur.right;
+                curr = curr.right;
             }
         }
-        return result;
+
+        return max;
     }
 }

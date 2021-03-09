@@ -5,14 +5,16 @@ public class _0236LowestCommonAncestorOfABinaryTree {
      * 1. Recursion (Pre-order)
      *
      * Definition of this recursion:
-     *
      * from this point (root) (looking below), what is the lowest common ancestor
      *
      * https://www.youtube.com/watch?v=py3R23aAPCA
      *
+     * if both p and q exist in Tree rooted at root, then return their LCA
+     * if neither p and q exist in Tree rooted at root, then return null
+     * if only one of p or q (NOT both of them), exists in Tree rooted at root, return it
+     *
      * Time complexity: O(n)
      * Space complexity: O(n)
-     *
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // write your code here
@@ -21,7 +23,10 @@ public class _0236LowestCommonAncestorOfABinaryTree {
         }
 
         if( root == p || root == q) {
-            // we don't care about which exact node we found
+            // lowest ancestor for p or q is itself
+            // If the other node is in the subtree of root & even we return right here
+            // when we go back to parent, the other sibling function call will return null,
+            // so we know that they both exist in tree rooted at root
             return root;
         }
 
@@ -32,11 +37,7 @@ public class _0236LowestCommonAncestorOfABinaryTree {
             return root;
         }
 
-        // Suppose we just [return root;] from a previous frame,
-        // which could be current root's left or right
-        // we just return this non-null value
-        // because nothing will come up on the other side because q and p are UNIQUE
-        if (left != null ) {
+        if (left != null) {
             return left;
         }
         if (right != null) {
@@ -46,7 +47,7 @@ public class _0236LowestCommonAncestorOfABinaryTree {
     }
 
     /**
-     * 2. Iteration (pre-order traversal)
+     * 2. Iteration (pre-order traversal, other two should also work)
      *
      * Summary:
      * How to store extra info (besides traversed node) during traversal:
@@ -55,54 +56,59 @@ public class _0236LowestCommonAncestorOfABinaryTree {
      * 3) different type (a mapping relationship that doesn't use integer as key): a map
      * In this example, we go with 3).
      *
-     * Possible Improvement:
-     * Have two boolean indicating whether p or q is found
-     * If both are found, early exit the pre-order traversal
-     *
      * Time complexity: O(n)
      * Space complexity: O(n)
      */
     public TreeNode lowestCommonAncestor2(TreeNode root, TreeNode p, TreeNode q) {
+        // bases case
         if (root == null) {
             return null;
         }
 
-        Map<TreeNode, TreeNode> map = new HashMap<>();
-
-        ArrayDeque<TreeNode> stack = new ArrayDeque<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
 
-        while (!stack.isEmpty()) {
+        HashMap<TreeNode, TreeNode> childToParent = new HashMap<>();
+        // or use a counter to count p and q;
+        boolean visitedP = false;
+        boolean visitedQ = false;
+
+        while (!stack.isEmpty() && (!visitedP || !visitedQ)) {
             TreeNode node = stack.pop();
+            if (node == p) {
+                visitedP = true;
+            }
+            if (node == q) {
+                visitedQ = true;
+            }
 
             if (node.right != null) {
                 stack.push(node.right);
-                map.put(node.right, node);
+                childToParent.put(node.right, node);
             }
 
             if (node.left != null) {
                 stack.push(node.left);
-                map.put(node.left, node);
+                childToParent.put(node.left, node);
             }
         }
 
-        Set<TreeNode> set = new HashSet<>();
-        TreeNode cur = p;
-
-        while (cur != null) {
-            set.add(cur);
-            cur = map.get(cur);
+        HashSet<TreeNode> pAncestors = new HashSet<>();
+        TreeNode pAncestor = p;
+        while (pAncestor != null) {
+            pAncestors.add(pAncestor);
+            pAncestor = childToParent.get(pAncestor);
         }
 
-        cur = q;
-        while (cur != null) {
-            if (set.contains(cur)) {
-                return cur;
+        TreeNode qAncestor = q;
+        while (qAncestor != null) {
+            if (pAncestors.contains(qAncestor)) {
+                return qAncestor;
             }
-            cur = map.get(cur);
+            qAncestor = childToParent.getOrDefault(qAncestor, null);
         }
 
-        // unreachable code
+        // unreachable code for compilation
         return null;
     }
 }

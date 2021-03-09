@@ -1,9 +1,121 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Stack;
 
 public class _0098ValidBinarySearchTree {
+    /**
+     * Intuition:
+     * node.right.val > node.val && node.left.val < node.val
+     *   [5]
+     *  1  6
+     *   [4] 7
+     *
+     * Not just right child should > root, but all the nodes in right subtree should > root
+     * -> keep upper and lower limits
+     */
 
     /**
-     * 1. Iterative in-order treaversal
+     * 1. Recursive pre-order traversal (Divide and conquer top down)
+     *
+     * Why use Integer instead of int?
+     * Because node val might be Integer.MIN_VALUE or Integer.MAX_VALUE
+     *
+     * We could also use long
+     *
+     * Time: O(n)
+     * Space: O(h)
+     */
+    public boolean isValidBST1(TreeNode root) {
+        return preorder(root, null, null);
+    }
+
+    private boolean preorder(TreeNode root, Integer min, Integer max) {
+        if (root == null) {
+            return true;
+        }
+
+        if ((min != null && root.val <= min) || (max != null && root.val >= max)) {
+            return false;
+        }
+
+        return preorder(root.left, min, root.val) && preorder(root.right, root.val, max);
+    }
+
+    /**
+     * 1.1 Iterative pre-order traversal
+     *
+     * Time: O(n)
+     * Space: O(h)
+     */
+    public boolean isValidBST11(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+
+        Deque<TreeNode> nodeStack = new ArrayDeque<>();
+        Deque<long[]> rangeStack = new ArrayDeque<>();
+        nodeStack.push(root);
+        rangeStack.push(new long[]{Long.MIN_VALUE, Long.MAX_VALUE});
+
+        while (!nodeStack.isEmpty()) {
+            TreeNode node = nodeStack.pop();
+            long[] range = rangeStack.pop();
+            if (node.val <= range[0] || node.val >= range[1]) {
+                return false;
+            }
+
+            if (node.right != null) {
+                nodeStack.push(node.right);
+                rangeStack.push(new long[]{node.val, range[1]});
+            }
+
+            if (node.left != null) {
+                nodeStack.push(node.left);
+                rangeStack.push(new long[]{range[0], node.val});
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * 2. Post-order traversal
+     *
+     * Recursive version similar to recursive pre-order traversal
+     * Technically iteraive would work too, but I couldn't figure it out.
+     */
+
+
+    /**
+     * 3. Recursive in-order traversal
+     *
+     * We want to change min in the 'previous' function call,
+     * we can't use Integer, because it is immutable.
+     */
+    public boolean isValidBST3(TreeNode root) {
+        return inorder(root, new long[]{Long.MIN_VALUE});
+    }
+
+    private boolean inorder(TreeNode root, long[] min) {
+        if (root == null) {
+            return true;
+        }
+
+        if (!inorder(root.left, min))  {
+            return false;
+        }
+
+        if (root.val <= min[0]) {
+            return false;
+        }
+
+        min[0] = root.val;
+
+        return inorder(root.right, min);
+    }
+
+    /**
+     * 3.1. Iterative in-order traversal
      *
      * No need to keep the traversal list:
      * The last added inorder element is enough to ensure at each step that the tree is BST (or not).
@@ -11,16 +123,13 @@ public class _0098ValidBinarySearchTree {
      *
      * Time complexity: O(n)
      * Space complexity: O(length of longest left going path)
-     *
-     * @param root
-     * @return
      */
     public boolean isValidBST(TreeNode root) {
         if (root == null) {
             return true;
         }
-        Stack<TreeNode> stack = new Stack<>();
-        TreeNode pre = null;
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        long prev = Long.MIN_VALUE;
 
         //boolean onRightSideOfPrev = false;
 
@@ -33,13 +142,13 @@ public class _0098ValidBinarySearchTree {
             }
 
             root = stack.pop();
-            if ( pre != null && root.val <= pre.val) {
+            if ( root.val <= prev) {
                 // pre != null && ((!onRightSideofPrev && pre.val > root.val)
                 // || (onRightSideofPrev && pre.val >= root.val)))
                 return false;
             }
 
-            pre = root;
+            prev = root.val;
             root = root.right;
 
             // handle duplicate values on the left side. for right side, switch > and >=
@@ -48,46 +157,18 @@ public class _0098ValidBinarySearchTree {
         return true;
     }
 
-    /**
-     * 2. Divide and Conquer - Top Down
-     *
-     * If we use Integer.MAX_VALUE and Integer.MIN_VALUE to compare
-     * it won't work with nodes whose value is Integer.MAX_VALUE or min value.
-     *
-     *
-     * Time complexity: O(nlogn)
-     * Space complexity: O(h)
-     *
-     * @param root
-     * @return
-     */
-    public boolean isValidBST2(TreeNode root) {
-        return helper(root, null, null);
-    }
-
-    // min, max: min and max from top to here so far
-    boolean helper(TreeNode root, Integer min, Integer max) {
-        if (root == null)
-            return true;
-
-        if ((min != null && root.val <= min) || (max != null && root.val >= max))
-            // left subtree: max is parent value, root.val must < max
-            // right subtree: min is parent value, root.val must > min
-            return false;
-
-        return helper(root.left, min, root.val) && helper(root.right, root.val, max);
-    }
 
     /**
-     * 2.1 Divide and Conquer with custom return class - Bottom up
+     * 4. Divide and Conquer with custom return class - Bottom up
      *
-     * Time complexity:
-     * T(n) = 2T(n/2) + O(1)
-     * O(nlogn)
+     * Similar to recursive post-order,
+     * but DC uses result from sub-tasks and combine
+     * In recursive post-order, curr node's range is passed from parent,
+     * we don't utilize child function calls to determine the validity of cur node's val
      *
-     * Space complexity:
-     * O(h)
      *
+     * Time : O(n)
+     * Space: O(h)
      */
     class ResultType {
         public boolean isBST;

@@ -1,6 +1,4 @@
-package Tree;
-
-public class _700SearchInABinarySearchTree {
+public class _0700SearchInABinarySearchTree {
     /*
     1. Recursion
 
@@ -32,9 +30,6 @@ public class _700SearchInABinarySearchTree {
     h: the tree's height. If the tree is skewed, h = number of nodes;
      */
     public TreeNode searchBST2(TreeNode root, int val) {
-        if (root == null) {
-            return null;
-        }
         TreeNode cur = root;
         while (cur != null) {
             if (val < cur.val) {
@@ -45,6 +40,6 @@ public class _700SearchInABinarySearchTree {
                 return cur;
             }
         }
-        return cur;
+        return null;
     }
 }

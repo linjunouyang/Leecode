@@ -17,24 +17,28 @@ public class _0543DiameterOfBinaryTree {
      * 'The longest path that passes a given node as the ROOT node is T = left_height+right_height.
      * So you just calculate T for all nodes and output the max T.
      *
-     * Time complexity: O(n)
-     * Space complexity: O(n)
-     *
+     * Time: O(n)
+     * Space: O(n)
      */
-    public int DiameterOfBinaryTree(TreeNode root) {
+    public int diameterOfBinaryTree(TreeNode root) {
         return DFS(root)[0];
     }
 
-    // int[2] = [best, height + 1 (number of nodes from this node to deepest leaf) ]
+    // int[2] = [longest, nodes] (num of nodes from node to deepest leaf)
     private int[] DFS(TreeNode node)
     {
-        if (node == null) return new int[] { 0, 0 };
+        if (node == null) {
+            return new int[] { 0, 0 };
+        }
         int[] left = DFS(node.left);
         int[] right = DFS(node.right);
 
-        int best = Math.max(left[1] + right[1], Math.max(left[0], right[0]));
-        int numNodes = 1 + Math.max(left[1], right[1]);
-        return new int[] { best, numNodes };
+        int longestInSub = Math.max(left[0], right[0]);
+        int longestWithRoot = left[1] + right[1];
+        int longest = Math.max(longestWithRoot, longestInSub);
+
+        int nodes = 1 + Math.max(left[1], right[1]);
+        return new int[] { longest, nodes };
     }
 
     /**
@@ -43,17 +47,17 @@ public class _0543DiameterOfBinaryTree {
      * The *depth* of a *node* is the number of edges from the root to the the node
      * A root node will have a depth of 0.
      *
-     * The *height* of a *node* is the number of edges from the node to the deepest leaf
+     * The *height* of a *node* is the number of edges from the node to the DEEPEST leaf
      * A leaf node will have a height of 0.
      *
      * The *height* of a *tree* is the *height* of its root node,
      * The *depth* of a *tree* is depth of deepest node
-     * The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+     * The diameter of a binary tree is the length of the longest path between any two nodes in a tree.
+     * This path may or may not pass through the root.
      *
      * Generally we don't talk about the depth of a tree
      *
      * make sure the node is there till the left and right childs are processed (so we use peek instead of pop)
-     *
      * ____
      * I feel like we can't use traditional iterative post-order (which only uses a stack)
      * because we don't have the info of left child and right child
@@ -62,11 +66,9 @@ public class _0543DiameterOfBinaryTree {
      * -----
      * array creation with both dimension expression and initialization is illegal
      * NO: new int[2]{0, 0}
-     * 
      *
      * Time complexity: O(n)
      * Space complexity: O(n)
-     *
      */
     public int DiameterOfBinaryTree2(TreeNode root) {
         if(root == null){
@@ -95,6 +97,46 @@ public class _0543DiameterOfBinaryTree {
 
         }
         return maxLength;
+    }
+
+    /**
+     * My usual post-order template
+     */
+    public int diameterOfBinaryTree2(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int diameter = 0;
+        Deque<TreeNode> nodeStack = new ArrayDeque<>();
+        HashMap<TreeNode, Integer> nodeToPathCount = new HashMap<>();
+        TreeNode curr = root;
+        TreeNode prev = null;
+
+        while (!nodeStack.isEmpty() || curr != null) {
+            while (curr != null) {
+                nodeStack.push(curr);
+                curr = curr.left;
+            }
+
+            curr = nodeStack.peek();
+
+            if (curr.right == null || prev == curr.right) {
+                nodeStack.pop();
+
+                int leftHeight = nodeToPathCount.getOrDefault(curr.left, 0);
+                int rightHeight = nodeToPathCount.getOrDefault(curr.right, 0);
+                nodeToPathCount.put(curr, Math.max(leftHeight, rightHeight) + 1);
+                diameter = Math.max(diameter, leftHeight + rightHeight);
+
+                prev = curr;
+                curr = null;
+            } else {
+                curr = curr.right;
+            }
+        }
+
+        return diameter;
     }
 
 }

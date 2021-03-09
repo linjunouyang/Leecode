@@ -1,5 +1,3 @@
-package Tree;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -7,7 +5,7 @@ import java.util.Deque;
  * 6.20 No. Stuck in recursion.
  */
 
-public class _129SumRootToLeafNumbers {
+public class _0129SumRootToLeafNumbers {
     /**
      * 1. Recursion (pre-oder)
      *

@@ -7,15 +7,14 @@ public class _0102BinaryTreeLevelOrderTraversal {
     /**
      * 1. Iteration, BFS (level-order traversal)
      *
-     * Time complexity: O(n)
-     * Space complexity: O(n) for balanced, O(1) for unbalanced.
-     *
+     * Time: O(n)
+     * Space: O(n) for balanced, O(1) for unbalanced.
      */
     public static List<List<Integer>> levelOrder1(TreeNode root) {
-        List<List<Integer>> total = new ArrayList<>();
+        List<List<Integer>> levels = new ArrayList<>();
 
         if (root == null) {
-            return total;
+            return levels;
         }
 
         Queue<TreeNode> queue = new ArrayDeque<>();
@@ -34,11 +33,15 @@ public class _0102BinaryTreeLevelOrderTraversal {
                     queue.offer(node.right);
                 }
             }
-            total.add(level);
+            levels.add(level);
         }
 
-        return total;
+        return levels;
     }
+
+    /**
+     * 1.1 Iteration DFS
+     */
 
     /**
      * 2 Recursion, DFS (pre-order traversal)
@@ -47,8 +50,6 @@ public class _0102BinaryTreeLevelOrderTraversal {
      *
      * Time complexity: O(n)
      * Space complexity: O(lgn) for balanced, O(n) for unbalanced.
-     *
-     * @param
      */
     public static List<List<Integer>> levelOrder2(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();

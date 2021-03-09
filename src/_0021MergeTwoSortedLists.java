@@ -1,32 +1,26 @@
-package LinkedList;
-
-public class _21MergeTwoSortedLists {
+public class _0021MergeTwoSortedLists {
     /**
      * 1. Recursion
+     *
+     * decide the head for sub-problem (l1, l2)
+     * and merge the rest of list by recursion (newHead.next = mergeTwoLists())
      *
      * Time complexity: O(n)
      * Space complexity: O(n)
      *
-     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Merge Two Sorted Lists.
-     * Memory Usage: 39.9 MB, less than 15.83% of Java online submissions for Merge Two Sorted Lists.
-     *
      * in real life, the length of a linked list could be much longer than we expected,
      * in which case the recursive approach is likely to introduce a stack overflow. (Imagine a file system)
-     *
-     * @param l1
-     * @param l2
-     * @return
      */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2){
-        if(l1 == null) {
+        if (l1 == null) {
             return l2;
         }
 
-        if(l2 == null) {
+        if (l2 == null) {
             return l1;
         }
 
-        if(l1.val < l2.val){
+        if (l1.val < l2.val){
             l1.next = mergeTwoLists(l1.next, l2);
             return l1;
         } else{
@@ -44,13 +38,6 @@ public class _21MergeTwoSortedLists {
      *
      * Time complexity: O(n)
      * Space complexity: O(1)
-     *
-     * Runtime: 0 ms, faster than 100.00% of Java online submissions for Merge Two Sorted Lists.
-     * Memory Usage: 35.8 MB, less than 100.00% of Java online submissions for Merge Two Sorted Lists.
-     *
-     * @param l1
-     * @param l2
-     * @return
      */
     public ListNode mergeTwoLists2(ListNode l1, ListNode l2){
         ListNode dummy = new ListNode(0);
@@ -67,6 +54,7 @@ public class _21MergeTwoSortedLists {
             lastNode = lastNode.next;
         }
 
+        // notice it's if not while because the rest of list is already linked
         if (l1 != null) {
             lastNode.next = l1;
         } else {

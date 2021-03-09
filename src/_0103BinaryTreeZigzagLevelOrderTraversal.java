@@ -81,10 +81,11 @@ public class _0103BinaryTreeZigzagLevelOrderTraversal {
 
     private void travel(TreeNode curr, List<List<Integer>> sol, int level)
     {
-        if(curr == null) return;
+        if(curr == null) {
+            return;
+        }
 
-        if(sol.size() <= level)
-        {
+        if(sol.size() <= level) {
             List<Integer> newLevel = new LinkedList<>();
             sol.add(newLevel);
         }
@@ -101,16 +102,11 @@ public class _0103BinaryTreeZigzagLevelOrderTraversal {
     }
 
     /**
-     * 3. Iteration. BFS. Two Stacks
+     * 3. Iteration. BFS. Two Stacks (not necessary)
      *
      * Time complexity: O(n)
-     *
      * Space complexity: O(n)
-     *
-     * Runtime: 1 ms, faster than 81.42% of Java online submissions for Binary Tree Zigzag Level Order Traversal.
-     * Memory Usage: 36.2 MB, less than 99.97% of Java online submissions for Binary Tree Zigzag Level Order Traversal.
      */
-
     public List<List<Integer>> zigzagLevelOrder3(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
 

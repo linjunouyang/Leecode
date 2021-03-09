@@ -8,11 +8,12 @@ public class _0572SubtreeOfAnotherTree {
     /**
      * 1. Recursive PreOrder
      *
-     * Time complexity:
-     * O(m*n)
-     * worst case: for each node in the 1st tree, we need to check if isSame(Node s, Node t). Total m nodes, isSame(...) takes O(n) worst case
+     * Time O(m*n)
+     * worst case: for each node in the 1st tree, we need to check if isSame(Node s, Node t).
+     * Total m nodes, isSame(...) takes O(n) worst case
      *
      * Space complexity:
+     * height of isSubtree + height of isSame = O(m) + O(min(some value, n)) = O(m)
      * O(height of 1str tree)(Or you can say: O(m) for worst case, O(logm) for average case)
      */
     public boolean isSubtree(TreeNode s, TreeNode t) {
