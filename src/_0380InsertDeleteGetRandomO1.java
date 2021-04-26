@@ -29,7 +29,7 @@ public class _0380InsertDeleteGetRandomO1 {
      *
      * Space complexity: O(N), to store N elements.
      */
-    private Map<Integer, Integer> dict; // int -> index
+    private HashMap<Integer, Integer> dict; // int -> index
     private List<Integer> list; // index -> int
     private Random rand;
 

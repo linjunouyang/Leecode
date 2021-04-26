@@ -22,13 +22,24 @@ public class _0022GenerateParentheses {
      * When to add open bracket? If we still have one left
      * When to add closing bracket? If it would not exceed num of opening brackets.
      *
-     * Time complexity: O(2 ^ (2n))
+     *
+     * StringBuilder.toString() -> return new String(value, 0, count) -> Arrays.copyOfRange
+     * ->
+     *
+     * Time complexity: O(n * 2 ^ (2n))
      * a tree with branching of b (b = 2 here) and max depth of h (h = 2n here)
      * total number of nodes in worst case: 1 + b + b ^ (h - 1) = (b ^ h - 1) / (b - 1) = O(b ^ h)
      *
+     * for all the leaf nodes, we call toString(), which takes O(n) time
+     *
+     * Space: O(n)
      */
     public List<String> generateParenthesis(int n) {
-        List<String> ans = new ArrayList<String>();
+        List<String> ans = new ArrayList<>();
+        if (n <= 0) {
+            // although n >= 1 is guaranteed.
+            return ans;
+        }
         backtrack(ans, new StringBuilder(), 0, 0, n);
         return ans;
     }
@@ -53,6 +64,11 @@ public class _0022GenerateParentheses {
     }
 
     /**
-     * 3. Closure Number (dp like)
+     * 3. BFS (never mind)
+     * Technically, we could use BFS,
+     * but it's not efficient
+     * space:need to store all intermediate strings
+     * time: for every step, we have to examine previous intermediate result
+     * to help us decide can we place a left/right parentheses, or should we stop
      */
 }

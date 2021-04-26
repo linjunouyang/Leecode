@@ -1,5 +1,3 @@
-package BinarySearch;
-
 /**
  * TBD: Divide and Conquer
  *
@@ -10,7 +8,7 @@ package BinarySearch;
  */
 
 
-public class _240SearchA2DMatrixII {
+public class _0240SearchA2DMatrixII {
     /*
     1. Binary-Search like method
 

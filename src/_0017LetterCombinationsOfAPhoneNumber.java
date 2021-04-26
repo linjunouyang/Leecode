@@ -6,9 +6,7 @@ public class _0017LetterCombinationsOfAPhoneNumber {
     /**
      * 1. Backtracking (DFS)
      *
-     * Time complexity:
-     * 3 + 9 + ... + 3 ^ (len) = 3（3 ^ n  - 1) / (3 - 1) = O(3 ^ n)
-     *
+     * Time complexity: O(4^len)
      * Space complexity: O(len)
      */
     private static final String[] LETTERS = {" ", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
@@ -52,19 +50,22 @@ public class _0017LetterCombinationsOfAPhoneNumber {
      *
      */
     public List<String> letterCombinations2(String digits) {
+        String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+
         LinkedList<String> ans = new LinkedList<String>();
         if (digits.isEmpty()) {
             return ans;
         }
-        String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         ans.add("");
-        while(ans.peek().length()!=digits.length()){
+
+        while(ans.peek().length() != digits.length()){
             String remove = ans.remove();
             String map = mapping[digits.charAt(remove.length())-'0'];
             for(char c: map.toCharArray()){
                 ans.addLast(remove+c);
             }
         }
+
         return ans;
     }
 

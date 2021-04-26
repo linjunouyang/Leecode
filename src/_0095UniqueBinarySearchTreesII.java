@@ -3,7 +3,7 @@ import java.util.*;
 // 1 <= n <= 8
 public class _0095UniqueBinarySearchTreesII {
     /**
-     * 1. Recursion (pre-order)
+     * 1. Recursion (pre-order) / divide and conquer
      *
      * duplicate re-computation for cases like
      *      y                         x

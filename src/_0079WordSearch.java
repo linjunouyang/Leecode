@@ -11,17 +11,12 @@ import javafx.stage.DirectoryChooserBuilder;
  *
  * Template:
  * https://leetcode.com/explore/learn/card/recursion-ii/472/backtracking/
- *
- *
  */
 public class _0079WordSearch {
     /**
      * 1. Backtracking
      *
-     * explore board in DFS manner
-     *
-     * Time:
-     * n: number off cells
+     * Time: n: number off cells
      *
      * I think the overall time complexity is closer to O(N*3^min(L, N)).
      * Each cell has only 3 directions to be potentially explored
@@ -29,26 +24,20 @@ public class _0079WordSearch {
      * So, the worst case can be expressed by N * 4 * 3^min(L - 1, N - 1) (4 means the beginning point)
      * and by big O, -> O(N * 3^min(L, N))
      *
-     * More accurate: O(N * min(3^L, N))
-     *
+     * More accurate: O(n * min(3^L, n))
      *
      * Space:
      * visited: O(size of board)
      * recursion call stack: O(len of word)
-     *
      */
-    private final static int[][] DIRECTION = {{-1,0}, {0, -1}, {1, 0}, {0, 1}};
-
     public boolean exist(char[][] board, String word) {
-
         int rows = board.length;
         int cols = board[0].length;
-
         boolean[][] visited = new boolean[rows][cols];
 
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
-                if (explore(board, visited, word, 0, row, col)) {
+                if (search(board, visited, row, col, word, 0)) {
                     return true;
                 }
             }
@@ -57,37 +46,39 @@ public class _0079WordSearch {
         return false;
     }
 
-    private boolean explore(char[][] board, boolean[][] visited, String word, int idx, int row, int col) {
-        // OR we can check length boundary and grid boundary here
-//        if (idx == word.length()) {
-//            return true;
-//        }
-//
-//        if (row < 0 || row >= board.length || col < 0 || col >= board[0].length) {
-//            return false;
-//        }
-
-        if (!visited[row][col] && board[row][col] == word.charAt(idx)) {
-            visited[row][col] = true;
-
-            if (idx == word.length() - 1) {
-                return true;
-            }
-
-            for (int i = 0; i < DIRECTION.length; i++) {
-                int[] nextDirection = DIRECTION[i];
-                int nextRow = row + nextDirection[0];
-                int nextCol = col + nextDirection[1];
-                if (0 <= nextRow && nextRow < board.length && 0 <= nextCol && nextCol < board[0].length) {
-                    if (explore(board, visited, word, idx + 1, nextRow, nextCol)) {
-                        return true;
-                    }
-                }
-            }
-
-            visited[row][col] = false;
+    private boolean search(char[][] board, boolean[][] visited, int row, int col,
+                           String word, int idx) {
+        if (word.charAt(idx) != board[row][col]) {
+            return false;
         }
 
+        if (idx == word.length() - 1) {
+            return true;
+        }
+
+        visited[row][col] = true;
+
+        int[][] directions = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        int rows = board.length;
+        int cols = board[0].length;
+
+        for (int[] direction : directions) {
+            int newRow = row + direction[0];
+            int newCol = col + direction[1];
+
+            if (isValid(newRow, rows, newCol, cols)
+                    && !visited[newRow][newCol]
+                    && search(board, visited, newRow, newCol, word, idx + 1)) {
+                return true;
+            }
+        }
+
+        visited[row][col] = false;
+
         return false;
+    }
+
+    private boolean isValid(int row, int rows, int col, int cols) {
+        return 0 <= row && row < rows && 0 <= col && col < cols;
     }
 }

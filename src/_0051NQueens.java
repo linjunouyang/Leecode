@@ -1,23 +1,29 @@
-package DFS;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Two queens can't show in the same row, column, and 斜线
+ * Two queens can't show in the same row, column, and diagonals
  *
- * Time complexity: O(s * n^3)
- * s: the number of answers
- * n^3: the construction time for each answer
- * (there are n elements in the cols, each element takes roughly O(n/2) time on search for loop
- * and O(n/2) time on isValid, O(n^2) on drawChessBoard
- *
- *
- * Runtime: 4 ms, faster than 54.76% of Java online submissions for N-Queens.
- * Memory Usage: 37.7 MB, less than 91.89% of Java online submissions for N-Queens.
  */
-public class _51NQueens {
+public class _0051NQueens {
 
+    /**
+     * 1. Backtracking
+     * Time: O(n! * n^3)
+     * n!: the number of answers
+     * n^3: the construction time for each answer
+     * (there are n elements in the cols,
+     * each element takes roughly O(n/2) time on search for loop
+     * and O(n/2) time on isValid,
+     * O(n^2) on drawChessBoard)
+     *
+     * Could use 3 boolean arrays to make isValid O(1)
+     *
+     * Space: O(n)
+     * search recursive call stack: O(n)
+     * List<Integer> cols: O(n)
+     * StringBuilder: O(n)
+     */
     List<List<String>> solveNQueens(int n) {
         List<List<String>> results = new ArrayList<>();
         if (n <= 0) {
@@ -29,15 +35,6 @@ public class _51NQueens {
         return results;
     }
 
-    /**
-     * There are multiple ways to represent each queen's coordinate
-     *
-     * Here we use List<Integer> cols. The row index can be inferred from the list index
-     *
-     * @param results
-     * @param cols
-     * @param n
-     */
     private void search(List<List<String>> results, List<Integer> cols, int n) {
         if (cols.size() == n) {
             // no need to new a new list, because the function returns a different list every time
