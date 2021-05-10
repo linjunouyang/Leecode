@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0044WildcardMatching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0108ConvertSortedArrayToBinarySearchTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0773SlidingPuzzle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0864ShortestPathToGetAllKeys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BinarySearch/_240SearchA2DMatrixII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0240SearchA2DMatrixII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DFS/_46Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0046Permutations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DFS/_51NQueens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0051NQueens.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0003LongestSubstringWithoutRepeatingCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0003LongestSubstringWithoutRepeatingCharacters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0017LetterCombinationsOfAPhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0017LetterCombinationsOfAPhoneNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0022GenerateParentheses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0022GenerateParentheses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0079WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0079WordSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0095UniqueBinarySearchTreesII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0095UniqueBinarySearchTreesII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0380InsertDeleteGetRandomO1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0380InsertDeleteGetRandomO1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +127,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -241,7 +241,8 @@
       <workItem from="1617946945347" duration="4009000" />
       <workItem from="1618184668960" duration="625000" />
       <workItem from="1619211273857" duration="1360000" />
-      <workItem from="1619421675167" duration="995000" />
+      <workItem from="1619421675167" duration="2487000" />
+      <workItem from="1619903376283" duration="7913000" />
     </task>
     <servers />
   </component>
