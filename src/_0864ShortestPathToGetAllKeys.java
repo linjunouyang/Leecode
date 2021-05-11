@@ -77,9 +77,7 @@ public class _0864ShortestPathToGetAllKeys {
                     return steps;
                 }
 
-
                 for (int[] direction : directions) {
-                    int keys = state.keys;
                     int row = state.row + direction[0];
                     int col = state.col + direction[1];
                     if (row < 0 || row >= rows || col < 0 || col >= cols) {
@@ -87,10 +85,11 @@ public class _0864ShortestPathToGetAllKeys {
                     }
 
                     char nextChar = grid[row].charAt(col);
-
                     if (nextChar == '#') {
                         continue;
                     }
+
+                    int keys = state.keys;
                     if (Character.isUpperCase(nextChar) && (keys & (1 << (nextChar - 'a'))) == 0 ) {
                         continue;
                     }
