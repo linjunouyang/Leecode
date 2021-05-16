@@ -19,6 +19,8 @@ public class _0489RobotRoomCleaner {
     /**
      * 1. Backtracking
      *
+     * Intuition: Robot's trace is like DFS
+     *
      * Locate positions and cache visited positions:
      * typical: given fixed coordinates.
      * here: Set starting point as (0, 0), and use relative coordinates
