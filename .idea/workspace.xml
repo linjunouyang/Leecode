@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0996NumberOfSquarefulArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0208ImplementTrie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -242,7 +242,7 @@
       <workItem from="1618184668960" duration="625000" />
       <workItem from="1619211273857" duration="1360000" />
       <workItem from="1619421675167" duration="2487000" />
-      <workItem from="1619903376283" duration="18070000" />
+      <workItem from="1619903376283" duration="22236000" />
     </task>
     <servers />
   </component>
