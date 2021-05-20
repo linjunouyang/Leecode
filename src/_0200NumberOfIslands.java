@@ -14,6 +14,9 @@ class Coordinate {
 class Map {
     final static char ISLAND = '1';
     final static char WATER = '0';
+
+    public class Entry<T, T1> {
+    }
 }
 
 public class _0200NumberOfIslands {
