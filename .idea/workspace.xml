@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0934ShortestBridge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1004MaxConsecutiveOnesIII.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0436FindRightInterval.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0695MaxAreaOfIsland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0695MaxAreaOfIsland.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.huawei">
+  <component name="RunManager" selected="Application._0436FindRightInterval">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -72,16 +72,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_0199BinaryTreeRightSideView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_0199BinaryTreeRightSideView" />
+    <configuration name="_0436FindRightInterval" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_0436FindRightInterval" />
       <module name="LeetCode" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,18 +162,18 @@
     </configuration>
     <list>
       <item itemvalue="Application._0575DecodeStringMain" />
-      <item itemvalue="Application._0199BinaryTreeRightSideView" />
       <item itemvalue="Application.testSort" />
       <item itemvalue="Application.huawei" />
       <item itemvalue="Application._0113PathSumII" />
+      <item itemvalue="Application._0436FindRightInterval" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._0436FindRightInterval" />
         <item itemvalue="Application.huawei" />
         <item itemvalue="Application.testSort" />
         <item itemvalue="Application._0575DecodeStringMain" />
         <item itemvalue="Application._0113PathSumII" />
-        <item itemvalue="Application._0199BinaryTreeRightSideView" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +240,7 @@
       <workItem from="1619211273857" duration="1360000" />
       <workItem from="1619421675167" duration="2487000" />
       <workItem from="1619903376283" duration="24571000" />
-      <workItem from="1621381968582" duration="1401000" />
+      <workItem from="1621381968582" duration="4608000" />
     </task>
     <servers />
   </component>

@@ -115,7 +115,7 @@ public class _0695MaxAreaOfIsland {
         int[] size;
         int[] rank;
 
-        UinionFind(int n) {
+        UnionFind(int n) {
             parent = new int[n];
             for (int i = 0; i < n; i++) {
                 parent[i] = i;
