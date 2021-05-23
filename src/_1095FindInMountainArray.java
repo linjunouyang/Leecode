@@ -1,6 +1,14 @@
 public class _1095FindInMountainArray {
     class MountainArray {
         int[] arr;
+
+        public int length() {
+            return arr.length;
+        }
+
+        public int get(int i) {
+            return arr[i];
+        }
     }
 
     /**

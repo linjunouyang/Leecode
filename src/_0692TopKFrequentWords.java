@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Map;
 
 /**
  * Summary:
@@ -43,7 +44,7 @@ public class _0692TopKFrequentWords {
      * Space complexity: O(n)
      */
     public List<String> topKFrequent(String[] words, int k) {
-        Map<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
         for (String word : words) {
             map.put(word, map.getOrDefault(word, 0) + 1);
         }
@@ -89,7 +90,7 @@ public class _0692TopKFrequentWords {
     public List<String> topKFrequent2(String[] words, int k) {
 
         List<String> result = new LinkedList<>();
-        Map<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < words.length; i++) {
             map.put(words[i], map.getOrDefault(words[i], 0) + 1);
         }
@@ -190,7 +191,7 @@ public class _0692TopKFrequentWords {
     }
 
     public List<String> topKFrequent3(String[] words, int k) {
-        Map<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
         for(String word:words){
             map.put(word, map.getOrDefault(word, 0)+1);
         }

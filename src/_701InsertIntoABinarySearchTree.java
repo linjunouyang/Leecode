@@ -1,5 +1,3 @@
-package Tree;
-
 /*
 9.27 First. Solved in 7 minutes. While loop.
  */

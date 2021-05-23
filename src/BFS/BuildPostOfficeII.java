@@ -5,15 +5,15 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-//class Coordinate {
-//    int x;
-//    int y;
-//
-//    public Coordinate(int x, int y) {
-//        this.x = x;
-//        this.y = y;
-//    }
-//}
+class Coordinate {
+    int x;
+    int y;
+
+    public Coordinate(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
 
 public class BuildPostOfficeII {
     public int EMPTY = 0;

@@ -30,7 +30,7 @@ public class _0387FirstUniqueCharacterInAString {
 
         // or use array: new int[26]
         // freq [s.charAt(i) - 'a']
-        Map<Character, Integer> map = new HashMap<>();
+        HashMap<Character, Integer> map = new HashMap<>();
 
         // count the number of occurances
         for (int i = 0; i < s.length(); i++) {
@@ -81,7 +81,7 @@ public class _0387FirstUniqueCharacterInAString {
      * @return
      */
     public int firstUniqChar2(String s) {
-        Map<Character, Integer> map = new LinkedHashMap<>();
+        HashMap<Character, Integer> map = new LinkedHashMap<>();
         Set<Character> set = new HashSet<>();
 
         for (int i = 0; i < s.length(); i++) {

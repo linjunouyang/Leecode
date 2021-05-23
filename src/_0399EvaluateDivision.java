@@ -34,7 +34,7 @@ public class _0399EvaluateDivision {
     }
 
     public double[] calcEquation(List<List<String>> equations, double[] values, List<List<String>> queries) {
-        Map<String, List<Neighbor>> map = new HashMap<>();
+        HashMap<String, List<Neighbor>> map = new HashMap<>();
 
         for (int i = 0; i < equations.size(); i++) {
             List<String> equation = equations.get(i);
@@ -70,7 +70,7 @@ public class _0399EvaluateDivision {
         return res;
     }
 
-    private Result bfs(Map<String, List<Neighbor>> map, Set<String> visited, String start, String end) {
+    private Result bfs(HashMap<String, List<Neighbor>> map, Set<String> visited, String start, String end) {
         Deque<Neighbor> queue = new ArrayDeque<>();
         queue.offer(new Neighbor(start, 1));
         visited.add(start);

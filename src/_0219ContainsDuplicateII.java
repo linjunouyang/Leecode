@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Map;
 
 public class _0219ContainsDuplicateII {
     /**
@@ -38,7 +39,7 @@ public class _0219ContainsDuplicateII {
      */
     public boolean containsNearbyDuplicate1(int[] nums, int k) {
         // number -> positions
-        Map<Integer, List<Integer>> map = new HashMap<>();
+        HashMap<Integer, List<Integer>> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
             List<Integer> positions = map.getOrDefault(nums[i], new ArrayList<>());

@@ -12,7 +12,7 @@ public class _1042FlowerPlantingWithNoAdjacent {
      * Space: O(N)
      */
     public int[] gardenNoAdj(int n, int[][] paths) {
-        Map<Integer, Set<Integer>> graph = new HashMap<>();
+        HashMap<Integer, Set<Integer>> graph = new HashMap<>();
         for (int i = 0; i < n; i++) {
             graph.put(i, new HashSet<>());
         }
@@ -84,7 +84,7 @@ public class _1042FlowerPlantingWithNoAdjacent {
      *
      */
     public int[] gardenNoAdj3(int n, int[][] paths) {
-        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        HashMap<Integer, List<Integer>> adjList = new HashMap<>();
         for (int[] path : paths) {
             adjList.putIfAbsent(path[0], new ArrayList<>());
             adjList.get(path[0]).add(path[1]);
@@ -101,7 +101,7 @@ public class _1042FlowerPlantingWithNoAdjacent {
         return res;
     }
 
-    private boolean backtrack(Map<Integer, List<Integer>> adjList, int node, int[] res, int lastColor) {
+    private boolean backtrack(HashMap<Integer, List<Integer>> adjList, int node, int[] res, int lastColor) {
         if (res[node] != 0) {
             if (res[node] == lastColor) {
                 return false;

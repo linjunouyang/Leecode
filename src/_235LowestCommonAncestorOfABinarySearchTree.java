@@ -1,5 +1,3 @@
-package Tree;
-
 /**
  * 6.18 Solved it with binary search
  *

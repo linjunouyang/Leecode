@@ -1,5 +1,3 @@
-package Tree;
-
 /**
  * 9.24 1st Solved in 7 minutes. Better than the Solution
  */

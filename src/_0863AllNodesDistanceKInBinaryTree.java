@@ -80,7 +80,7 @@ public class _0863AllNodesDistanceKInBinaryTree {
      * @param parent
      */
     private void buildNodeToParentMap(
-            Map<TreeNode, TreeNode> nodeToParentMap,
+            HashMap<TreeNode, TreeNode> nodeToParentMap,
             TreeNode root,
             TreeNode parent
     ) {
@@ -127,14 +127,14 @@ public class _0863AllNodesDistanceKInBinaryTree {
 
     public List<Integer> distanceK2(TreeNode root, TreeNode target, int K) {
         List<Integer> res = new LinkedList<>();
-        Map<TreeNode, Integer> map = new HashMap<>();
+        HashMap<TreeNode, Integer> map = new HashMap<>();
         find(root, target, map);
         dfs(root, target, K, map.get(root), res, map);
         return res;
     }
 
     // find target node first and store the distance in that path that we could use it later directly
-    private int find(TreeNode root, TreeNode target, Map<TreeNode, Integer> map) {
+    private int find(TreeNode root, TreeNode target, HashMap<TreeNode, Integer> map) {
         if (root == null) return -1;
         if (root == target) {
             map.put(root, 0);
@@ -151,10 +151,16 @@ public class _0863AllNodesDistanceKInBinaryTree {
         return val;
     }
 
-    private void dfs(TreeNode root, TreeNode target, int K, int length, List<Integer> res, Map<TreeNode, Integer> map) {
-        if (root == null) return;
-        if (map.containsKey(root)) length = map.get(root);
-        if (length == K) res.add(root.val);
+    private void dfs(TreeNode root, TreeNode target, int K, int length, List<Integer> res, HashMap<TreeNode, Integer> map) {
+        if (root == null) {
+            return;
+        }
+        if (map.containsKey(root)) {
+            length = map.get(root);
+        }
+        if (length == K) {
+            res.add(root.val);
+        }
         dfs(root.left, target, K, length + 1, res, map);
         dfs(root.right, target, K, length + 1, res, map);
     }

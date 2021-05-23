@@ -18,7 +18,7 @@ public class _0049GroupAnagrams {
      */
     public List<List<String>> groupAnagrams(String[] strs) {
         if (strs == null || strs.length == 0) return new ArrayList<List<String>>();
-        Map<String, List<String>> map = new HashMap<String, List<String>>();
+        HashMap<String, List<String>> map = new HashMap<String, List<String>>();
         for (String s : strs) {
             char[] ca = s.toCharArray();
             Arrays.sort(ca);
@@ -44,7 +44,7 @@ public class _0049GroupAnagrams {
     public List<List<String>> groupAnagrams2(String[] strs) {
         if (strs.length == 0) return new ArrayList();
 
-        Map<String, List> ans = new HashMap<String, List>();
+        HashMap<String, List> ans = new HashMap<String, List>();
 
         int[] count = new int[26];
 

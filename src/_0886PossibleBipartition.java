@@ -10,7 +10,7 @@ public class _0886PossibleBipartition {
      *
      */
     public boolean possibleBipartition(int N, int[][] dislikes) {
-        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        HashMap<Integer, List<Integer>> adjList = new HashMap<>();
         for(int[] dislike : dislikes) {
             adjList.putIfAbsent(dislike[0], new ArrayList<>());
             adjList.get(dislike[0]).add(dislike[1]);
@@ -31,7 +31,7 @@ public class _0886PossibleBipartition {
         return true;
     }
 
-    private boolean bfs(Map<Integer, List<Integer>> adjList, int start, int[] division) {
+    private boolean bfs(HashMap<Integer, List<Integer>> adjList, int start, int[] division) {
         Deque<Integer> queue = new ArrayDeque<>();
         queue.offer(start);
         division[start] = 1;

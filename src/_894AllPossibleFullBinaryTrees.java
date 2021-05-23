@@ -1,5 +1,5 @@
-package Tree;
 import java.util.*;
+import java.util.Map;
 
 /**
  * 9.25 First, not solved.

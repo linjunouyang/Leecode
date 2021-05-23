@@ -3,8 +3,12 @@ import java.util.List;
 
 public class _1428LeftmostColumnWithAtLeastAOne {
     interface BinaryMatrix {
-        public default int get(int row, int col) {}
-      public default List<Integer> dimensions() {};
+        public default int get(int row, int col) {
+            return 0;
+        }
+      public default List<Integer> dimensions() {
+            return new ArrayList<>();
+      };
     };
 
     /**

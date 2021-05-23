@@ -1,4 +1,3 @@
-package Tree;
 import java.util.*;
 
 public class _617MergeTwoBinaryTrees {

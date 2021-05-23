@@ -19,7 +19,7 @@ public class _0323NumberOfConnectedComponentsInAnUndirectedGraph {
      *
      */
     public int countComponents(int n, int[][] edges) {
-        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        HashMap<Integer, List<Integer>> adjList = new HashMap<>();
         for (int[] edge : edges) {
             adjList.putIfAbsent(edge[0], new ArrayList<>());
             adjList.get(edge[0]).add(edge[1]);
@@ -40,7 +40,7 @@ public class _0323NumberOfConnectedComponentsInAnUndirectedGraph {
         return components;
     }
 
-    private void bfs(Map<Integer, List<Integer>> adjList, boolean[] visited, int start) {
+    private void bfs(HashMap<Integer, List<Integer>> adjList, boolean[] visited, int start) {
         Deque<Integer> queue = new ArrayDeque<>();
         queue.offer(start);
 
@@ -55,7 +55,7 @@ public class _0323NumberOfConnectedComponentsInAnUndirectedGraph {
         }
     }
 
-    private void dfs(Map<Integer, List<Integer>> adjList, boolean[] visited, int start) {
+    private void dfs(HashMap<Integer, List<Integer>> adjList, boolean[] visited, int start) {
         Deque<Integer> stack = new ArrayDeque<>();
         stack.push(start);
 

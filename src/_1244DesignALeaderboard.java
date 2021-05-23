@@ -1,11 +1,12 @@
 import java.util.*;
+import java.util.Map;
 
 public class _1244DesignALeaderboard {
     /**
      * 1. HashMap + QuickSelect
      *
      */
-    private Map<Integer, Integer> scores;
+    private HashMap<Integer, Integer> scores;
 
     public _1244DesignALeaderboard() {
         scores = new HashMap<>();
@@ -120,7 +121,7 @@ public class _1244DesignALeaderboard {
      * It does not support the add or addAll operations.
      *
      */
-    private Map<Integer, Integer> map; // playerId -> score
+    private HashMap<Integer, Integer> map; // playerId -> score
     private TreeMap<Integer, Integer> sorted; // score -> number of ppl with this score
 
 //    public _1244DesignALeaderboard() {

@@ -32,7 +32,7 @@ public class _1048LongestStringChain {
      */
     public int longestStrChain(String[] words) {
         // string -> biggest word chain length so far
-        Map<String, Integer> dp = new HashMap<>();
+        HashMap<String, Integer> dp = new HashMap<>();
         Arrays.sort(words, (a, b)->a.length() - b.length());
         int res = 0;
         for (String word : words) {
@@ -124,7 +124,7 @@ public class _1048LongestStringChain {
         }
 
         int ans = 0;
-        Map<String, Integer> map = new HashMap<>();
+        HashMap<String, Integer> map = new HashMap<>();
         for (String word : words) {
             int best = helper(map, set, word);
             ans = Math.max(ans, best);
@@ -133,7 +133,7 @@ public class _1048LongestStringChain {
     }
 
     // what is the biggest length for a word chain ends up at 'word'
-    private int helper(Map<String, Integer> map, Set<String> set, String word){
+    private int helper(HashMap<String, Integer> map, Set<String> set, String word){
         if (map.containsKey(word)) {
             return map.get(word);
         }

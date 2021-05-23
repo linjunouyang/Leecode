@@ -32,7 +32,7 @@ public class _0759EmployeeFreeTime {
     public List<Interval> employeeFreeTime(List<List<Interval>> schedule) {
         List<Interval> result = new ArrayList<>();
         List<Interval> work = new ArrayList<>();
-        schedule.forEach(e -> timeLine.addAll(e));
+        schedule.forEach(e -> result.addAll(e));
         //Collections.sort(timeLine, ((a, b) -> a.start - b.start));
 
         Interval temp = work.get(0);
@@ -183,7 +183,7 @@ public class _0759EmployeeFreeTime {
     public List<Interval> employeeFreeTime4(List<List<Interval>> schedule) {
         List<Interval> result = new ArrayList<>();
         // time point -> score
-        Map<Integer, Integer> map = new TreeMap<>();
+        TreeMap<Integer, Integer> map = new TreeMap<>();
         for (List<Interval> list : schedule) {
             for (Interval interval : list) {
                 map.put(interval.start, map.getOrDefault(interval.start, 0) + 1);

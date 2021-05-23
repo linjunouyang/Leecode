@@ -18,7 +18,7 @@ public class _0981TimeBasedKey_ValueStore {
      * List will be sorted because the timestamps for all TimeMap.set operations are strictly increasing.
      * Otherwise / OR, we can use a PriorityQueue or TreeMap (floorKey)
      */
-    Map<String, List<Data>> map;
+    HashMap<String, List<Data>> map;
     public _0981TimeBasedKey_ValueStore() {
         map = new HashMap<String, List<Data>>();
     }

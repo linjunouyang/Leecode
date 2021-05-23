@@ -17,7 +17,7 @@ public class _1152AnalyzeUserWebsiteVisitPattern {
 
     public List<String> mostVisitedPattern(String[] username, int[] timestamp, String[] website) {
         // username -> (time, website)
-        Map<String, List<Pair>> map = new HashMap<>();
+        HashMap<String, List<Pair>> map = new HashMap<>();
         int n = username.length;
         for (int i = 0; i < n; i++) {
             map.putIfAbsent(username[i], new ArrayList<>());
@@ -26,7 +26,7 @@ public class _1152AnalyzeUserWebsiteVisitPattern {
 
         // 3-sequence -> visit times
         String res = "";
-        Map<String, Integer> count = new HashMap<>();
+        HashMap<String, Integer> count = new HashMap<>();
         for (String key : map.keySet()) {
             Set<String> set = new HashSet<>(); // this set is to avoid visit the same 3-seq in one user
             List<Pair> list = map.get(key);

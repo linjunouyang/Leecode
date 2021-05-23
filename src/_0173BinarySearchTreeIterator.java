@@ -5,15 +5,6 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
 /**
  * Why design iterators:
  *

@@ -1,5 +1,3 @@
-package Tree;
-
 public class _114FlattenBinaryTreeToLinkedList {
     /**
      * 1. Recursion, reversed post order (right -> left -> cur)

@@ -16,7 +16,7 @@ public class _0939MinimumAreaRectangle {
      * Space complexity: O(n)
      */
     public int minAreaRect(int[][] points) {
-        Map<Integer, Set<Integer>> map = new HashMap<>(); // x -> y
+        HashMap<Integer, Set<Integer>> map = new HashMap<>(); // x -> y
         for (int[] p : points) {
             if (!map.containsKey(p[0])) {
                 map.put(p[0], new HashSet<>());
