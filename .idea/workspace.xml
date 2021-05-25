@@ -2,50 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0772BasicCalculatorIII.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0857MinimumCostToHireKWorkers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0261GraphValidTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_0356LineReflection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BFS/BuildPostOfficeII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BFS/BuildPostOfficeII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/BinaryTreePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BinaryTreePaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_0040CombinationSumII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0040CombinationSumII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_0099RecoverBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0099RecoverBinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_105ConstructBinaryTreeFromPreorderAndInorderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_105ConstructBinaryTreeFromPreorderAndInorderTraversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_106ConstructBinaryTreeFromInorderAndPostorderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_106ConstructBinaryTreeFromInorderAndPostorderTraversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_108ConvertSortedArrayToBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_108ConvertSortedArrayToBinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_114FlattenBinaryTreeToLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_114FlattenBinaryTreeToLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_226InvertBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_226InvertBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_230KthSmallestElementInABST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_230KthSmallestElementInABST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_235LowestCommonAncestorOfABinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_235LowestCommonAncestorOfABinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_257BinaryTreePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_257BinaryTreePaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_337HouseRobberIII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_337HouseRobberIII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_559MaximumDepthOfNaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_559MaximumDepthOfNaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_590NaryTreePostorderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_590NaryTreePostorderTraversal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_617MergeTwoBinaryTrees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_617MergeTwoBinaryTrees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_654MaximumBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_654MaximumBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_701InsertIntoABinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_701InsertIntoABinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_814BinaryTreePruning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_814BinaryTreePruning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tree/_894AllPossibleFullBinaryTrees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_894AllPossibleFullBinaryTrees.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0049GroupAnagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0049GroupAnagrams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0079WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0079WordSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0173BinarySearchTreeIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0173BinarySearchTreeIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0219ContainsDuplicateII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0219ContainsDuplicateII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0323NumberOfConnectedComponentsInAnUndirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0323NumberOfConnectedComponentsInAnUndirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0387FirstUniqueCharacterInAString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0387FirstUniqueCharacterInAString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0399EvaluateDivision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0399EvaluateDivision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0692TopKFrequentWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0692TopKFrequentWords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0759EmployeeFreeTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0759EmployeeFreeTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0863AllNodesDistanceKInBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0863AllNodesDistanceKInBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0886PossibleBipartition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0886PossibleBipartition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0939MinimumAreaRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0939MinimumAreaRectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0981TimeBasedKey_ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0981TimeBasedKey_ValueStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1042FlowerPlantingWithNoAdjacent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1042FlowerPlantingWithNoAdjacent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1048LongestStringChain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1048LongestStringChain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1095FindInMountainArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1095FindInMountainArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1152AnalyzeUserWebsiteVisitPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1152AnalyzeUserWebsiteVisitPattern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1244DesignALeaderboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1244DesignALeaderboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1428LeftmostColumnWithAtLeastAOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1428LeftmostColumnWithAtLeastAOne.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +234,7 @@
       <workItem from="1619211273857" duration="1360000" />
       <workItem from="1619421675167" duration="2487000" />
       <workItem from="1619903376283" duration="24571000" />
-      <workItem from="1621381968582" duration="15766000" />
+      <workItem from="1621381968582" duration="19617000" />
     </task>
     <servers />
   </component>
