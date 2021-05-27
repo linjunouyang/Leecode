@@ -121,6 +121,15 @@ public class _0261GraphValidTree {
         public int find(int x) {
             if (parent[x] != x) {
                 parent[x] = find(parent[x]);
+
+                // path splitting
+//                int xParent = parent[x];
+//                parent[x] = parent[parent[x]];
+//                x = xParent;
+
+                // path halving
+//                parent[x] = parent[parent[x]];
+//                x = parent[x];
             }
             return parent[x];
         }
