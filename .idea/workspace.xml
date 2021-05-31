@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_1522DiameterOfNAryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1278PalindromePartitioningIII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +227,7 @@
       <workItem from="1619211273857" duration="1360000" />
       <workItem from="1619421675167" duration="2487000" />
       <workItem from="1619903376283" duration="24571000" />
-      <workItem from="1621381968582" duration="48207000" />
+      <workItem from="1621381968582" duration="51078000" />
     </task>
     <servers />
   </component>
@@ -313,10 +313,10 @@
       <screen x="-110" y="-1055" width="1920" height="1055" />
     </state>
     <state x="838" y="-881" width="602" height="822" key="find.popup/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1619213518426" />
-    <state x="1058" y="-820" width="670" height="675" key="search.everywhere.popup" timestamp="1622238578360">
+    <state x="1058" y="-820" width="670" height="675" key="search.everywhere.popup" timestamp="1622441226560">
       <screen x="-110" y="-1055" width="1920" height="1055" />
     </state>
-    <state x="1058" y="-820" width="670" height="675" key="search.everywhere.popup/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1622238578360" />
+    <state x="1058" y="-820" width="670" height="675" key="search.everywhere.popup/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1622441226560" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
