@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_0546RemoveBoxes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0907SumOfSubarrayMinimums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1547MinimumCostToCutAStick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_1522DiameterOfNAryTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +227,7 @@
       <workItem from="1619211273857" duration="1360000" />
       <workItem from="1619421675167" duration="2487000" />
       <workItem from="1619903376283" duration="24571000" />
-      <workItem from="1621381968582" duration="45613000" />
+      <workItem from="1621381968582" duration="48207000" />
     </task>
     <servers />
   </component>
