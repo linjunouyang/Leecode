@@ -12,6 +12,7 @@ public class _0295FindMedianFromDataStream {
      * The elements of the priority queue are ordered according to their natural ordering,
      * The head of this queue is the least element with respect to the specified ordering.
      *
+     * A PriorityQueue in Java does not have any restriction with regard to duplicate elements.
      *
      * MedianOfTwoSortedArray
      */
@@ -24,13 +25,16 @@ public class _0295FindMedianFromDataStream {
             large = new PriorityQueue<>(Collections.reverseOrder()); // or ((a,b) -> b - a)
         }
 
-        // Time: O(n)
+        // Time: O(log n)
         // large size = small size or large size = small size + 1
         public void addNum(int num) {
-            large.add(num); // 5-9
-            small.add(large.poll()); // 1-[5] 6-9
-            if (large.size() < small.size()) // 4 < 5
-                large.add(small.poll());  // 1-[4] [5]-9
+            if (large.size() <= small.size()) {
+                small.add(num);
+                large.add(small.poll());
+            } else {
+                large.add(num);
+                small.add(large.poll());
+            }
         }
 
         // Time: O(1)

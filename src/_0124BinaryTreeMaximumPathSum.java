@@ -27,7 +27,7 @@ public class _0124BinaryTreeMaximumPathSum {
      * Now the object variable in parent and child calls point to different objects.
      *
      * Time: O(n)
-     * Space: O(n)
+     * Space: O(h)
      */
     public int maxPathSum(TreeNode root) {
         int[] max = new int[]{Integer.MIN_VALUE}; // max might be negative
@@ -51,7 +51,9 @@ public class _0124BinaryTreeMaximumPathSum {
         // compare max with max path sum within this subtree
         max[0] = Math.max(max[0], left + root.val + right);
 
-        // Tell parent: what is the max contribution we can give
+        // Tell parent: what is the max contribution we can give.
+        // Another implementation is that we threshold the return val with Math.max(0, ...)
+        // so that we don't need Math.max(0, ..) for child results above
         return root.val + Math.max(left, right);
     }
 
@@ -59,7 +61,7 @@ public class _0124BinaryTreeMaximumPathSum {
      * 2. Iteration
      *
      * hashmap.get:
-     * More formally, if this map contains a mapping from a key k to a value v such that (key==null ? k==null : key.equals(k)),
+     * if this map contains a mapping from a key k to a value v such that (key==null ? k==null : key.equals(k)),
      * then this method returns v;
      * otherwise it returns null. (There can be at most one such mapping.)
      *
@@ -93,6 +95,7 @@ public class _0124BinaryTreeMaximumPathSum {
             if (curr.right == null || prev == curr.right) {
                 curr = stack.pop();
 
+                // The null key won't be dealt with hashCode(), and it will go to bucket 0.
                 int left = Math.max(0, nodeToMax.getOrDefault(curr.left, 0));
                 int right = Math.max(0, nodeToMax.getOrDefault(curr.right, 0));
                 max = Math.max(max, left + right + curr.val);

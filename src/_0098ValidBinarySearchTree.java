@@ -20,7 +20,8 @@ public class _0098ValidBinarySearchTree {
      * Why use Integer instead of int?
      * Because node val might be Integer.MIN_VALUE or Integer.MAX_VALUE
      *
-     * We could also use long
+     * We could also use long: Long.MIN_VALUE, long min, ...
+     * Don't forget (long) root.val
      *
      * Time: O(n)
      * Space: O(h)
@@ -60,18 +61,18 @@ public class _0098ValidBinarySearchTree {
         while (!nodeStack.isEmpty()) {
             TreeNode node = nodeStack.pop();
             long[] range = rangeStack.pop();
-            if (node.val <= range[0] || node.val >= range[1]) {
+            if (node.val < range[0] || node.val > range[1]) {
                 return false;
             }
 
             if (node.right != null) {
                 nodeStack.push(node.right);
-                rangeStack.push(new long[]{node.val, range[1]});
+                rangeStack.push(new long[]{(long) node.val + 1, range[1]});
             }
 
             if (node.left != null) {
                 nodeStack.push(node.left);
-                rangeStack.push(new long[]{range[0], node.val});
+                rangeStack.push(new long[]{range[0], (long) node.val - 1});
             }
         }
 
@@ -82,7 +83,7 @@ public class _0098ValidBinarySearchTree {
      * 2. Post-order traversal
      *
      * Recursive version similar to recursive pre-order traversal
-     * Technically iteraive would work too, but I couldn't figure it out.
+     * Technically iterative would work too, but I couldn't figure it out.
      */
 
 
@@ -128,28 +129,30 @@ public class _0098ValidBinarySearchTree {
         if (root == null) {
             return true;
         }
+
         Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode curr = root;
         long prev = Long.MIN_VALUE;
 
-        //boolean onRightSideOfPrev = false;
+        // boolean onRightSideOfPrev = false;
 
         // initially stack is empty, so we need root != null
-        while (root != null || !stack.isEmpty()) {
+        while (curr != null || !stack.isEmpty()) {
             // go left, keep going down
-            while (root != null) {
-                stack.push(root);
-                root = root.left;
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
             }
 
-            root = stack.pop();
-            if ( root.val <= prev) {
+            curr = stack.pop();
+            if (curr.val <= prev) {
                 // pre != null && ((!onRightSideofPrev && pre.val > root.val)
                 // || (onRightSideofPrev && pre.val >= root.val)))
                 return false;
             }
 
-            prev = root.val;
-            root = root.right;
+            prev = curr.val;
+            curr = curr.right;
 
             // handle duplicate values on the left side. for right side, switch > and >=
             // onRightSideOfPrev = root == null ? false : true;
@@ -165,7 +168,6 @@ public class _0098ValidBinarySearchTree {
      * but DC uses result from sub-tasks and combine
      * In recursive post-order, curr node's range is passed from parent,
      * we don't utilize child function calls to determine the validity of cur node's val
-     *
      *
      * Time : O(n)
      * Space: O(h)

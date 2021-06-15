@@ -7,7 +7,12 @@ import java.util.Deque;
  */
 public class _0224BasicCalculator {
     /**
-     * 1.
+     * 1. Sign Stack
+     *
+     * Parentheses decide the range of effect of the sign right before '('
+     * inner context sign depends on the outside context sign and the sign before '('
+     *
+     *
      * Principle:
      * (Sign before '+'/'-') = (This context sign);
      * (Sign after '+'/'-') = (This context sign) * (1 or -1);
@@ -26,12 +31,15 @@ public class _0224BasicCalculator {
      *
      * (1-(4-(5+2))-3)+(6+8)
      *
+     * Time: O(n)
+     * Space: O(n)
+     *
      * 394. Decode String.
      * the theme is using a stack to help you parse through a string where order of operations is important
      * (i.e. look at the innermost parenthesis first).
      */
     public int calculate(String s) {
-        if(s == null) {
+        if (s == null) {
             return 0;
         }
 
@@ -42,17 +50,17 @@ public class _0224BasicCalculator {
         Deque<Integer> stack = new ArrayDeque<Integer>();
         stack.push(sign);
 
-        for(int i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if(c >= '0' && c <= '9') {
+            if (c >= '0' && c <= '9') {
                 num = num * 10 + (c - '0');
-            } else if(c == '+' || c == '-') {
+            } else if (c == '+' || c == '-') {
                 result += sign * num;
                 sign = stack.peek() * (c == '+' ? 1: -1);
                 num = 0;
             } else if (c == '(') {
                 stack.push(sign);
-            } else if(c == ')') {
+            } else if (c == ')') {
                 stack.pop();
             }
         }

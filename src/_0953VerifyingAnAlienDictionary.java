@@ -22,13 +22,13 @@ public class _0953VerifyingAnAlienDictionary {
     }
 
     boolean bigger(int[] map, String s1, String s2) {
-        int n = s1.length(), m = s2.length();
-        for (int i = 0; i < n && i < m; ++i) {
+        int end = Math.min(s1.length(), s2.length());
+        for (int i = 0; i < end; ++i) {
             if (s1.charAt(i) != s2.charAt(i)) {
                 return map[s1.charAt(i) - 'a'] > map[s2.charAt(i) - 'a'];
             }
         }
-        return n > m;
+        return s1.length() > s2.length();
     }
 
 }

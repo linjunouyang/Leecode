@@ -17,12 +17,11 @@ public class _0236LowestCommonAncestorOfABinaryTree {
      * Space complexity: O(n)
      */
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        // write your code here
         if (root == null) {
             return null;
         }
 
-        if( root == p || root == q) {
+        if (root == p || root == q) {
             // lowest ancestor for p or q is itself
             // If the other node is in the subtree of root & even we return right here
             // when we go back to parent, the other sibling function call will return null,
@@ -40,9 +39,12 @@ public class _0236LowestCommonAncestorOfABinaryTree {
         if (left != null) {
             return left;
         }
+
         if (right != null) {
             return right;
         }
+
+        // unreachable
         return null;
     }
 
@@ -69,6 +71,7 @@ public class _0236LowestCommonAncestorOfABinaryTree {
         stack.push(root);
 
         HashMap<TreeNode, TreeNode> childToParent = new HashMap<>();
+
         // or use a counter to count p and q;
         boolean visitedP = false;
         boolean visitedQ = false;

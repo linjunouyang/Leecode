@@ -23,8 +23,9 @@ public class _0480SlidingWindowMedian {
      */
     public double[] medianSlidingWindow(int[] nums, int k) {
         double[] medians = new double[nums.length - k + 1];
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>(Collections.reverseOrder());
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>();
+
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
 
         for(int i = 0; i < nums.length; i++) {
             if (minHeap.size() <= maxHeap.size()) {
@@ -35,16 +36,17 @@ public class _0480SlidingWindowMedian {
                 maxHeap.add(minHeap.remove());
             }
 
-
             if (minHeap.size() + maxHeap.size() == k) {
                 int start = i - k + 1;
-                if(minHeap.size() == maxHeap.size()) {
+                if (minHeap.size() == maxHeap.size()) {
+                    // cast to long to avoid overflow
                     medians[start] = ((long) minHeap.peek() + maxHeap.peek()) / 2.0;
                 } else {
                     medians[start] = (double) minHeap.peek();
                 }
 
                 if(!minHeap.remove(nums[start])) {
+                    // avoid remove same duplicate number
                     maxHeap.remove(nums[start]);
                 }
             }
@@ -68,7 +70,6 @@ public class _0480SlidingWindowMedian {
      *
      * Avoid Integer overflow during comparison using Integer.compare
      *
-     *
      * Time: O(n logk)
      * Space: O(k)
      */
@@ -78,6 +79,8 @@ public class _0480SlidingWindowMedian {
                 if (nums[i1] != nums[i2]) {
                     return Integer.compare(nums[i1], nums[i2]);
                 } else {
+                    // for cases like [[2147483647,2147483647]]
+                    // Without this, 0 and 1 will be treated the same, 1 won't be added
                     return Integer.compare(i1, i2);
                 }
             }

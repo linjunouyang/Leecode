@@ -1,9 +1,18 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.LinkedList;
 
 // todo: other solutions
 public class _0239SlidingWindowMaximum {
     /**
      * 2. Deque <Monotonic Queue>
+     *
+     * Increasing or decreasing?
+     * suppose i < j, and nums[i] < nums[j]
+     * as we move window, we know nums[i] will never be max, and will be out of bounds earlier
+     * i would be least possible candidate for max, so rule out smaller elements on the left
+     *
+     * [earlier to be out of window, .... later to be out of window]
      *
      * https://www.jiuzhang.com/solution/sliding-window-maximum/
      * 单调队列中的元素是严格单调的。我们在求解这个问题的时候需要维护他的单调性。
@@ -22,14 +31,17 @@ public class _0239SlidingWindowMaximum {
             return nums;
         }
         int[] result = new int[n - k + 1];
-        LinkedList<Integer> dq = new LinkedList<>();
+        Deque<Integer> queue = new ArrayDeque<>();
         for (int i = 0; i < n; i++) {
-            if (!dq.isEmpty() && dq.peek() < i - k + 1) {
+            // we can exchange if and while block
+            if (!queue.isEmpty() && queue.peek() < i - k + 1) {
                 // pop out out of range element in one round at most. (the leftmost)
                 // (one round we only accept one element, so we pop at most one element out).
-                dq.poll();
+                queue.poll();
             }
-            while (!dq.isEmpty() && nums[i] >= nums[dq.peekLast()]) {
+
+            // notice isEmpty, peekLast and pollLast
+            while (!queue.isEmpty() && nums[i] >= nums[queue.peekLast()]) {
                 // 每滑动一次就判断当前元素和队尾元素的关系，
                 // 1.
                 // 如果放入队尾满足单调递减，放入即可
@@ -37,11 +49,14 @@ public class _0239SlidingWindowMaximum {
                 // 2.
                 // 如果放入不满足，就需要删除队尾元素直到放入当前元素之后满足队列单调递减。同时要确保已经出窗口的最大值（队首元素）被删除掉。
                 // previous elements are smaller, and they will be out of window first, so no need to keep them
-                dq.pollLast();
+                queue.pollLast();
             }
-            dq.offer(i);
+
+            // offer i, so i will be considered
+            queue.offer(i);
+
             if (i - k + 1 >= 0) {
-                result[i - k + 1] = nums[dq.peek()];
+                result[i - k + 1] = nums[queue.peek()];
             }
         }
         return result;

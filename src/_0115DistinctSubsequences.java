@@ -110,7 +110,7 @@ public class _0115DistinctSubsequences {
 
         for (int sIdx = 1; sIdx <= sLen; sIdx++) {
             // originally tIdx <= sIdx
-            for (int tIdx = 1; tIdx <= Math.min(sIdx + 1, tLen); tIdx++) {
+            for (int tIdx = 1; tIdx <= Math.min(sIdx, tLen); tIdx++) {
                 dp[sIdx][tIdx] = dp[sIdx - 1][tIdx];
                 if (s.charAt(sIdx - 1) == t.charAt(tIdx - 1)) {
                     dp[sIdx][tIdx] += dp[sIdx - 1][tIdx - 1];

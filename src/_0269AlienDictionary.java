@@ -4,12 +4,18 @@ import java.util.*;
  * 1. all letters are in lowercase.
  * 2. if the order is invalid, return an empty string.
  * 3. There may be multiple valid order of letters, return any one of them is fine.
- * 4. The input can contain words followed by their prefix, for example, abcd and then ab. These cases will never result in a valid alphabet (because in a valid alphabet, prefixes are always first). You'll need to make sure your solution detects these cases correctly.
- * 5. Your output string must contain all unique letters that were within the input list, including those that could be in any position within the ordering. It should not contain any additional letters that were not in the input.
+ * 4. The input can contain words followed by their prefix, for example, abcd and then ab.
+ * These cases will never result in a valid alphabet (because in a valid alphabet, prefixes are always first).
+ * You'll need to make sure your solution detects these cases correctly.
+ * 5. Your output string must contain all unique letters that were within the input list,
+ * including those that could be in any position within the ordering.
+ * [[[It should not contain any additional letters that were not in the input.]]]
+ *
+ * Syntax:
+ * ArrayList<Character>[] adjLists = (ArrayList<Character>[]) new ArrayList[DICT_SIZE];
  *
  * follow-up:
  * how many valid alphabet orderings there are
- *
  */
 public class _0269AlienDictionary {
     /**
@@ -50,6 +56,7 @@ public class _0269AlienDictionary {
         for (String word : words) {
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
+                // !! only care about letters show up in words
                 counts.put(c, 0);
                 adjList.put(c, new ArrayList<>());
             }
@@ -68,9 +75,11 @@ public class _0269AlienDictionary {
                     counts.put(word2.charAt(j), counts.get(word2.charAt(j)) + 1);
                     break;
                 }
+                // !! avoid infinite loop
                 j++;
             }
 
+            // !! invalid orders like ["abc" "ab"]
             if (j == end && word1.length() > word2.length()) {
                 return "";
             }
@@ -111,8 +120,8 @@ public class _0269AlienDictionary {
      *
      * If we made a reverse adjacency list instead of a forward one,
      * the output order would be correct (without needing to be reversed).
-     * Remember that when we reverse the edges of a directed graph, t
-     * he nodes with no incoming edges became the ones with no outgoing edges.
+     * Remember that when we reverse the edges of a directed graph,
+     * the nodes with no incoming edges became the ones with no outgoing edges.
      * This means that the ones at the start of the alphabet will now be the ones returned first.
      *
      * One issue we need to be careful of is cycles.
@@ -167,16 +176,21 @@ public class _0269AlienDictionary {
     }
 
     // Return true iff no cycles detected.
-    private boolean dfs(HashMap<Character, List<Character>> reverseAdjList, Character c, HashMap<Character, Boolean> seen, StringBuilder output) {
+    private boolean dfs(HashMap<Character, List<Character>> reverseAdjList, Character c,
+                        HashMap<Character, Boolean> seen, StringBuilder output) {
         if (seen.containsKey(c)) {
             return seen.get(c); // If this node was grey (false), a cycle was detected.
         }
+
         seen.put(c, false);
         for (Character next : reverseAdjList.get(c)) {
             boolean result = dfs(reverseAdjList, next, seen, output);
-            if (!result) return false;
+            if (!result) {
+                return false;
+            }
         }
         seen.put(c, true);
+
         output.append(c);
         return true;
     }

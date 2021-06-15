@@ -13,11 +13,13 @@ public class _0472ConcatenatedWords {
      * <p>
      * Of course it is also obvious that a word can only be formed by words shorter than it.
      * So we can first sort the input by length of each word, and only try to form one word by using words in front of it.
-     * <p>
+     *
      * Time complexity: O(N * L ^ 3)
+     * add word to hashset: O(avg len * num words)
+     *
      * String HashCode takes O(L) for 1st computation
      * substring: O(L)
-     * <p>
+     *
      * Space complexity:
      * preWords: O(n)
      * sort: O(logn) to O(n)
@@ -64,14 +66,19 @@ public class _0472ConcatenatedWords {
      * and for each breakdown, we check whether each substring is available in dict.
      * -> a lot of repetitive work (overlapping sub-problems)
      *
-     * ? How to describe its optimal substructure
-     *
      * dp[i] = 1 if exists j[0, i - 1] that dp[j] = true && dict contains word[j, i)
+     *
+     * Time: O(l * l * l)
+     * i, j and substring
+     * Space: O(len)
      */
     private static boolean canForm(String word, Set<String> dict) {
-//        if (dict.isEmpty()) {
-//            return false;
-//        }
+        if (word.equals("")) {
+            // for the case: [""]
+            // & we don't sort and don't add word after check
+            return false;
+        }
+
         boolean[] dp = new boolean[word.length() + 1];
         dp[0] = true;
         for (int i = 1; i <= word.length(); i++) {
@@ -79,6 +86,7 @@ public class _0472ConcatenatedWords {
             // For long words, it's faster to use stored result rather than take substring and check in set
             for (int j = i - 1; j >= 0; j--) {
                 if (!dp[j]) {
+                    // if dp len is word.length(), we won't be able to find first word
                     continue;
                 }
                 if (dict.contains(word.substring(j, i))) {
@@ -169,7 +177,8 @@ public class _0472ConcatenatedWords {
     /**
      * 3. Trie + DFS
      *
-     * We have to answer a question recursively: is a substring(word[x, word.length()-1]) prefixed with another word in words?
+     * We have to answer a question recursively:
+     * is a substring(word[x, word.length()-1]) prefixed with another word in words?
      * That's natural to prefix tree(trie).
      *
      * Time complexity: O(n * 2^k)
@@ -178,8 +187,7 @@ public class _0472ConcatenatedWords {
      *
      * Space complexity: O(n * k)
      * Trie: O(n * k)
-     * chars array in addWord: O(k)
-     * testWord: O(k)
+     * dfs depth: O(k)
      */
     class TrieNode {
         TrieNode[] children;
@@ -197,31 +205,31 @@ public class _0472ConcatenatedWords {
         }
 
         TrieNode root = new TrieNode();
-        for (String word : words) { // construct Trie tree
+        // construct Trie tree
+        for (String word : words) {
             addWord(word, root);
         }
 
-        for (String word : words) { // test word is a concatenated word or not
-            if (word.length() == 0) {
-                continue;
-            }
-            if (testWord(word.toCharArray(), 0, root, 0)) {
+        for (String word : words) {
+            if (dfs(root, word, 0, 0)) {
                 res.add(word);
             }
         }
+
         return res;
     }
 
-    public void addWord(String str, TrieNode root) {
-        char[] chars = str.toCharArray();
-        TrieNode cur = root;
-        for (char c : chars) {
-            if (cur.children[c - 'a'] == null) {
-                cur.children[c - 'a'] = new TrieNode();
+    private void addWord(String word, TrieNode root) {
+        TrieNode curr = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (curr.children[c - 'a'] == null) {
+                curr.children[c - 'a'] = new TrieNode();
             }
-            cur = cur.children[c - 'a'];
+
+            curr = curr.children[c - 'a'];
         }
-        cur.isEnd = true;
+        curr.isEnd = true;
     }
 
     /**
@@ -239,24 +247,28 @@ public class _0472ConcatenatedWords {
      * O(L) = O(L-1) + O(L-2) + ... + O(1) = 2(O(L-2) + O(L-3) + ... + O(1)) = 2(2(O(L-3) + ... + O(1))) = 2^L
      *
      */
-    public boolean testWord(char[] chars, int index, TrieNode root, int count) {
-        TrieNode cur = root;
-        int n = chars.length;
-        for (int i = index; i < n; i++) {
-            if (cur.children[chars[i] - 'a'] == null) {
+    private boolean dfs(TrieNode node, String word, int start, int count) {
+        if (start == word.length() && count > 1) {
+            return true;
+        }
+
+        TrieNode curr = node;
+        for (int i = start; i < word.length(); i++) {
+            char c = word.charAt(i);
+
+            if (curr.children[c - 'a'] == null) {
                 return false;
             }
-            if (cur.children[chars[i] - 'a'].isEnd) {
-                if (i == n - 1) {
-                    // no next word, so test count to get result.
-                    return count >= 1;
-                }
-                if (testWord(chars, i + 1, root, count + 1)) {
-                    return true;
-                }
+
+            if (curr.children[c - 'a'].isEnd && dfs(node, word, i + 1, count + 1)) {
+                // notice: curr.children[c - 'a'].isEnd instead of curr.isEnd
+                // dfs(node) instead of dfs(curr)
+                return true;
             }
-            cur = cur.children[chars[i] - 'a'];
+
+            curr = curr.children[c - 'a'];
         }
+
         return false;
     }
 

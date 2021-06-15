@@ -10,7 +10,7 @@ import java.util.*;
 public class _0210CourseScheduleII {
 
     /**
-     * 1&2 BFS and DFS with more reuseable code
+     * 1&2 BFS and DFS with more reusable code
      *
      * Time: O(V + E)
      * build adj list: O(E)
@@ -75,18 +75,20 @@ public class _0210CourseScheduleII {
     }
 
     /**
+     * DFS: explore courses from most advanced -> most basic
+     *
      * 0: Vertex is not processed yet. Initially, all vertices are WHITE.
      * 1: Vertex is being processed (DFS for this vertex has started, but not finished
      * which means that all descendants (in DFS tree) of this vertex are not processed yet (or this vertex is in the function call stack)
      * 2: Vertex and all its descendants are processed.
-     * While doing DFS, if an edge is encountered from current vertex to a GRAY vertex,
-     * then this edge is back edge and hence there is a cycle.
      *
+     * While doing DFS, if an edge is encountered from current vertex to a GRAY vertex,
+     * then this edge is back edge and hence there is a cycle
      */
     private boolean dfs(List<Integer> res, int[] status, int i,
                         int[] indegrees, List<List<Integer>> adjs) {
         if (status[i] == 2) {
-            //when visit = 2, which means the subtree whose root is i has been dfs traversed
+            // when visit = 2, which means the subtree whose root is i has been dfs traversed
             // and all the nodes in subtree has been put in the result(if we request), so we do not need to traverse it again
             //            return true;
             return true;

@@ -18,76 +18,82 @@ public class _0773SlidingPuzzle {
      * initial push (easy to forget), and following push inside while loop
      * 2. right after poll -> 1 places
      *
+     * Print path:
+     * HashMap<String, String>: newState -> parent state
+     *
      * Could also use Two-way BFS:
      * https://leetcode.com/problems/sliding-puzzle/discuss/113620/JavaPython-3-BFS-clean-codes-w-comment-Time-and-space%3A-O(m-*-n-*-(m-*-n)!).
      *
-     *
      * Number of possible board states: (rows * cols)!
      * Time: O(rows * cols * (rows * cols)!)
-     * Space: O((rows * cols)!)
+     * Space: O(rows * cols * (rows * cols)!)
      */
+    private final static int ROWS = 2;
+    private final static int COLS = 3;
+    private final static int[] MOVES = new int[]{-1, 1, 3, -3};
+    private final static String END = "123450";
+
     public int slidingPuzzle(int[][] board) {
-        int rows = board.length;
-        int cols = board[0].length;
-        int steps = 0;
-        int[][] directions = new int[][]{{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-
-        Deque<String> queue = new ArrayDeque<>();
-        HashSet<String> states = new HashSet<>();
-
-        // initial board state as root node
-        StringBuilder sb = new StringBuilder();
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < cols; col++) {
-                sb.append(board[row][col]);
+        StringBuilder start = new StringBuilder();
+        for (int row = 0; row < ROWS; row++) {
+            for (int col = 0; col < COLS; col++) {
+                start.append(board[row][col]);
             }
         }
-        queue.offer(sb.toString());
+
+        String startStr = start.toString();
+        Deque<String> queue = new ArrayDeque<>();
+        queue.offer(startStr);
+        HashSet<String> visited = new HashSet<>();
+        visited.add(startStr);
+
+        int steps = 0;
 
         while (!queue.isEmpty()) {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                // Check current board configuration
                 String state = queue.poll();
-                if (state.equals("123450")) {
+                if (state.equals(END)) {
                     return steps;
                 }
 
-                // Explore next possible board states
                 char[] chars = state.toCharArray();
-                int emptyIdx = state.indexOf('0');
-                int emptyRow = emptyIdx / cols;
-                int emptyCol = emptyIdx % cols;
-
-                for (int[] direction : directions) {
-                    // invalid next state
-                    int nextRow = emptyRow + direction[0];
-                    int nextCol = emptyCol + direction[1];
-                    if (nextRow < 0 || nextRow >= rows || nextCol < 0 || nextCol >= cols) {
+                int zeroPos = state.indexOf('0');
+                for (int move : MOVES) {
+                    int zeroNextPos = zeroPos + move;
+                    if (!isValid(zeroPos, zeroNextPos)) {
                         continue;
                     }
 
-                    // generate next state(node)
-                    int otherIdx = nextRow * cols + nextCol;
-                    chars[emptyIdx] = chars[otherIdx];
-                    chars[otherIdx] = '0';
+                    chars[zeroPos] = chars[zeroNextPos];
+                    chars[zeroNextPos] = '0';
 
-                    // ready to visit next state(node)
                     String nextState = String.valueOf(chars);
-                    if (!states.contains(nextState)) {
+                    if (!visited.contains(nextState)) {
                         queue.offer(nextState);
-                        states.add(nextState);
+                        visited.add(nextState);
                     }
 
-                    // revert
-                    chars[otherIdx] = chars[emptyIdx];
-                    chars[emptyIdx] = '0';
+                    // don't forget to revert when newState is visited
+                    chars[zeroNextPos] = chars[zeroPos];
+                    chars[zeroPos] = '0';
                 }
             }
             steps++;
         }
 
         return -1;
+    }
+
+    private boolean isValid(int zeroPos, int zeroNextPos) {
+        int last = ROWS * COLS - 1;
+        if (zeroNextPos < 0 || zeroNextPos > last ||
+                // don't forget these two situations
+                (zeroPos == COLS && zeroNextPos == COLS - 1) ||
+                (zeroPos == COLS - 1 && zeroNextPos == COLS)) {
+            return false;
+        }
+        return true;
     }
 
     /**

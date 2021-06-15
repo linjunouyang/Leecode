@@ -27,7 +27,8 @@ public class _0010RegularExpressionMatching {
      * 2) a dot ., then it can definitely match the last character in s, so M[i][j] = M[i - 1][j - 1]
      * 3) If it is a star * , then it can means 0 time, or at least 1 time(>= 1):
      * 3.1. 0 time, then we are using the 1st j - 2 characters in pattern p to match 1st i chars in s, so M[i][j] = M[i][j - 2]
-     * 3.2. >= 1 time, then a* can be treated like a*a where the last a is just a virtual/dummy character who will be responsible for matching the last character in s, so M[i][j] can be divided into 2 parts:
+     * 3.2. >= 1 time, then a* can be treated like a*a where the last a is just a virtual/dummy character who will be responsible for matching the last character in s,
+     * so M[i][j] can be divided into 2 parts:
      * a)The dummy character(the 2nd last character in p) matches last character in s, i.e. p[j - 2] = s[i] or p[j - 2] = '.'. For example:
      * ######a
      * ###a*a
@@ -41,24 +42,26 @@ public class _0010RegularExpressionMatching {
      *
      */
     public boolean isMatch(String s, String p) {
-        if(s == null || p == null) return false;
+        if (s == null || p == null) {
+            return false;
+        }
 
         int m = s.length();
         int n = p.length();
 
         boolean[][] M = new boolean[m + 1][n + 1];
         M[0][0] = true;
-        for(int j = 1; j < n; j +=2){
+        for (int j = 1; j < n; j +=2){
             M[0][j + 1] = p.charAt(j) == '*' && M[0][j - 1];
         }
 
-        for(int i = 1; i < m + 1; i++){
-            for(int j = 1; j < n + 1; j++){
+        for (int i = 1; i < m + 1; i++){
+            for (int j = 1; j < n + 1; j++){
                 char curS = s.charAt(i - 1);
                 char curP = p.charAt(j - 1);
-                if(curS == curP || curP == '.'){
+                if (curS == curP || curP == '.'){
                     M[i][j] = M[i - 1][j - 1];
-                }else if(curP == '*'){
+                } else if (curP == '*'){
                     // if * represents 0 time
                     boolean b1 = M[i][j - 2];
                     // if * represents 1 or more times

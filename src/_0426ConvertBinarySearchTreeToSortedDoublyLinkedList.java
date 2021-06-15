@@ -1,6 +1,9 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ *  in-place means mutating the input and not returning newly allocated data. That is you can use extra space but in the end the returned value should not be something newly created but instead all changes done in the given input only.
+ */
 public class _0426ConvertBinarySearchTreeToSortedDoublyLinkedList {
     class Node {
         public int val;
@@ -24,17 +27,19 @@ public class _0426ConvertBinarySearchTreeToSortedDoublyLinkedList {
      * 1. Recursive In-order traversal with dummy node
      *
      * Time complexity: O(n)
-     * Space complexity: O(n)
+     * Space complexity: O(h)
      */
     public Node treeToDoublyList(Node root) {
         if (root == null) {
             return null;
         }
         Node dummy = new Node(0, null, null);
-        Node prev = dummy;
-        prev = inorder(root, prev);
-        prev.right = dummy.right;
-        dummy.right.left = prev;
+
+        Node last = inorder(root, dummy);
+
+        last.right = dummy.right;
+        dummy.right.left = last;
+
         return dummy.right;
     }
 
@@ -42,23 +47,21 @@ public class _0426ConvertBinarySearchTreeToSortedDoublyLinkedList {
         if (node == null) {
             return prev;
         }
-        prev = inorder(node.left, prev);
+        Node leftLast = inorder(node.left, prev);
 
-        prev.right = node;
-        node.left = prev;
+        leftLast.right = node;
+        node.left = leftLast;
 
-        // The right subtree's left-most node's predecessor is current node
-        prev = inorder(node.right, node);
+        Node rightLast = inorder(node.right, node);
 
-        return prev;
+        return rightLast;
     }
 
     /**
      * 2. Iterative in-order traversal with dummy node
      *
      * Time complexity: O(n)
-     * Space complexity: O(n)
-     *
+     * Space complexity: O(h)
      */
     public Node treeToDoublyList2(Node root) {
         if (root == null) {
@@ -77,9 +80,11 @@ public class _0426ConvertBinarySearchTreeToSortedDoublyLinkedList {
             }
 
             curr = stack.pop();
+
             prev.right = curr;
             curr.left = prev;
             prev = curr;
+
             curr = curr.right;
         }
 
@@ -90,11 +95,43 @@ public class _0426ConvertBinarySearchTreeToSortedDoublyLinkedList {
     }
 
     /**
-     * 3. in-order traversal without duummy node
+     * 2.1 in-order traversal without dummy node
      *
      * We need to maintain two references: first and last
      * https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/solution/
      */
+    private Node treeToDoublyList21(Node root) {
+        if (root == null) {
+            return null;
+        }
+
+        Deque<Node> nodes = new ArrayDeque<>();
+        Node curr = root;
+        Node prev = null;
+        Node first = null;
+
+        while (!nodes.isEmpty() || curr != null) {
+            while (curr != null) {
+                nodes.push(curr);
+                curr = curr.left;
+            }
+
+            curr = nodes.pop();
+            if (prev != null) {
+                prev.right = curr;
+                curr.left = prev;
+            } else {
+                first = curr;
+            }
+            prev = curr;
+
+            curr = curr.right;
+        }
+
+        first.left = prev;
+        prev.right = first;
+        return prev.right;
+    }
 
     /**
      * 4. Divide and Conquer
@@ -131,6 +168,4 @@ public class _0426ConvertBinarySearchTreeToSortedDoublyLinkedList {
 
         return n1;
     }
-
-
 }
