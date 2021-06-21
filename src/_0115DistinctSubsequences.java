@@ -21,10 +21,10 @@ public class _0115DistinctSubsequences {
      * https://leetcode.com/problems/distinct-subsequences/solution/
      *
      * Whenever we have choices in a problem, it could be a good idea to fall back on a recursive approach.
-     * A recursive solution makes the most sense when a problem can be broken down into subproblems
-     * and solutions to subproblems can be used to solve the top level problem.
-     * Well, for our problem, a substring is our subproblem because i represents that we have already processed 0...i−1 characters in string S.
-     * Similarly, j represents that we have processed 0...j−1 characters in string T.
+     * A recursive solution makes the most sense when a problem can be broken down into sub-problems
+     * and solutions to sub-problems can be used to solve the top level problem.
+     * Well, for our problem, a substring is our sub-problem because i represents that we have already processed 0...i−1 characters in string S.
+     * Similarly, j represents that we have processed 0...j−1 characters in string t.
      *
      * [State / Input]
      * Every recursive approach needs some variables that help define the state of the recursion.
@@ -34,7 +34,7 @@ public class _0115DistinctSubsequences {
      * [Return value]
      * The return value is not that hard to figure out really.
      * Given two indices i and j, our function would return the number of distinct subsequences in the substring
-     * s[i...M] that equal the substring t[j⋯N] where M and N represent the lengths of the two string respectively.
+     * s[i...M] that equal the substring t[j..N] where M and N represent the lengths of the two string respectively.
      *
      * [Base Case]
      * 1) If we exhausted the string S, but there are still characters to be considered in string T,
@@ -61,9 +61,11 @@ public class _0115DistinctSubsequences {
         if (tIdx == t.length()) {
             return 1;
         }
+
         if (sIdx == s.length() || s.length() - sIdx < t.length() - tIdx) {
             return 0;
         }
+
         // Or we could use Pair
         String key = sIdx + "," + tIdx;
         if (map.containsKey(key)) {
@@ -112,7 +114,7 @@ public class _0115DistinctSubsequences {
             // originally tIdx <= sIdx
             for (int tIdx = 1; tIdx <= Math.min(sIdx, tLen); tIdx++) {
                 dp[sIdx][tIdx] = dp[sIdx - 1][tIdx];
-                if (s.charAt(sIdx - 1) == t.charAt(tIdx - 1)) {
+                if (s.charAt(sIdx - 1) == t.charAt(tIdx - 1)) { // don't forget minus  1
                     dp[sIdx][tIdx] += dp[sIdx - 1][tIdx - 1];
                 }
             }
@@ -123,43 +125,24 @@ public class _0115DistinctSubsequences {
 
     /**
      * 3. Space Optimized
+     *
+     * Time: O(mn)
+     * Space: O(m)
      */
     public int numDistinct3(String s, String t) {
-        int sLen = s.length(); //3
-        int tLen = t.length(); //4
-        int[] dp = new int[tLen + 1];//5
-        dp[0] = 1;
+        int n = s.length();
+        int m = t.length();
+        int[] dp = new int[m + 1];
+        dp[0] = 1; // this will be inherited for each 'row'
 
-        for (int sIdx = 1; sIdx <= sLen; sIdx++) {
-            int[] dp2 = new int[tLen + 1];
-            dp2[0] = 1;
-            for (int tIdx = 1; tIdx <= Math.min(sIdx, tLen); tIdx++) {
-                dp2[tIdx] = dp[tIdx];
-                if (s.charAt(sIdx - 1) == t.charAt(tIdx - 1)) {
-                    dp2[tIdx] += dp[tIdx - 1];
-                }
-            }
-            dp = dp2;
-        }
-
-        return dp[tLen];
-    }
-
-    public int numDistinct4(String s, String t) {
-        int sLen = s.length(); //3
-        int tLen = t.length(); //4
-        int[] dp = new int[tLen + 1];//5
-        dp[0] = 1;
-
-        for (int sIdx = 1; sIdx <= sLen; sIdx++) {
-            for (int tIdx = Math.min(sIdx, tLen); tIdx >= 1; tIdx--) {
-                dp[tIdx] = dp[tIdx];
-                if (s.charAt(sIdx - 1) == t.charAt(tIdx - 1)) {
-                    dp[tIdx] += dp[tIdx - 1];
+        for (int i = 1; i <= n; i++) {
+            for (int j = m; j >= 1; j--) {
+                if (s.charAt(i - 1) == t.charAt(j - 1)) {
+                    dp[j] += dp[j - 1];
                 }
             }
         }
 
-        return dp[tLen];
+        return dp[m];
     }
 }

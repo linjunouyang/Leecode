@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
  * By RE convention, the star applies before a match so .* can match any sequence of characters.
  *
@@ -7,7 +9,46 @@
  */
 public class _0010RegularExpressionMatching {
     /**
-     * 1. DP
+     * 1. Top-down DP
+     *
+     * Time: O(mn)
+     * Space: O(mn)
+     */
+    public boolean isMatch1(String s, String p) {
+        HashMap<String, Boolean> cache = new HashMap<>();
+        return matchHelper(s, 0, p, 0, cache);
+    }
+
+    private boolean matchHelper(String s, int i, String p, int j,
+                                HashMap<String, Boolean> cache) {
+        if (j == p.length()) {
+            return i == s.length();
+        }
+
+        String key = i + "," + j;
+        if (cache.containsKey(key)) {
+            return cache.get(key);
+        }
+
+        boolean firstMatch = i < s.length() &&
+                (p.charAt(j) == '.' || s.charAt(i) == p.charAt(j));
+
+        boolean res = false;
+        if (j + 1 < p.length() && p.charAt(j + 1) == '*') {
+            // second char is '*'
+            res = matchHelper(s, i, p, j + 2, cache) || // not match
+                    (firstMatch && matchHelper(s, i + 1, p, j, cache)); // match
+        } else {
+            // second char is not '*'
+            res = firstMatch && matchHelper(s, i + 1, p, j + 1, cache); // 1-1 match
+        }
+
+        cache.put(key, res);
+        return res;
+    }
+
+    /**
+     * 2. DP
      *
      * boolean[][] dp = new boolean[m + 1][n + 1];
      * dp[i][j]: if the first i characters in s match the first j characters in p.
@@ -41,7 +82,7 @@ public class _0010RegularExpressionMatching {
      * Space complexity: O(p len * s len)
      *
      */
-    public boolean isMatch(String s, String p) {
+    public boolean isMatch2(String s, String p) {
         if (s == null || p == null) {
             return false;
         }
@@ -55,18 +96,21 @@ public class _0010RegularExpressionMatching {
             M[0][j + 1] = p.charAt(j) == '*' && M[0][j - 1];
         }
 
-        for (int i = 1; i < m + 1; i++){
-            for (int j = 1; j < n + 1; j++){
+        for (int i = 1; i < m + 1; i++) {
+            for (int j = 1; j < n + 1; j++) {
                 char curS = s.charAt(i - 1);
                 char curP = p.charAt(j - 1);
+
                 if (curS == curP || curP == '.'){
                     M[i][j] = M[i - 1][j - 1];
-                } else if (curP == '*'){
+                } else if (curP == '*') {
                     // if * represents 0 time
                     boolean b1 = M[i][j - 2];
+
                     // if * represents 1 or more times
                     char starBase = p.charAt(j - 2);
                     boolean b2 = (M[i - 1][j] && (starBase == '.' || starBase == curS));
+
                     M[i][j] = b1 || b2;
                 }
             }

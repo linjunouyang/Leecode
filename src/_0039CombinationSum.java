@@ -20,15 +20,8 @@ public class _0039CombinationSum {
      *
      * Space complexity:
      * O(target) (If every number is almost 1, recursion depth ~= target)
-     *
-     * Runtime: 5 ms, faster than 49.00% of Java online submissions for Combination Sum.
-     * Memory Usage: 37.5 MB, less than 100.00% of Java online submissions for Combination Sum.
-     *
-     * @param nums
-     * @param target
-     * @return
      */
-    public List<List<Integer>> combinationSum(int[] nums, int target) {
+    public List<List<Integer>> combinationSum1(int[] nums, int target) {
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
         backtrack(list, new ArrayList<>(), nums, target, 0);
@@ -56,11 +49,52 @@ public class _0039CombinationSum {
             tempList.add(nums[i]);
 
             // 把所有[1, 2]开头的剩余的和为remain - nums[i]的集合，都找到，放入到results
-            backtrack(list, tempList, nums, remain - nums[i], i);
+            backtrack(list, tempList, nums, remain - nums[i], i); // i, not start
 
             // [1, 2] -> [1]
             tempList.remove(tempList.size() - 1);
         }
+    }
+
+    /**
+     * Another implementation
+     *
+     * focus on one index in each function call.
+     */
+    public List<List<Integer>> combinationSum11(int[] candidates, int target) {
+        Arrays.sort(candidates);
+        List<List<Integer>> combinations = new ArrayList<>();
+        List<Integer> combination = new ArrayList<>();
+        explore(candidates, 0, 0, target, combination, combinations);
+        return combinations;
+    }
+
+    private void explore(int[] candidates, int idx,
+                         int sum, int target,
+                         List<Integer> combination,
+                         List<List<Integer>> combinations) {
+        // base cases: idx, sum target
+        if (sum > target) {
+            return;
+        }
+
+        if (idx == candidates.length) {
+            return;
+        }
+
+        // not choose cur candidate
+        explore(candidates, idx + 1, sum, target, combination, combinations);
+
+        // choose
+        combination.add(candidates[idx]);
+        sum += candidates[idx];
+        if (sum == target) {
+            combinations.add(new ArrayList<>(combination));
+            combination.remove(combination.size() - 1);
+            return;
+        }
+        explore(candidates, idx, sum, target, combination, combinations);
+        combination.remove(combination.size() - 1);
     }
 
 }

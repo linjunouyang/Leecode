@@ -15,12 +15,6 @@ public class _0023MergeKSortedLists {
      *
      * Time complexity: O(nlogn)
      * Space complexity: O(n)
-     *
-     * Runtime: 7 ms, faster than 47.48% of Java online submissions for Merge k Sorted Lists.
-     * Memory Usage: 43.7 MB, less than 26.24% of Java online submissions for Merge k Sorted Lists.
-     *
-     * @param lists
-     * @return
      */
     public ListNode mergeKLists1(ListNode[] lists) {
         List<Integer> vals = new ArrayList<>();
@@ -51,19 +45,13 @@ public class _0023MergeKSortedLists {
      * k : number of lists
      *
      * Time complexity: O(nk)
-     * Space commplexity: O(1)
-     *
-     * Runtime: 338 ms, faster than 5.10% of Java online submissions for Merge k Sorted Lists.
-     * Memory Usage: 57.3 MB, less than 5.47% of Java online submissions for Merge k Sorted Lists.
+     * Space complexity: O(1)
      *
      * Notice the pattern:
      * Find minimum O(k), add it to the list, and take into next element into consideration O(1)
      * ->
      * Priority Queue
      * Find minimum O(logk), add it to the list, and take into next element into consideration O(logk)
-     *
-     * @param lists
-     * @return
      */
     public ListNode mergeKList2(ListNode[] lists) {
         // Dummy Node
@@ -102,9 +90,6 @@ public class _0023MergeKSortedLists {
      *
      * Time complexity: O(nlogn)
      * Space complexity: O(n)
-     *
-     * @param lists
-     * @return
      */
     public ListNode mergeKLists30(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
@@ -144,39 +129,29 @@ public class _0023MergeKSortedLists {
      *
      * Time complexity: O(nlogk)
      * Space complexity: O(k)
-     *
-     * Runtime: 5 ms, faster than 75.88% of Java online submissions for Merge k Sorted Lists.
-     * Memory Usage: 41.2 MB, less than 43.17% of Java online submissions for Merge k Sorted Lists.
-     *
      */
     public ListNode mergeKList31(ListNode[] lists) {
-        Comparator<ListNode> cmp = new Comparator<ListNode>() {
-            @Override
-            public int compare(ListNode o1, ListNode o2) {
-                return o1.val - o2.val;
-            }
-        };
+        ListNode dummy = new ListNode(0);
+        ListNode prev = dummy;
 
-        // Dummy head
-        ListNode head = new ListNode(0);
-        ListNode p = head;
+        PriorityQueue<ListNode> minHeap = new PriorityQueue<>(Comparator.comparingInt(e -> e.val));
 
-        PriorityQueue<ListNode> minHeap = new PriorityQueue<>(cmp);
-        for (ListNode list : lists) {
-            if (list != null) {
-                minHeap.offer(list);
+        for (ListNode head : lists) {
+            if (head != null) {
+                minHeap.offer(head);
             }
         }
 
         while (!minHeap.isEmpty()) {
-            p.next = minHeap.poll();
-            p = p.next;
-            if (p.next != null) {
-                minHeap.offer(p.next);
+            ListNode node = minHeap.poll();
+            prev.next = node;
+            prev = node;
+            if (node.next != null) {
+                minHeap.offer(node.next);
             }
         }
 
-        return head.next;
+        return dummy.next;
     }
 
 
@@ -185,14 +160,6 @@ public class _0023MergeKSortedLists {
      *
      * Time complexity: if equal length, O(nk)
      * Space complexity: O(1)
-     *
-     *
-     * Runtime: 114 ms, faster than 16.33% of Java online submissions for Merge k Sorted Lists.
-     * Memory Usage: 56.8 MB, less than 5.47% of Java online submissions for Merge k Sorted Lists.
-     *
-     *
-     * @param lists
-     * @return
      */
     public ListNode mergeKList4(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
@@ -247,10 +214,6 @@ public class _0023MergeKSortedLists {
      * Time complexity: Suppose equal length n
      * O(nlogk)
      * Space complexity: O(1)
-     *
-     *
-     * @param lists
-     * @return
      */
     public ListNode mergeKList5(ListNode[] lists) {
         int interval = 1;

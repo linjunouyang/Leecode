@@ -15,19 +15,17 @@ public class _0079WordSearch {
     /**
      * 1. Backtracking
      *
-     * Time: n: number off cells
+     * Time: O(N * 3^min(L, N))
+     * n: number off cells
      *
      * I think the overall time complexity is closer to O(N*3^min(L, N)).
      * Each cell has only 3 directions to be potentially explored
      * because one direction has been already visited by its parent.
      * So, the worst case can be expressed by N * 4 * 3^min(L - 1, N - 1) (4 means the beginning point)
-     * and by big O, -> O(N * 3^min(L, N))
-     *
-     * More accurate: O(n * min(3^L, n))
      *
      * Space:
-     * visited: O(size of board)
-     * recursion call stack: O(len of word)
+     * visited: O(board size)
+     * recursion call stack: O(min(word len, board size))
      */
     public boolean exist(char[][] board, String word) {
         int rows = board.length;
@@ -47,6 +45,9 @@ public class _0079WordSearch {
 
     private boolean search(char[][] board, boolean[][] visited, int row, int col,
                            String word, int idx) {
+        // if we check (idx == word.length) -> return true;
+        // failed cases: [["a"]] "a"
+
         if (word.charAt(idx) != board[row][col]) {
             return false;
         }
