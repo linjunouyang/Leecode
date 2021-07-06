@@ -13,10 +13,10 @@ public class _0255VerifyPreorderSequenceInBinarySearchTree {
      *
      * Because it's a BST, all the nodes in left subtree should be smaller
      * all the nodes in right subtree should be bigger
-     * -> validate this before diving into subproblems
+     * -> validate this before diving into sub-problems
      *
      * Time: O(n^2)
-     * average: T(n) = T(n/2) + O(n)
+     * average: T(n) = 2T(n/2) + O(n)
      * -> O(nlogn)
      *
      * Space: O(n)
@@ -76,6 +76,34 @@ public class _0255VerifyPreorderSequenceInBinarySearchTree {
                 low = path.pop();
             }
             path.push(val);
+        }
+        return true;
+    }
+
+    public boolean verifyPreorder22(int[] preorder) {
+        Deque<int[]> stack = new ArrayDeque<>();
+        stack.push(new int[]{0, preorder.length - 1});
+        while (!stack.isEmpty()) {
+            int[] range = stack.pop();
+            int rootVal = preorder[range[0]];
+
+            int firstBiggerIdx = range[1] + 1;
+            for (int i = range[0]; i <= range[1]; i++) {
+                if (firstBiggerIdx == range[1] + 1 && preorder[i] > rootVal) {
+                    firstBiggerIdx = i;
+                } else if (firstBiggerIdx != range[1] + 1 && preorder[i] < rootVal) {
+                    return false;
+                }
+            }
+
+            if (range[0] + 1 < firstBiggerIdx - 1) {
+                stack.push(new int[]{range[0] + 1, firstBiggerIdx - 1});
+            }
+
+            if (firstBiggerIdx < range[1]) {
+                stack.push(new int[]{firstBiggerIdx, range[1]});
+            }
+
         }
         return true;
     }

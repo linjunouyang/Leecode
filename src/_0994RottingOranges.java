@@ -12,7 +12,6 @@ public class _0994RottingOranges {
      *
      * Time: O(row * cols)
      * Space: O(row * cols)
-     *
      */
     public int orangesRotting(int[][] grid) {
         if (grid == null || grid.length == 0 || grid[0].length == 0) {
@@ -39,6 +38,7 @@ public class _0994RottingOranges {
         }
 
         if (numFresh == 0) {
+            // or put numFresh > 0 as a condition for while loop
             return 0;
         }
 
@@ -50,7 +50,9 @@ public class _0994RottingOranges {
                 for (int[] direction : directions) {
                     int nextRow = pos.row + direction[0];
                     int nextCol = pos.col + direction[1];
-                    if (isValid(rows, cols, nextRow, nextCol) && !visited[nextRow][nextCol] && grid[nextRow][nextCol] == 1) {
+                    if (isValid(rows, cols, nextRow, nextCol)
+                            && !visited[nextRow][nextCol]
+                            && grid[nextRow][nextCol] == 1) {
                         visited[nextRow][nextCol] = true;
                         queue.offer(new Position(nextRow, nextCol));
                         numFresh--;

@@ -11,9 +11,11 @@ import java.util.*;
  * ---
  *
  * Graph Representation:
- * 1. adjacency list
+ * 1. adjacency list (DFS requires being able to look up the adjacent (immediate neighbours) of a given node)
  * 2. adjacency matrix (for graphs where edge num >> node num)
  * 3. linked representation using node objects
+ *
+ * ---
  */
 public class _0261GraphValidTree {
     /**
@@ -22,19 +24,21 @@ public class _0261GraphValidTree {
      * DFS/BFS requires being able to look up the adjacent (immediate neighbours) of a given node.
      * -> adj list
      *
+     * Basic idea:
+     * 1. no cycles + avoid trivial cycles caused by 'undirected-ness'
+     * 2. connectivity
+     *
+     *
+     *
      * Detect cycles in graph during DFS/BFS
      * 1. directed graphs: seen.contains(next) -> return false;
      * 2. undirected graphs:
      * General idea:
      * DFS should only go along each edge once, and therefore only in one direction.
-     * when we go along an edge, we  ensure that we don't then later go back along it in the opposite direction.
+     * when we go along an edge, we ensure that we don't then later go back along it in the opposite direction.
      * a. delete the opposite direction edges from the adjacency list.
      * b. maintain node -> prev/parent,
      * when we iterate through the neighbours of a node, we ignore the "parent" node
-     *
-     * Optimization:
-     * Check whether or not there are n - 1 edges. (filter out cycles and some disconnected graphs)
-     * Check connectivity.
      *
      * Time: O(n + e)
      * creating adj lists: O(e + n)
@@ -56,6 +60,7 @@ public class _0261GraphValidTree {
 
         HashMap<Integer, Integer> nodeToParent = new HashMap<>();
         nodeToParent.put(0, -1);
+
         Deque<Integer> queue = new ArrayDeque<>();
         queue.offer(0);
 
@@ -90,6 +95,48 @@ public class _0261GraphValidTree {
             adjLists.putIfAbsent(node2, new ArrayList<>());
             adjLists.get(node2).add(node1);
         }
+    }
+
+    /**
+     * 1.2
+     *
+     * Optimization:
+     *      * 1. Verify that there are n - 1 edges. (filter out some cycles and some disconnected graphs)
+     *      * 2. connectivity
+     *
+     */
+    public boolean validTree12(int n, int[][] edges) {
+
+        if (edges.length != n - 1) return false;
+
+        // Make the adjacency list.
+        List<List<Integer>> adjacencyList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            adjacencyList.add(new ArrayList<>());
+        }
+        for (int[] edge : edges) {
+            adjacencyList.get(edge[0]).add(edge[1]);
+            adjacencyList.get(edge[1]).add(edge[0]);
+        }
+
+        Deque<Integer> stack = new ArrayDeque<>();
+        Set<Integer> seen = new HashSet<>();
+        stack.push(0);
+        seen.add(0);
+
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
+            for (int neighbour : adjacencyList.get(node)) {
+                if (seen.contains(neighbour)) {
+                    // might be trivial / non-trivial cycles, can't return false directly
+                    continue;
+                }
+                seen.add(neighbour);
+                stack.push(neighbour);
+            }
+        }
+
+        return seen.size() == n;
     }
 
     /**

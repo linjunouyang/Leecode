@@ -34,7 +34,7 @@ public class _0044WildcardMatching {
                                   String p, int pIndex,
                                   boolean[][] memo,
                                   boolean[][] visited) {
-        // 如果 p 从pIdex开始是空字符串了，那么 s 也必须从 sIndex 是空才能匹配上
+        // 如果 p 从 pIndex 开始是空字符串了，那么 s 也必须从 sIndex 是空才能匹配上
         if (pIndex == p.length()) {
             return sIndex == s.length();
         }
@@ -53,8 +53,8 @@ public class _0044WildcardMatching {
         boolean match;
 
         if (pChar == '*') {
-            match = isMatchHelper(s, sIndex, p, pIndex + 1, memo, visited) ||
-                    isMatchHelper(s, sIndex + 1, p, pIndex, memo, visited);
+            match = isMatchHelper(s, sIndex, p, pIndex + 1, memo, visited) || // * doesn't match any
+                    isMatchHelper(s, sIndex + 1, p, pIndex, memo, visited); // * matches curr sChar, as we go deeper in this call, * matches more and more
         } else {
             match = charMatch(sChar, pChar) &&
                     isMatchHelper(s, sIndex + 1, p, pIndex + 1, memo, visited);
@@ -106,36 +106,72 @@ public class _0044WildcardMatching {
      * Space: O(mn)
      */
     public boolean isMatch2(String s, String p) {
-        if (s == null || p == null) {
-            return false;
-        }
-
         int sLen = s.length();
         int pLen = p.length();
         boolean[][] dp = new boolean[sLen + 1][pLen + 1];
 
-        // Base cases:
         dp[0][0] = true;
-        for (int j = 1; j <= pLen; j++){
-            if(p.charAt(j-1) == '*'){
-                dp[0][j] = dp[0][j-1];
-            }
+        for (int pCount = 1; pCount <= pLen; pCount++) {
+            char pChar = p.charAt(pCount - 1);
+            dp[0][pCount] = dp[0][pCount - 1] && pChar == '*';
         }
 
-        // Recursion:
-        for (int i = 1; i <= sLen; i++){
-            for (int j = 1; j <= pLen; j++) {
-                char sChar = s.charAt(i - 1);
-                char pChar = p.charAt(j - 1);
-                if((sChar == pChar || pChar == '?') && dp[i-1][j-1]) {
-                    dp[i][j] = true;
-                } else if (pChar == '*' && (dp[i-1][j] || dp[i][j-1])) {
-                    dp[i][j] = true;
+        for (int sCount = 1; sCount <= sLen; sCount++) {
+            char sChar = s.charAt(sCount - 1);
+            for (int pCount = 1; pCount <= pLen; pCount++) {
+                char pChar = p.charAt(pCount - 1);
+                if (sChar == pChar || pChar == '?')  {
+                    dp[sCount][pCount] = dp[sCount - 1][pCount -1];
+                } else if (pChar == '*') {
+                    dp[sCount][pCount] = dp[sCount - 1][pCount] // match any non-0 length
+                            || dp[sCount][pCount - 1]; // empty match
                 }
             }
         }
+
         return dp[sLen][pLen];
     }
+
+    /**
+     * 2.1 Bottom-up DP (space optimized)
+     *
+     * Time: O(s len * p len)
+     * Space: O(p len)
+     */
+    public boolean isMatch21(String s, String p) {
+        int sLen = s.length();
+        int pLen = p.length();
+        boolean[] dp = new boolean[pLen + 1];
+
+        dp[0] = true;
+        for (int pCount = 1; pCount <= pLen; pCount++) {
+            char pChar = p.charAt(pCount - 1);
+            dp[pCount] = dp[pCount - 1] && pChar == '*';
+        }
+
+        for (int sCount = 1; sCount <= sLen; sCount++) {
+            char sChar = s.charAt(sCount - 1);
+            boolean topLeft = dp[0];
+            dp[0] = false;
+
+            for (int pCount = 1; pCount <= pLen; pCount++) {
+                boolean top = dp[pCount];
+                char pChar = p.charAt(pCount - 1);
+                if (sChar == pChar || pChar == '?')  {
+                    dp[pCount] = topLeft;
+                } else if (pChar == '*') {
+                    dp[pCount] = top // match any non-0 length
+                            || dp[pCount - 1]; // empty match
+                } else {
+                    dp[pCount] = false; // don't forget this case
+                }
+                topLeft = top;
+            }
+        }
+
+        return dp[pLen];
+    }
+
 
     /**
      * 3. Iterative backtracking, Dfs with greedy (?)
@@ -156,11 +192,17 @@ public class _0044WildcardMatching {
      * because we can make the second '*' to match more if the first one matching less than expect.
      * So, we do not need to revert to old point anymore and only the last revert point need to be remembered.
      *
-     * The gready idea: if you have multiple * in pattern, you check match for last .
-     * This is really hard to tell but the idea is: if there is a mismatch, you can choose to go back to any prev , but if you choose a previous * not last one, for the p,s to match, you need the left s and left p with * to mach. However, for this part to match, you also need guarantee it's subset(the substring start with last) to match some substr(end in last char in s) in left s. This equals the whole left substr(from dismatch) can be matched by substr start form last as * can match any chars.
+     * The greedy idea: if you have multiple * in pattern, you check match for last .
+     * This is really hard to tell but the idea is:
+     * if there is a mismatch, you can choose to go back to any prev,
+     * but if you choose a previous * not last one, for the p,s to match,
+     * you need the left s and left p with * to mach.
+     * However, for this part to match, you also need guarantee it's subset(the substring start with last) to match some substr(end in last char in s) in left s.
+     * This equals the whole left substr(from dismatch) can be matched by substr start form last as * can match any chars.
      * Thus checking any prev* is equal to check last* and thus only check last*.
-     * In a recusion formular, dp[prev*,end] = dp[last*,end], this is hard to think, but really elegant.
-     * The avg speed boost comparing with generally dp. Obviously less state to check as only check last* not all *. This is the major speed boost because of greedy algorithm.
+     * In a recursion formula, dp[prev*,end] = dp[last*,end], this is hard to think, but really elegant.
+     * The avg speed boost comparing with generally dp. Obviously less state to check as only check last* not all *.
+     * This is the major speed boost because of greedy algorithm.
      *
      * current star matches [sTmpIdx - startIdx] characters
      *

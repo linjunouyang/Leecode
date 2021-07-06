@@ -17,80 +17,138 @@
 
 public class _0265PaintHouseII {
     /**
-     * 1. Intuition - Recursion with memorization
-     * paint(1, red)
-     * painting house 1 red, along with the cost of painting the houses after it
-     * (taking into account restrictions caused by painting house 1 red).
+     * 1. Recursion with memorization
      *
-     * Disadvantage: re-computation
-     *
+     * Time: O(nk^2)
+     * Space: O(nk)
      */
-
-    /**
-     * 2. Dynamic Programming
-     *
-     *
-     * dp[i][j] = min{dp[i-1][h]} + costs[i][j] (h != j)
-     *
-     * n houses, k colors
-     * Time complexity: O(nk)
-     * Space complexity: O(k)
-     *
-     * @param costs
-     * @return
-     */
-    public int minCostII(int[][] costs) {
-        if (costs == null || costs.length == 0 || costs[0].length == 0) {
-            return 0;
-        }
-
+    public int minCostII1(int[][] costs) {
         int houses = costs.length;
         int colors = costs[0].length;
+        // if cost too big, use long
+        int[][] cache = new int[houses][colors];
+        int min = Integer.MAX_VALUE;
+        for (int color = 0; color < colors; color++) {
+            min = Math.min(min, paintUntil(costs, houses - 1, color, cache));
+        }
+        return min;
+    }
 
-        int[] lastHouse = costs[0];
-
-        for (int i = 1; i < houses; i++) {
-            int[] currHouse = new int[colors];
-
-            // find min and second min
-            int min = Integer.MAX_VALUE;
-            int second_min = Integer.MAX_VALUE;
-            for (int p = 0; p < colors; p++) {
-                if (lastHouse[p] <= min) {
-                    second_min = min;
-                    min = lastHouse[p];
-                } else if (lastHouse[p] < second_min) {
-                    second_min = lastHouse[p];
-                }
-            }
-
-            // compute paint costs for current house
-            for (int j = 0; j < colors; j++) {
-                if (lastHouse[j] == min) {
-                    currHouse[j] = second_min + costs[i][j];
-                } else {
-                    currHouse[j] = min + costs[i][j];
-                }
-            }
-
-            lastHouse = currHouse;
+    private int paintUntil(int[][] costs, int house, int color, int[][] cache) {
+        if (house == 0) {
+            cache[0][color] = costs[0][color];
+            return cache[0][color];
         }
 
-        int ans = Integer.MAX_VALUE;
-        for (int i = 0; i < colors; i++) {
-            ans = Math.min(ans, lastHouse[i]);
+        if (cache[house][color] != 0) {
+            // bc The problem says costs entry > 0 -> non 0 means computed before
+            return cache[house][color];
         }
 
-        return ans;
+        int colors = costs[0].length;
+        int min = Integer.MAX_VALUE;
+        for (int prevColor = 0; prevColor < colors; prevColor++) {
+            if (prevColor == color) {
+                continue;
+            }
+            min = Math.min(min, paintUntil(costs, house - 1, prevColor, cache));
+        }
+
+        cache[house][color] = costs[house][color] + min;
+
+        return cache[house][color];
+    }
+
+    /**
+     * 2. Bottom-up DP
+     *
+     * Time: O(nk^2)
+     * Space: O(nk)
+     */
+    public int minCostII2(int[][] costs) {
+        int houses = costs.length;
+        int colors = costs[0].length;
+        int[][] cache = new int[houses][colors];
+
+        // init
+        for (int color = 0; color < colors; color++) {
+            cache[0][color] = costs[0][color];
+        }
+
+        for (int house = 1; house < houses; house++) {
+            for (int color = 0; color < colors; color++) {
+                cache[house][color] = Integer.MAX_VALUE;
+                for (int prevColor = 0; prevColor < colors; prevColor++) {
+                    if (prevColor == color) {
+                        continue;
+                    }
+                    cache[house][color] = Math.min(cache[house][color],
+                            cache[house - 1][prevColor]);
+                }
+                cache[house][color] += costs[house][color];
+            }
+        }
+
+        int min = Integer.MAX_VALUE;
+        for (int color = 0; color < colors; color++) {
+            min = Math.min(min, cache[houses - 1][color]);
+        }
+
+        return min;
+    }
+
+    /**
+     * 2. Bottom-up DP (Space optimized)
+     *
+     * n houses, k colors
+     * Time complexity: O(n k^2)
+     * Space complexity: O(k)
+     */
+    public int minCostII3(int[][] costs) {
+        int houses = costs.length;
+        int colors = costs[0].length;
+        int[][] cache = new int[2][colors];
+
+        // init
+        for (int color = 0; color < colors; color++) {
+            cache[0][color] = costs[0][color];
+        }
+
+        for (int house = 1; house < houses; house++) {
+            int row = house % 2;
+            int prevRow = (house - 1) % 2;
+            for (int color = 0; color < colors; color++) {
+                cache[row][color] = Integer.MAX_VALUE;
+                for (int prevColor = 0; prevColor < colors; prevColor++) {
+                    if (prevColor == color) {
+                        continue;
+                    }
+                    cache[row][color] = Math.min(cache[row][color],
+                            cache[prevRow][prevColor]);
+                }
+                cache[row][color] += costs[house][color];
+            }
+        }
+
+        int min = Integer.MAX_VALUE;
+        int lastRow = (houses - 1) % 2;
+        for (int color = 0; color < colors; color++) {
+            min = Math.min(min, cache[lastRow][color]);
+        }
+
+        return min;
     }
 
 
     /**
-     * 2. Dynamic Programming: Optimized Time and Space
-     * @param costs
-     * @return
+     * 4. Bottom-up Dynamic Programming: Optimized Time and Space
+     *
+     * keep track of minCost, minColor, secondMinCost
+     *
+     * Time: O(nk)
+     * Space: O(nk)
      */
-    public int minCostII2(int[][] costs) {
+    public int minCostII4(int[][] costs) {
         if (costs.length == 0) return 0;
         int k = costs[0].length;
         int n = costs.length;
@@ -122,6 +180,7 @@ public class _0265PaintHouseII {
                 } else {
                     cost += prevMin;
                 }
+
                 // Determine whether or not this current cost is also a minimum.
                 if (min == -1 || cost <= min) {
                     secondMin = min;

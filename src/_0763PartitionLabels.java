@@ -11,33 +11,26 @@ public class _0763PartitionLabels {
      *
      * Time complexity: O(n)
      * Space complexity: O(1)
-     *
-     * @param S
-     * @return
      */
-    public List<Integer> partitionLabels(String S) {
-        List<Integer> subStrSizes = new ArrayList<>();
-        if (S == null || S.length() == 0) {
-            return subStrSizes;
+    public List<Integer> partitionLabels(String s) {
+        HashMap<Character, Integer> charToLastIndex = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            charToLastIndex.put(s.charAt(i), i);
         }
 
-        int[] lastOccur = new int[26];
-        for (int i = 0; i < S.length(); i++) {
-            lastOccur[S.charAt(i) - 'a'] = i;
-        }
-
+        List<Integer> partSizes = new ArrayList<>();
         int start = 0;
-        int rightMost = 0;
-
-        for (int i = start; i <= rightMost || i <= S.length() - 1; i++) {
-            int last = lastOccur[S.charAt(i) - 'a'];
-            rightMost = Math.max(rightMost, last);
-            if (i == rightMost) {
-                subStrSizes.add(rightMost - start + 1);
-                start = rightMost + 1;
+        int end = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            end = Math.max(end, charToLastIndex.get(c));
+            if (i == end) {
+                partSizes.add(end - start + 1);
+                start = i + 1;
+                end = i + 1;
             }
         }
 
-        return subStrSizes;
+        return partSizes;
     }
 }

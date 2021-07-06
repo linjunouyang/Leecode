@@ -45,10 +45,12 @@ public class _1153StringTransformsIntoAnotherString {
      * Time: O(n)
      * running time can be improved if count available character during the scan.
      *
-     * Space: O(26)
+     * Space: O(1)
      */
     public boolean canConvert(String str1, String str2) {
         if (str1.equals(str2)) {
+            //"abcdefghijklmnopqrstuvwxyz"
+            //"abcdefghijklmnopqrstuvwxyz"
             return true;
         }
         Map<Character, Character> dp = new HashMap<>();

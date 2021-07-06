@@ -28,12 +28,32 @@ public class _0116PopulatingNextRightPointersInEachNode {
     };
 
     /**
+     * 0. recursion
+     */
+    public Node connect(Node root) {
+        if (root == null) {
+            return null;
+        }
+
+        if (root.left != null) {
+            root.left.next = root.right;
+        }
+        if (root.right != null && root.next != null) {
+            root.right.next = root.next.left;
+        }
+
+        connect(root.left);
+        connect(root.right);
+        return root;
+    }
+
+    /**
      * 1. Level Order Traversal
      *
      * Time: O(n)
      * Space: O(n)
      */
-    public Node connect(Node root) {
+    public Node connect1(Node root) {
         if (root == null) {
             return null;
         }

@@ -72,9 +72,8 @@ public class _0146LRUCache {
      * We need to keep the key along with the node itself, because when the node is removed,
      * we are not blessed with the key from the caller of LRU cache.
      *
-     * Runtime: 56 ms, faster than 92.81% of Java online submissions for LRU Cache.
-     * Memory Usage: 56.6 MB, less than 65.03% of Java online submissions for LRU Cache.
-     *
+     * put value in node, so that we can get value & the degree of how recently used from nodes
+     * one HashMap would be enough -> easier to maintain
      */
     private DoubleLinkedList list;
     private Map<Integer, Node> map;
@@ -89,9 +88,6 @@ public class _0146LRUCache {
     /**
      * Time complexity: O(1)
      * Space complexity: O(1)
-     *
-     * @param key
-     * @return
      */
     public int get(int key) {
         Node node = map.get(key);
@@ -108,9 +104,6 @@ public class _0146LRUCache {
     /**
      * Time complexity: O(1)
      * Space complexity: O(1)
-     *
-     * @param key
-     * @param value
      */
     public void put(int key, int value) {
         Node node = map.get(key);
@@ -124,7 +117,7 @@ public class _0146LRUCache {
                 Node tail = list.getTail();
                 list.removeTail();
 
-                map.remove(tail.key);
+                map.remove(tail.key); // we need to know the key for a given node, so store key in node
             }
 
             Node newNode = new Node(key, value);

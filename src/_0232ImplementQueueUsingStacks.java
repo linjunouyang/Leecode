@@ -20,7 +20,6 @@ public class _0232ImplementQueueUsingStacks {
         /** Removes the element from in front of queue and returns that element: */
         /** Amortized O(1), Worst-case O(n) */
         /**
-         *
          * Amortized analysis gives the **average** performance (over time) of each operation in the **worst case**.
          * The basic idea is that a worst case operation can alter the state
          * in such a way that **the worst case cannot occur again for a long time**, thus amortizing its cost.
@@ -29,15 +28,14 @@ public class _0232ImplementQueueUsingStacks {
          *
          * push_1, push_2, push_n, pop_1, pop_2, pop_n
          *
-         *
          * The worst case time complexity of a single pop operation is O(n). S
-         * ince we have n pop operations, using the worst-case per operation analysis gives us a total of O(n^2)
+         * since we have n pop operations, using the worst-case per operation analysis gives us a total of O(n^2)
          *
          * However, in a sequence of operations the worst case does not occur often in each operation
          * some operations may be cheap, some may be expensive.
          * Therefore, a traditional worst-case per operation analysis can give overly pessimistic bound.
          *
-         * the number of times pop operation can be called is limited by the number of push operations before it.
+         * [the number of times pop operation can be called is limited by the number of push operations before it.]
          * Although a single pop operation could be expensive, it is expensive only once per n times (queue size),
          * when s2 is empty and there is a need for data transfer between s1 and s2.
          *
@@ -45,7 +43,6 @@ public class _0232ImplementQueueUsingStacks {
          * n (for push operations) + 2*n (for first pop operation) + n - 1 ( for pop operations)
          * which is O(2n).This gives O(2n/2n) = O(1) average time per operation.
          *
-         * @return
          */
         public int pop() {
             if (stack2.isEmpty()) {

@@ -32,11 +32,7 @@ public class _0099RecoverBinarySearchTree {
     }
 
     /**
-     * 1. In-order + identify reversion, swap
-     *
-     * adjacent: ... _ < _ < A > B < _ < _ ...
-     *                       ^^^^^
-     *                       drop #1
+     * 1. In-order + identify reversion, swap (hard to understand, use 1.1 instead)
      *
      * not adjacent: ... _ < _ < A > X < _ < Y > B < _ < _ ... (X may be the same as Y, but it's irrelevant)
      *                           ^^^^^       ^^^^^
@@ -49,6 +45,10 @@ public class _0099RecoverBinarySearchTree {
      * The second time we meet pre.val > root.val
      * the second node is the root node, since we are now looking for a node to replace with out first node,
      * which is found before.
+     *
+     * adjacent: ... _ < _ < A > B < _ < _ ...
+     *                       ^^^^^
+     *                      drop #1
      *
      * When they are consecutive, which means the case pre.val > cur.val will appear only once.
      * We need to take case this case without destroy the previous analysis.
@@ -90,6 +90,49 @@ public class _0099RecoverBinarySearchTree {
         b.val = tmp;
     }
 
+    /**
+     * 1.1 In-order traversal (my own implementation)
+     */
+    public void recoverTree11(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        TreeNode curr = root;
+        TreeNode prev = null;
+        List<TreeNode[]> reversions = new ArrayList<>();
+
+        while (!stack.isEmpty() || curr != null) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+
+            curr = stack.pop();
+            if (prev != null && prev.val > curr.val) {
+                reversions.add(new TreeNode[]{prev, curr});
+            }
+            prev = curr;
+
+            curr = curr.right;
+        }
+
+        if (reversions.size() == 1) {
+            TreeNode[] pair = reversions.get(0);
+
+            int temp = pair[0].val;
+            pair[0].val = pair[1].val;
+            pair[1].val = temp;
+        }  else if (reversions.size() == 2) {
+            TreeNode[] pair1 = reversions.get(0);
+            TreeNode[] pair2 = reversions.get(1);
+            int temp = pair1[0].val;
+            pair1[0].val = pair2[1].val;
+            pair2[1].val = temp;
+        }
+    }
+
 
     /**
      * 2. Morris Traversal
@@ -109,7 +152,10 @@ public class _0099RecoverBinarySearchTree {
         // In the 'loop' cases it could be equal to the node itself predecessor == curr.
         // last is a 'true' predecessor: the previous node in the inorder traversal.
         TreeNode curr = root;
-        TreeNode x = null, y = null, last = null, predecessor = null;
+        TreeNode x = null;
+        TreeNode y = null;
+        TreeNode last = null;
+        TreeNode predecessor = null;
 
         while (curr != null) {
             // 1. If there is a left child, compute the predecessor.
@@ -119,7 +165,6 @@ public class _0099RecoverBinarySearchTree {
             // b) If there is a link predecessor.right = root --> break it.
             if (curr.left != null) {
                 // Predecessor node is one step left and then right till you can.
-
                 predecessor = curr.left;
                 while (predecessor.right != null && predecessor.right != curr) {
                     //    1(c)
@@ -134,9 +179,6 @@ public class _0099RecoverBinarySearchTree {
                     predecessor.right = curr;
                     curr = curr.left;
                 } else {
-                    // break link predecessor.right = root
-                    // link is broken : time to change subtree and go right
-
                     // check for the swapped nodes
                     if (last != null && curr.val < last.val) {
                         if (x == null) x = last;
@@ -144,6 +186,8 @@ public class _0099RecoverBinarySearchTree {
                     }
                     last = curr;
 
+                    // break link predecessor.right = root
+                    // link is broken : time to change subtree and go right
                     predecessor.right = null;
                     curr = curr.right;
                 }
@@ -166,5 +210,54 @@ public class _0099RecoverBinarySearchTree {
             }
         }
         swap(x, y);
+    }
+
+    public void recoverTree21(TreeNode root) {
+        TreeNode curr = root;
+        List<TreeNode[]> reversions = new ArrayList<>();
+        TreeNode last = null;
+
+        while (curr != null) {
+            if (curr.left == null) {
+                // visited curr
+                if (last != null && last.val > curr.val) {
+                    reversions.add(new TreeNode[]{last, curr});
+                }
+                last = curr;
+
+                curr = curr.right;
+            } else {
+                TreeNode pred = curr.left;
+                while (pred.right != null && pred.right != curr) {
+                    pred = pred.right;
+                }
+
+                if (pred.right == null) {
+                    pred.right = curr;
+                    curr = curr.left;
+                } else {
+                    pred.right = null;
+
+                    // visited curr
+                    if (last != null && last.val > curr.val) {
+                        reversions.add(new TreeNode[]{last, curr});
+                    }
+                    last = curr;
+
+                    curr = curr.right;
+                }
+            }
+        }
+
+        if (reversions.size() == 1) {
+            TreeNode[] reversion = reversions.get(0);
+            int temp = reversion[0].val;
+            reversion[0].val = reversion[1].val;
+            reversion[1].val = temp;
+        } else {
+            int temp = reversions.get(0)[0].val;
+            reversions.get(0)[0].val = reversions.get(1)[1].val;
+            reversions.get(1)[1].val = temp;
+        }
     }
 }

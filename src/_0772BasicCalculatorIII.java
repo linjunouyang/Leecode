@@ -35,13 +35,18 @@ public class _0772BasicCalculatorIII {
             } else if (c == ')') {
                 // do the math when we encounter a ')' until '('
                 while (ops.peek() != '(') {
+                    // Why we don't care about precedence here?
+                    // bc in next block, whenever we found out prev op is higher than cur op, we calc prev operation
+                    // so when we reach here, the op sequence (from bottom to top) should be increasing or the same
                     int res = operation(ops.pop(), nums.pop(), nums.pop());
                     nums.push(res);
                 }
                 ops.pop(); // get rid of '('
             } else if (c == '+' || c == '-' || c == '*' || c == '/') {
-                while (!ops.isEmpty() && precedence(c, ops.peek())) {
-                    nums.push(operation(ops.pop(), nums.pop(),nums.pop()));
+                while (!ops.isEmpty() && canCalcPrev(ops.peek(), c)) {
+                    // when can we calc prev operation?
+                    // we have op before && prev op is higher or same level
+                    nums.push(operation(ops.pop(), nums.pop(), nums.pop()));
                 }
 
                 // Deal with negative numbers (not required by this question)
@@ -91,17 +96,20 @@ public class _0772BasicCalculatorIII {
     // helper function to check precedence of current operator and the uppermost operator in the ops stack
     //  if we have a + b * c. Num stack is a and b and op stack is ' + ' when we have current c as ' * ' ,
     //  the precedence check prevent us from doing a + b first
-    // return true is op2 is higher or same level as op1
-    private static boolean precedence(char op1, char op2) {
-        if (op2 == '(' || op2 == ')') {
-            return false;
-        }
-        if ((op1 == '*' || op1 == '/') && (op2 == '+' || op2 == '-')) {
+    // return true if op1 (prev op) can be computed first
+    private static boolean canCalcPrev(char prevOp, char currOp) {
+        if (prevOp == '(' || prevOp == ')') {
+            // cases like: '(2+' (2*' ')+' -> nothing to compute
             return false;
         }
 
-        // op1, op2 {*, /}
-        // op2 {*, /}, op1 {+, -}
+        if ((currOp == '*' || currOp == '/') && (prevOp == '+' || prevOp == '-')) {
+            // op2 is higher, op1 shouldn't be computed now
+            return false;
+        }
+
+        // same level: op1, op2 {*, /}, or op1, op2 {+, -}
+        // op1 is higher: op1 {*, /}, op2 {+, -}
         return true;
     }
 

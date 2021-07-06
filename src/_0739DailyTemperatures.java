@@ -1,9 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-/**
- *
- */
 public class _0739DailyTemperatures {
     /**
      * 1. Monotonous (decreasing) Stack
@@ -23,21 +20,21 @@ public class _0739DailyTemperatures {
      *
      * Time complexity: O(n)
      * Space complexity: O(n)
-     *
-     * @param temperatures
-     * @return
      */
     public int[] dailyTemperatures(int[] temperatures) {
+        int days = temperatures.length;
+        int[] answer = new int[days];
+
         Deque<Integer> stack = new ArrayDeque<>();
-        int[] ret = new int[temperatures.length];
-        for (int i = 0; i < temperatures.length; i++) {
-            while(!stack.isEmpty() && temperatures[i] > temperatures[stack.peek()]) {
-                int idx = stack.pop();
-                ret[idx] = i - idx;
+        for (int day = 0; day < days; day++) {
+            while (!stack.isEmpty() && temperatures[day] > temperatures[stack.peek()]) {
+                int prev = stack.pop();
+                answer[prev] = day - prev;
             }
-            stack.push(i);
+            stack.push(day);
         }
-        return ret;
+
+        return answer;
     }
 
     /**

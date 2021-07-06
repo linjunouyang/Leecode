@@ -45,36 +45,42 @@ public class _0431EncodeNaryTreeToBinaryTree {
 
     // Encodes an n-ary tree to a binary tree.
     public TreeNode encode(Node root) {
-        if (root == null) {
+        if (root == null)  {
             return null;
         }
 
         TreeNode bRoot = new TreeNode(root.val);
-        Deque<NodePair> queue = new ArrayDeque<>();
-        queue.offer(new NodePair(bRoot, root));
 
-        while (!queue.isEmpty()) {
-            NodePair pair = queue.poll();
-            TreeNode bNode = pair.bNode;
-            Node nNode = pair.nNode;
+        Deque<TreeNode> bStack = new ArrayDeque<>();
+        bStack.push(bRoot);
+        Deque<Node> nStack = new ArrayDeque<>();
+        nStack.push(root);
 
-            // The pointer is from parent to child,
-            // so we construct the relationship before offer nodes into queue
-            // (otherwise we need to know the parent each node's associated to)
-            TreeNode firstChild = null;
-            TreeNode prev = null;
-            for (Node nChild : nNode.children) {
-                TreeNode bChild = new TreeNode(nChild.val);
-                if (firstChild == null) {
-                    firstChild = bChild;
-                } else {
-                    prev.right = bChild;
-                }
-                prev = bChild;
-                queue.offer(new NodePair(bChild, nChild));
+        while (!nStack.isEmpty()) {
+            TreeNode bNode = bStack.pop();
+            Node nNode = nStack.pop();
+
+            if (nNode.children.size() > 0) {
+                Node firstChild = nNode.children.get(0);
+                TreeNode left = new TreeNode(firstChild.val);
+
+                bNode.left = left;
+
+                bStack.push(left);
+                nStack.push(firstChild);
             }
 
-            bNode.left = firstChild;
+            TreeNode curr = bNode.left;
+            for (int i = 1; i < nNode.children.size(); i++) {
+                Node nChild = nNode.children.get(i);
+                TreeNode bChild = new TreeNode(nChild.val);
+
+                curr.right = bChild;
+                curr = curr.right; // don't forget
+
+                bStack.push(bChild);
+                nStack.push(nChild);
+            }
         }
 
         return bRoot;
@@ -85,21 +91,27 @@ public class _0431EncodeNaryTreeToBinaryTree {
         if (root == null) {
             return null;
         }
+
         Node nRoot = new Node(root.val, new ArrayList<>());
-        Deque<NodePair> queue = new ArrayDeque<>();
-        queue.offer(new NodePair(root, nRoot));
 
-        while (!queue.isEmpty()) {
-            NodePair pair = queue.poll();
-            TreeNode bNode = pair.bNode;
-            Node nNode = pair.nNode;
+        Deque<TreeNode> bStack = new ArrayDeque<>();
+        bStack.push(root);
+        Deque<Node> nStack = new ArrayDeque<>();
+        nStack.push(nRoot);
 
-            TreeNode curr = bNode.left;
-            while (curr != null) {
-                Node nChild = new Node(curr.val, new ArrayList<>());
+        while (!bStack.isEmpty()) {
+            TreeNode bNode = bStack.pop();
+            Node nNode = nStack.pop();
+
+            TreeNode bChild = bNode.left;
+            while (bChild != null) {
+                Node nChild = new Node(bChild.val, new ArrayList<>());
                 nNode.children.add(nChild);
-                queue.offer(new NodePair(curr, nChild));
-                curr = curr.right;
+
+                bStack.push(bChild);
+                nStack.push(nChild);
+
+                bChild = bChild.right;
             }
         }
 
@@ -107,7 +119,7 @@ public class _0431EncodeNaryTreeToBinaryTree {
     }
 
     /**
-     * 2. DFS
+     * 2. DFS (pre-order)
      *
      * Time: O(n)
      * Space: O(n)
@@ -142,15 +154,16 @@ public class _0431EncodeNaryTreeToBinaryTree {
             return null;
         }
 
-        Node newRoot = new Node(root.val, new ArrayList<Node>());
+        Node nRoot = new Node(root.val, new ArrayList<Node>());
 
         // Decoding all the children nodes
-        TreeNode sibling = root.left;
-        while (sibling != null) {
-            newRoot.children.add(decode(sibling));
-            sibling = sibling.right;
+        TreeNode bChild = root.left;
+        while (bChild != null) {
+            Node nChild = decode(bChild);
+            nRoot.children.add(nChild);
+            bChild = bChild.right;
         }
 
-        return newRoot;
+        return nRoot;
     }
 }

@@ -41,23 +41,27 @@ public class _0523ContinuousSubarraySum {
      *
      * Time complexity: O(n)
      * Space complexity: O(n)
-     *
      */
     public boolean checkSubarraySum2(int[] nums, int k) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        map.put(0, -1); // for cases like ([0, 0] 0) ([1, 1] 2) ([any, any] -1)
-        int runningSum = 0;
-        for (int i=0;i<nums.length;i++) {
-            runningSum += nums[i];
-            if (k != 0) runningSum %= k;
-            Integer prev = map.get(runningSum);
-            if (prev != null) {
-                if (i - prev > 1) {
+        Map<Integer, Integer> sumToIdx = new HashMap<>();
+        /**
+         * For cases like ([1, 1] 2)
+         * if k can be <= 0, ([0, 0] 0) ([any, any] -1)
+         *
+         * Because the way we calculate subarray length: i - map.get(sum)
+         */
+        sumToIdx.put(0, -1); // for cases like
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            sum %= k; // k >= 1
+            if (sumToIdx.containsKey(sum)) {
+                if (i - sumToIdx.get(sum) > 1) {
                     return true;
                 }
                 // if prev != null, but distance <= 1, we don't update the entry
             } else {
-                map.put(runningSum, i);
+                sumToIdx.put(sum, i);
             }
         }
         return false;

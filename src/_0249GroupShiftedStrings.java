@@ -19,43 +19,30 @@ public class _0249GroupShiftedStrings {
      * K: longest length
      *
      * Space complexity: O(N)
-     *
-     * Runtime: 1 ms, faster than 100.00% of Java online submissions for Group Shifted Strings.
-     * Memory Usage: 36.6 MB, less than 100.00% of Java online submissions for Group Shifted Strings.
-     *
-     * @param strings
-     * @return
      */
     public List<List<String>> groupStrings(String[] strings) {
-        if (strings == null) {
-            return new ArrayList<>();
+        HashMap<String, List<String>> diffsToStrs = new HashMap<>();
+        for (String string : strings) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 1; i < string.length(); i++) {
+                int diff = string.charAt(i - 1) - string.charAt(i);
+                if (diff < 0) {
+                    // "az" -> 25 "ba" -> -1 + 26 = 2
+                    diff += 26;
+                }
+                sb.append(diff);
+            }
+            String diffs = sb.toString();
+            List<String> strs = diffsToStrs.getOrDefault(diffs, new ArrayList<>());
+            strs.add(string);
+            diffsToStrs.put(diffs, strs);
         }
 
-        Map<String, List<String>> map = new HashMap<>();
-
-        for(String s : strings) {
-            String key = getKey(s);
-            List<String> list = map.getOrDefault(key, new ArrayList<>());
-            list.add(s);
-            map.put(key, list);
+        List<List<String>> res = new ArrayList<>();
+        for (String diffs : diffsToStrs.keySet()) {
+            List<String> strs = diffsToStrs.get(diffs);
+            res.add(strs);
         }
-        return new ArrayList<>(map.values());
-    }
-
-    private String getKey(String s) {
-        if (s == null) {
-            return "null";
-        } else if (s.isEmpty()) {
-            return "zero";
-        }
-
-        StringBuilder builder = new StringBuilder();
-
-        for(int i = 1; i < s.length(); i++) {
-            int diff = s.charAt(i) - s.charAt(i-1);
-            builder.append(diff < 0 ? diff + 26 : diff);
-        }
-
-        return builder.toString();
+        return res;
     }
 }

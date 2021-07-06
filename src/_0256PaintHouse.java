@@ -1,6 +1,6 @@
 public class _0256PaintHouse {
     /**
-     * 1. Brute Force
+     * 0. Brute Force
      *
      * generate every valid permutation of house colors
      * (or all permutations and then remove all the invalid ones, e.g. ones that have 2 red houses side-by-side)
@@ -32,17 +32,85 @@ public class _0256PaintHouse {
      */
 
     /**
+     * 1. Recursion with Memoization
+     */
+    private static final int COLORS = 3;
+    private static final int RED = 0;
+    private static final int BLUE = 1;
+    private static final int GREEN = 2;
+
+    public int minCost(int[][] costs) {
+        int houses = costs.length;
+        // the min total cost to paint all houses starting from 'house' (with 'house' painted as 'color')
+        int[][] cache = new int[houses][COLORS];
+
+        return Math.min(paint(0, RED, costs, cache),
+                Math.min(paint(0, GREEN, costs, cache),
+                        paint(0, BLUE, costs, cache)));
+    }
+
+    // paint 'house' with 'color', what's the min total cost for painting houses starting from 'house'
+    private int paint(int houseIdx, int color, int[][] costs, int[][] cache) {
+        int houses = costs.length;
+        if (houseIdx == houses) {
+            return 0;
+        }
+        if (cache[houseIdx][color] != 0) {
+            return cache[houseIdx][color];
+        }
+
+        int minCost = Integer.MAX_VALUE;
+        for (int nextColor = RED; nextColor <= GREEN; nextColor++) {
+            if (color == nextColor) {
+                continue;
+            }
+            int cost = costs[houseIdx][color] + paint(houseIdx + 1, nextColor, costs, cache);
+            minCost = Math.min(minCost, cost);
+        }
+
+        cache[houseIdx][color] = minCost;
+
+        return minCost;
+    }
+
+    /**
      * 2. Dynamic Programming
      *
      * p[i][j] = min{dp[i-1][k] +costs[i][j]} (k != j)
      *
      * Time complexity: O(n)
-     * Space complexity: O(1)
-     *
-     * @param costs: n x 3 cost matrix
-     * @return: An integer, the minimum cost to paint all houses
+     * Space complexity: O(n)
      */
-    public int minCost(int[][] costs) {
+    public int minCost21(int[][] costs) {
+        int houses = costs.length;
+        int[][] dp = new int[houses][COLORS];
+
+        for (int color = RED; color <= GREEN; color++) {
+            dp[houses - 1][color] = costs[houses - 1][color];
+        }
+
+        for (int house = houses - 2; house >= 0; house--) {
+            for (int color = RED; color <= GREEN; color++) {
+                dp[house][color] = Integer.MAX_VALUE;
+                for (int nextColor = RED; nextColor <= GREEN; nextColor++) {
+                    if (nextColor == color) {
+                        continue;
+                    }
+                    dp[house][color] = Math.min(dp[house][color], dp[house + 1][nextColor]);
+                }
+                dp[house][color] += costs[house][color];
+            }
+        }
+
+        return Math.min(dp[0][RED],
+                Math.min(dp[0][GREEN],
+                        dp[0][BLUE]));
+    }
+
+
+
+
+    public int minCost2(int[][] costs) {
         if (costs == null || costs.length == 0 || costs[0].length == 0) {
             return 0;
         }
@@ -59,16 +127,19 @@ public class _0256PaintHouse {
 
         for (int i = 1; i < n; i++) {
             for (int j = 0; j < 3; j++) {
-                dp[i&1][j] = Integer.MAX_VALUE;
+                dp[i & 1][j] = Integer.MAX_VALUE;
                 for (int k = 0; k < 3; k++) {
                     if (k != j) {
-                        dp[i&1][j] = Math.min(dp[i&1][j], dp[i&1 ^ 1][k] + costs[i][j]);
+                        dp[i & 1][j] = Math.min(dp[i & 1][j],
+                                dp[i & 1 ^ 1][k] + costs[i][j]);
                     }
                 }
             }
         }
 
-        return Math.min(dp[n&1^1][0], Math.min(dp[n&1^1][1], dp[n&1^1][2]) );
+        return Math.min(dp[n & 1 ^ 1][0],
+                Math.min(dp[n & 1 ^ 1][1],
+                        dp[n & 1 ^ 1][2]));
 
 //        int[] previousRow = costs[costs.length -1];
 //

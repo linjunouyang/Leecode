@@ -89,21 +89,28 @@ public class _0907SumOfSubarrayMinimums {
         int n = A.length;
         int res = 0;
         int mod = (int) (1e9 + 7);
+
         for (int i = 0; i <= n; i++) {
             int cur = i == n ? 0 : A[i]; // A[i] >= 1,
             while (!stack.isEmpty() && A[stack.peek()] > cur) {
                 // k ... j ... i
                 // A[j] is the min of any sub-arr with start: [k+1, j], end: [j, i - 1]
-                int j = stack.pop();
+                int pivot = stack.pop();
 
                 // empty -> all prev nums are bigger
                 // -> cur num can be min for any sub-arr with start: [0, j]
                 // -> set j-k=j+1 -> k = -1
-                int k = stack.isEmpty() ? -1 : stack.peek();
-                res = (int) ((res + (long) A[j] * (j - k) * (i - j)) % mod);
+                int left = stack.isEmpty() ? -1 : stack.peek();
+
+                // res and * * are within int range
+                // but the sum of these two might be out of int max
+                // number of left bound choices: (pivot - left)
+                // number of right bound choices: (i - pivot)
+                res = (int) ((res + (long) A[pivot] * (pivot - left) * (i - pivot)) % mod);
             }
             stack.push(i);
         }
+
         return res;
     }
 }

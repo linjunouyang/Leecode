@@ -30,7 +30,8 @@ public class _0056MergeIntervals {
      *
      * https://leetcode.com/problems/merge-intervals/solution/
      *
-     *
+     * Time: O(nlogn)
+     * Space: O(1)
      */
     public int[][] merge(int[][] intervals) {
         if (intervals == null || intervals.length == 0) {
@@ -55,13 +56,12 @@ public class _0056MergeIntervals {
                 prev[1] = Math.max(intervals[i][1], prev[1]);
             } else {
                 prev = intervals[i];
-                list.add(prev);
+                list.add(prev); // if no this statement, need to add(prev) after for loop
             }
         }
 
 
         return list.toArray(new int[1][1]);
-
     }
 
     /**

@@ -37,7 +37,7 @@ public class _0253MeetingRoomsII {
             return 0;
         }
 
-        // Min heap
+        // Min heap: all the rooms with earliest end time at top
         PriorityQueue<Integer> allocator =
                 new PriorityQueue<Integer>(
                         intervals.length,
@@ -61,8 +61,8 @@ public class _0253MeetingRoomsII {
 
         // Iterate over remaining intervals
         for (int i = 1; i < intervals.length; i++) {
-            // If the room due to free up the earliest is free, assign that room to this meeting.
             if (intervals[i][0] >= allocator.peek()) {
+                // If the room due to free up the earliest is free, assign that room to this meeting.
                 allocator.poll();
             }
 
@@ -86,9 +86,6 @@ public class _0253MeetingRoomsII {
      *
      * Time complexity: O(nlogn)
      * Space complexity: O(n)
-     *
-     * @param intervals
-     * @return
      */
     public int minMeetingRooms2(int[][] intervals) {
         int[] start = new int[intervals.length];
@@ -108,8 +105,10 @@ public class _0253MeetingRoomsII {
 
         while (startPointer < intervals.length) {
             if (start[startPointer] >= end[endPointer]) {
+                // we process the 'end' (-1) and the 'start' (+1), so rooms no change
                 endPointer++;
             } else {
+                // e.g. start: 1, end: 2
                 rooms++;
             }
 
@@ -120,7 +119,9 @@ public class _0253MeetingRoomsII {
     }
 
     /**
-     * 3. TreeMap for scheduling problems
+     * 3. Sweep line
+     *
+     * Two implementations: 1) TreeMap 2) Event class
      *
      * This is the same approach Elements of Programming Interviews book takes for Meeting Rooms type problems.
      * The idea is that we only need to keep track of "space occupied".
@@ -136,8 +137,7 @@ public class _0253MeetingRoomsII {
      * we can use a TreeMap since it keeps track of the natural order of the keys. We will use the time as keys, start/end as value.
      *
      * The TreeMap step will be populated like so:
-     *
-     * 1(start), 2(start),10(end),12(end), 14(start),15(end).
+     * 1(start), 2(start), 10(end), 12(end), 14(start), 15(end).
      *
      * Keep in mind treemap insertion is log(n) time for each element (nlogn to populate with n items)
      *
@@ -156,9 +156,12 @@ public class _0253MeetingRoomsII {
      * ](  -1, +1
      * )(  -1, -1
      *
-     * Time complexity:
-     * @param intervals
-     * @return
+     * Time: O(nlogn)
+     * values: O(n)
+     *
+     * Space:
+     * TreeMap: O(n)
+     * values: O(n)
      */
     public int minMeetingRooms3(int[][] intervals) {
         TreeMap<Integer, Integer> changes = new TreeMap<>();
@@ -166,9 +169,52 @@ public class _0253MeetingRoomsII {
             changes.put(i[0], changes.getOrDefault(i[0], 0) + 1);
             changes.put(i[1], changes.getOrDefault(i[1], 0) - 1);
         }
-        int room = 0, maxrooms = 0;
-        for (int v : changes.values())
-            maxrooms = Math.max(maxrooms, room += v);
-        return maxrooms;
+        int rooms = 0;
+        int res = 0;
+        for (int change : changes.values()) {
+            rooms += change;
+            res = Math.max(res, rooms);
+        }
+        return res;
+    }
+
+    class Event {
+        boolean isStart;
+        int time;
+
+        public Event(boolean isStart, int time) {
+            this.isStart = isStart;
+            this.time = time;
+        }
+    }
+
+    public int minMeetingRooms31(int[][] intervals) {
+        List<Event> events = new ArrayList<>();
+        for (int[] interval : intervals) {
+            events.add(new Event(true, interval[0]));
+            events.add(new Event(false, interval[1]));
+        }
+
+        Collections.sort(events, (e1, e2) -> {
+            if (e1.isStart && !e2.isStart) {
+                return -1;
+            } else if (!e1.isStart && e2.isStart) {
+                return -1;
+            }
+            return e1.time - e2.time;
+        });
+
+        int rooms = 0;
+        int res = 0;
+        for (Event event : events) {
+            if (event.isStart) {
+                rooms++;
+            } else {
+                rooms--;
+            }
+            res = Math.max(res, rooms);
+        }
+
+        return res;
     }
 }

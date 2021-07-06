@@ -12,7 +12,7 @@
  * 1. Time: hash collisions -> O(1) deteriorate to O(n)
  * 2. Space: O(n * average len)
  *
- * Balance Tree:
+ * Balanced Tree:
  * 1. Time: O(m log n)
  * 2. Space: O(n * average len)
  *

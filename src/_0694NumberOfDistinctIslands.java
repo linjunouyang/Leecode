@@ -26,7 +26,6 @@ public class _0694NumberOfDistinctIslands {
      *
      * sb string will be added into the set, so only need to analyze set space:
      * O(mn)
-     *
      */
     public int numDistinctIslands(int[][] grid) {
         if (grid == null) {
@@ -58,6 +57,7 @@ public class _0694NumberOfDistinctIslands {
         }
         sb.append(dir);
         grid[i][j] = 0;
+
         dfs(grid, i - 1, j, sb, "u");
         dfs(grid, i + 1, j, sb, "d");
         dfs(grid, i, j - 1, sb, "l");
@@ -90,7 +90,8 @@ public class _0694NumberOfDistinctIslands {
             for (int i = 0; i < near.length; i++) {
                 int newRow = pos[0] + near[i][0];
                 int newCol = pos[1] + near[i][1];
-                if (0 <= newRow && newRow < grid.length && 0 <= newCol && newCol < grid[0].length && grid[newRow][newCol] == 1) {
+                if (0 <= newRow && newRow < grid.length && 0 <= newCol && newCol < grid[0].length
+                        && grid[newRow][newCol] == 1) {
                     sb.append(dir[i]);
                     grid[newRow][newCol] = 0;
                     stack.push(new int[]{newRow, newCol});
@@ -160,7 +161,7 @@ public class _0694NumberOfDistinctIslands {
                     rq.offer(nr);
                     cq.offer(nc);
                     grid[nr][nc] = 0;
-                    sb.append(nr-i).append(nc-j);
+                    sb.append(nr - i).append(nc - j);
                     // or sb.append(k);
                 }
             }

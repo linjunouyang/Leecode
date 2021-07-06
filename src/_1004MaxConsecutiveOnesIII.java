@@ -44,10 +44,44 @@ public class _1004MaxConsecutiveOnesIII {
     }
 
     /**
+     * To solve TLE, we might want to cache the result: cache[nums.length][k + 1]
+     * notice that: 1 <= nums.length <= 10^5 0 <= k <= nums.length
+     * cache might end up too big -> MLE
+     *
+     * Bottom-up (spaced optimized) might be the only possible solution in this category
+     *
+     * dp[i][k] 表示将A[i]置为1并且作为开头的最长子数组的长度，置换次数最多为k。0<=k<=K
+     *
+     * 状态转换方程：
+     * dp[i][k] = A[i]==0? dp[i+1][k-1]+1 : dp[i+1][k]+1, k>0;
+     * dp[i][0] = A[i]==0? 0 : dp[i+1][0]+1, k==0
+     * 目标：max{dp[i][K]}
+     *
+     * 空间优化：使用一维滚动数组优化，k从最大的K开始，递减至0。
+     */
+    public int longestOnes22(int[] A, int K) {
+        int n = A.length;
+        int[] dp = new int[K+1];
+
+        int ans = 0;
+        for (int i = n - 1; i >= 0; i--){
+            for (int k = K; k > 0; k--){
+                dp[k] = (A[i] == 0) ? (dp[k - 1] + 1) : (dp[k] + 1);
+            }
+            dp[0] = (A[i] == 0) ? 0 : (dp[0] + 1);
+            ans = Math.max(dp[K], ans);
+        }
+
+        return ans;
+    }
+
+    /**
      * 3. Sliding window
      *
      * Translation:
      * Find the longest subarray with at most K zeros.
+     *
+     * longest subarray -> sliding window
      *
      * variant:
      * https://leetcode.com/problems/max-consecutive-ones-iii/discuss/248287/java-sliding-windows-with-comments-in-line
@@ -56,6 +90,7 @@ public class _1004MaxConsecutiveOnesIII {
      * Space: O(1)
      */
     public int longestOnes2(int[] nums, int k) {
+        // in this implementation, once we found a bigger valid window, our window size never shrinks (don't care about validity)
         int start = 0;
         int end = 0;
 
@@ -79,6 +114,31 @@ public class _1004MaxConsecutiveOnesIII {
             end++;
         }
 
-        return end - start;
+        return end - start; // eventually end = nums.length, so no need to plus 1
+    }
+
+    public int longestOnes21(int[] A, int K) {
+        // in this implementation, our window is always valid, so need to remeber the max valid
+        int max = 0;
+        int zeroCount = 0; // zero count in current window
+        int i = 0; // slow pointer
+
+        for (int j = 0; j < A.length; ++j) {
+            if (A[j] == 0) { // move forward j, if current is 0, increase the zeroCount
+                zeroCount++;
+            }
+
+            // when current window has more than K, the window is not valid any more
+            // we need to loop the slow pointer until the current window is valid
+            while (zeroCount > K) {
+                if (A[i] == 0) {
+                    zeroCount--;
+                }
+                i++;
+            }
+
+            max = Math.max(max, j - i + 1); // everytime we get here, the current window is valid
+        }
+        return max;
     }
 }

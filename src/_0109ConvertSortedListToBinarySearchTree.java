@@ -87,24 +87,25 @@ public class _0109ConvertSortedListToBinarySearchTree {
      * Time: O(n)
      * Space: O(n)
      */
-    public TreeNode sortedListToBST3(ListNode head) {
+    public TreeNode sortedListToBST2(ListNode head) {
         List<Integer> list = new ArrayList<>();
         ListNode curr = head;
-        while (curr != null){
+        while (curr != null) {
             list.add(curr.val);
             curr = curr.next;
         }
-        return buildTree(0, list.size() - 1, list);
+        return buildBST(list, 0, list.size() - 1);
     }
 
-    private TreeNode buildTree(int left, int right, List<Integer> list){
-        if (left > right) {
+    private TreeNode buildBST(List<Integer> list, int start, int end) {
+        if (start > end) {
             return null;
         }
-        int mid = left + (right - left + 1) / 2;
+
+        int mid = start + (end - start) / 2;
         TreeNode root = new TreeNode(list.get(mid));
-        root.left = buildTree(left, mid - 1, list);
-        root.right = buildTree(mid + 1, right, list);
+        root.left = buildBST(list, start, mid - 1);
+        root.right = buildBST(list, mid + 1, end);
         return root;
     }
 
@@ -145,6 +146,45 @@ public class _0109ConvertSortedListToBinarySearchTree {
             if (range[0] <= mid - 1) {
                 rangeStack.push(new int[]{range[0], mid - 1});
                 parentStack.push(node);
+            }
+        }
+
+        return root;
+    }
+
+    private TreeNode buildBST3(List<Integer> list) {
+        if (list.size() == 0) {
+            return null;
+        }
+
+        Deque<int[]> rangeStack = new ArrayDeque<>();
+        rangeStack.push(new int[]{0, list.size() - 1});
+
+        int mid = (list.size() - 1) / 2;
+        TreeNode root = new TreeNode(list.get(mid));
+        Deque<TreeNode> nodeStack = new ArrayDeque<>();
+        nodeStack.push(root);
+
+        while (!nodeStack.isEmpty()) {
+            int[] range = rangeStack.pop();
+            TreeNode node = nodeStack.pop();
+
+            mid = range[0] + (range[1] - range[0]) / 2;
+
+            if (range[0] <= mid - 1) {
+                int leftMid = range[0] + (mid - 1 - range[0]) / 2;
+                TreeNode leftChild = new TreeNode(list.get(leftMid));
+                nodeStack.push(leftChild);
+                node.left = leftChild;
+                rangeStack.push(new int[]{range[0], mid - 1});
+            }
+
+            if (mid + 1 <= range[1]) {
+                int rightMid = mid + 1 + (range[1] - mid - 1) / 2;
+                TreeNode rightChild = new TreeNode(list.get(rightMid));
+                nodeStack.push(rightChild);
+                node.right = rightChild;
+                rangeStack.push(new int[]{mid + 1, range[1]});
             }
         }
 

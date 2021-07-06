@@ -1,4 +1,42 @@
-public class _4MedianOfTwoSortedArrays {
+public class _0004MedianOfTwoSortedArrays {
+    /**
+     * 1. Two Pointers
+     *
+     * Time: O(m + n)
+     * Space: O(1)
+     */
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int index1 = 0;
+        int index2 = 0;
+        int med1 = 0;
+        int med2 = 0;
+        int end = (nums1.length + nums2.length) / 2;
+
+        for (int i = 0; i <= end; i++) {
+            med1 = med2;
+            if (index1 == nums1.length) {
+                med2 = nums2[index2];
+                index2++;
+            } else if (index2 == nums2.length) {
+                med2 = nums1[index1];
+                index1++;
+            } else if (nums1[index1] < nums2[index2] ) {
+                med2 = nums1[index1];
+                index1++;
+            }  else {
+                med2 = nums2[index2];
+                index2++;
+            }
+        }
+
+        // the median is the average of two numbers
+        if ((nums1.length + nums2.length) % 2 == 0) {
+            return (med1 + med2) / 2.0;
+        }
+
+        return med2;
+    }
+
     /**
      * 1. findKth()
      *
@@ -12,15 +50,8 @@ public class _4MedianOfTwoSortedArrays {
      *
      * Time complexity: O(log(m + n))
      * Space complexity: O(log(m + n))
-     *
-     * Runtime: 2 ms, faster than 100.00% of Java online submissions for Median of Two Sorted Arrays.
-     * Memory Usage: 45.1 MB, less than 93.75% of Java online submissions for Median of Two Sorted Arrays.
-     *
-     * @param nums1
-     * @param nums2
-     * @return
      */
-    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    public double findMedianSortedArrays2(int[] nums1, int[] nums2) {
         int len = nums1.length + nums2.length;
 
         if (len % 2 == 0) {
@@ -86,5 +117,71 @@ public class _4MedianOfTwoSortedArrays {
         } else {
             return findKth(A, startOfA, B, startOfB + k / 2, k - k / 2);
         }
+    }
+
+    /**
+     * 3. Binary Search
+     *
+     * https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/he-bing-yi-hou-zhao-gui-bing-guo-cheng-zhong-zhao-/#comment
+     *
+     * Time: O(log min(m, n))
+     * Space: O(1)
+     */
+    public double findMedianSortedArrays3(int[] nums1, int[] nums2) {
+         if (nums1.length > nums2.length) {
+             // 1. When we compare nums1[i], nums2[j], i is calculated from valid [left, right]
+             //    but j might be out of bounds, so always make nums2 point to longer array
+             // 2. Improves time complexity: O(log min(m, n))
+             int[] temp = nums1;
+             nums1 = nums2;
+             nums2 = temp;
+         }
+
+        int m = nums1.length;
+        int n = nums2.length;
+
+        // 分割线左边的所有元素需要满足的个数 m + (n - m + 1) / 2;
+        int totalLeft = (m + n + 1) / 2;
+
+        // 在 nums1 的区间 [0, m] 里查找恰当的分割线，
+        // 使得 nums1[i - 1] <= nums2[j] && nums2[j - 1] <= nums1[i]
+        int left = 0;
+        int right = m; // not m - 1, because we're trying to find first index of right part (m means it's empty)
+
+        // we want to achieve: nums1[i - 1] <= nums2[j] && nums2[j - 1] <= nums1[i]
+        while (left < right) {
+            // Why +1?
+            // we need to access nums1[i - 1], to avoid i - 1 < 0
+            int i = left + (right - left + 1) / 2;
+            int j = totalLeft - i;
+
+            if (nums1[i - 1] > nums2[j]) {
+                // because i is right-skewed, setting right = i will cause dead loop.
+                // 下一轮搜索的区间 [left, i - 1]
+                right = i - 1;
+            } else {
+                // we know the answer definitely exists, so no need to check second condition here
+                // nums2[j - 1] > nums[1]
+
+                // because i is right-skewed, if left + 1 = right (i = right), setting left = i + 1 will be out of bounds
+                // 下一轮搜索的区间 [i, right]
+                left = i;
+            }
+        }
+
+        int i = left;
+        int j = totalLeft - i;
+
+        int nums1LeftMax = i == 0 ? Integer.MIN_VALUE : nums1[i - 1];
+        int nums1RightMin = i == m ? Integer.MAX_VALUE : nums1[i];
+        int nums2LeftMax = j == 0 ? Integer.MIN_VALUE : nums2[j - 1];
+        int nums2RightMin = j == n ? Integer.MAX_VALUE : nums2[j];
+
+        if (((m + n) % 2) == 1) {
+            return Math.max(nums1LeftMax, nums2LeftMax);
+        } else {
+            return (double) ((Math.max(nums1LeftMax, nums2LeftMax) + Math.min(nums1RightMin, nums2RightMin))) / 2;
+        }
+
     }
 }

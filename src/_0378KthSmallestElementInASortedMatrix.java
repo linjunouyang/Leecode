@@ -18,10 +18,8 @@ public class _0378KthSmallestElementInASortedMatrix {
     /**
      * 1. Heap
      *
-     * x = min {K, N}
-     *
-     * Time: x + klog(x)
-     * Space: o(x)
+     * Time: O(n + k * log n)
+     * Space: O(n)
      */
     public int kthSmallest(int[][] matrix, int k) {
         int n = matrix.length;
@@ -45,49 +43,59 @@ public class _0378KthSmallestElementInASortedMatrix {
     /**
      * 2. Binary Search
      *
-     * Time: O(N * log(MAX - MIN))
+     * Time: O(n * log(MAX - MIN))
      * Space: O(1)
-     *
      */
     public static int kthSmallest2(int[][] matrix, int k) {
         int n = matrix.length;
-        int start = matrix[0][0], end = matrix[n - 1][n - 1];
+        int start = matrix[0][0];
+        int end = matrix[n - 1][n - 1];
+
         while (start < end) {
             int mid = start + (end - start) / 2;
             // {biggest num <= mid, smallest num > mid}
-            int[] smallLargePair = { matrix[0][0], matrix[n - 1][n - 1] };
+            int[] closests = { matrix[0][0], matrix[n - 1][n - 1] };
 
-            int count = countLessEqual(matrix, mid, smallLargePair);
+            int count = countLessEqual(matrix, mid, closests);
 
-            if (count == k)
-                return smallLargePair[0];
-
-            if (count < k)
-                start = smallLargePair[1]; // search higher
-            else
-                end = smallLargePair[0]; // search lower
+            if (count == k) {
+                return closests[0];
+            } else if (count < k) {
+                // Why +1 here or -1 below won't work?
+                // because closests are actual nums in the matrix, they might be the kth smallest
+                start = closests[1]; // search higher (+1 won't work)
+            } else {
+                end = closests[0]; // search lower (-1 won't work)
+            }
         }
 
         return start; // or return end
     }
 
-    private static int countLessEqual(int[][] matrix, int mid, int[] smallLargePair) {
+    // count number of elements that are less than or equal to the mid
+    // update biggest num less than or equal to the mid, smallest num bigger than mid
+    private static int countLessEqual(int[][] matrix, int mid, int[] closests) {
+        int n = matrix.length;
         int count = 0;
-        int n = matrix.length, row = n - 1, col = 0;
+        int row = n - 1;
+        int col = 0;
+
         while (row >= 0 && col < n) {
-            if (matrix[row][col] > mid) {
+            int cur = matrix[row][col];
+            if (cur > mid) {
                 // as matrix[row][col] is bigger than the mid, let's keep track of the
                 // smallest number greater than the mid
-                smallLargePair[1] = Math.min(smallLargePair[1], matrix[row][col]);
+                closests[1] = Math.min(closests[1], cur);
                 row--;
             } else {
                 // as matrix[row][col] is less than or equal to the mid, let's keep track of the
                 // biggest number less than or equal to the mid
-                smallLargePair[0] = Math.max(smallLargePair[0], matrix[row][col]);
+                closests[0] = Math.max(closests[0], cur);
                 count += row + 1;
                 col++;
             }
         }
+
         return count;
     }
 }

@@ -107,7 +107,8 @@ public class _0647PalindromicSubstrings {
      * 2) extractPalindrome is a stateless instead of stateful method.
      * Global variables are not good for multi-threading
      *
-     *
+     * Time: O(n ^ 2)
+     * Space: O(1)
      */
     public int countSubstrings2(String s) {
         int count=0;
