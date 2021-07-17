@@ -20,36 +20,38 @@ public class _0890FindAndReplacePattern {
      * Space: O(num of chars)
      */
     public List<String> findAndReplacePattern(String[] words, String pattern) {
-        List<String> matchedWords = new ArrayList<>();
+        // question to ask: duplicate in words?
+        List<String> matches = new ArrayList<>();
 
         for (String word : words) {
             if (isMatch(word, pattern)) {
-                matchedWords.add(word);
+                matches.add(word);
             }
         }
 
-        return matchedWords;
+        return matches;
     }
 
+    // guaranteed same length
     private boolean isMatch(String word, String pattern) {
-        HashMap<Character, Character> letterMap = new HashMap<>();
-        HashSet<Character> mappedChars = new HashSet<>();
+        HashMap<Character, Character> wordToPattern = new HashMap<>();
+        HashMap<Character, Character> patternToWord = new HashMap<>();
 
         for (int i = 0; i < word.length(); i++) {
             char wChar = word.charAt(i);
             char pChar = pattern.charAt(i);
-            if (letterMap.containsKey(wChar) ) {
-                if (pChar != letterMap.get(wChar)) {
-                    return false;
-                }
-            } else {
-                if (mappedChars.contains(pChar)) {
-                    return false;
-                }
-                letterMap.put(wChar, pChar);
-                mappedChars.add(pChar);
+
+            if (wordToPattern.containsKey(wChar) && wordToPattern.get(wChar) != pChar) {
+                return false;
             }
+            wordToPattern.put(wChar, pChar);
+
+            if (patternToWord.containsKey(pChar) && patternToWord.get(pChar) != wChar) {
+                return false;
+            }
+            patternToWord.put(pChar, wChar);
         }
+
         return true;
     }
 }

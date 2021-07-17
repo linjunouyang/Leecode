@@ -76,6 +76,44 @@ public class _0828CountUniqueCharactersOfAllSubstringsOfAGivenString {
      * Time: O(n)
      * Space: O(n) (can be optimized to O(1)
      */
+
+    /**
+     * Time: O(n ^ 2)
+     * Space: O(1)
+     *
+     * repetitive work: for same characters, ith right boundary is (i+1)th left boundary
+     */
+    public int uniqueLetterString20(String s) {
+        int count = 0;
+        final int START = 0;
+        final int END = s.length() - 1;
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+
+            int left = i - 1;
+            while (left >= START && s.charAt(left) != c) {
+                left--;
+            }
+
+            int right = i + 1;
+            while (right <= END && s.charAt(right) != c) {
+                right++;
+            }
+
+            count += (i - left) * (right - i);
+        }
+
+        return count;
+    }
+
+    /**
+     * Time: O(n)
+     * Space: O(n)
+     *
+     * Avoid repetitive boundary detection by summarize characters' pos list
+     * but increase the space use
+     */
     public int uniqueLetterString2(String s) {
         List<Integer>[] record = new List[26];
         int len = s.length();
@@ -94,16 +132,24 @@ public class _0828CountUniqueCharactersOfAllSubstringsOfAGivenString {
             for (int j = 0; j < size; j++) {
                 //for each position, check left pos and right pos. 对于一个字母的每个位置，查看该位置左边的位置left和右边的位置right
                 int position = record[i].get(j);
-                int leftPos = j == 0 ? -1 : record[i].get(j - 1);
-                int rightPos = j == size - 1 ? len : record[i].get(j + 1);
+                int leftPos = (j == 0) ? -1 : record[i].get(j - 1);
+                int rightPos = (j == size - 1) ? len : record[i].get(j + 1);
                 result += (position - leftPos) * (rightPos - position);
                 result %= M;
             }
         }
 
-        return (int)result;
+        return (int) result;
     }
 
+    /**
+     * Time: O(n)
+     * Space: O(1)
+     *
+     * We don't need remember all characters' position list.
+     * Simply the last two index. When we encounter a character
+     * the last one contribution = (last first - last second) * (cur idx - last one)
+     */
     public int uniqueLetterString3(String s) {
         int[][] charPos = new int[26][2];
         for (int i = 0; i < 26; i++) {

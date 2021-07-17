@@ -55,6 +55,7 @@ public class _0864ShortestPathToGetAllKeys {
     private int bfs(String[] grid, int totalKeys, int startRow, int startCol) {
         int rows = grid.length;
         int cols = grid[0].length();
+        int allKeysMask = (1 << totalKeys) - 1;
 
         State start = new State(0, startRow, startCol);
 
@@ -73,7 +74,7 @@ public class _0864ShortestPathToGetAllKeys {
             for (int i = 0; i < size; i++) {
                 State state = queue.poll();
 
-                if (state.keys == (1 << totalKeys) - 1) {
+                if (state.keys == allKeysMask) {
                     return steps;
                 }
 
@@ -81,18 +82,22 @@ public class _0864ShortestPathToGetAllKeys {
                     int row = state.row + direction[0];
                     int col = state.col + direction[1];
                     if (row < 0 || row >= rows || col < 0 || col >= cols) {
+                        // out of bounds
                         continue;
                     }
 
                     char nextChar = grid[row].charAt(col);
                     if (nextChar == '#') {
+                        // wall
                         continue;
                     }
 
                     int keys = state.keys;
-                    if (Character.isUpperCase(nextChar) && (keys & (1 << (nextChar - 'a'))) == 0 ) {
+                    if (Character.isUpperCase(nextChar) && (keys & (1 << (nextChar - 'A'))) == 0 ) {
+                        // no key for the lock
                         continue;
                     }
+
                     if (Character.isLowerCase(nextChar)) {
                         keys |= 1 << (nextChar - 'a');
                     }

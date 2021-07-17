@@ -2,47 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36ecb659-0905-424a-b4b4-eec3616930e1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/WeRide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0743NetworkDelayTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_0802FindEventualSafeStates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1135ConnectingCitiesWithMinimumCost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_1143LongestCommonSubsequence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DFS/_47PermutationsII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0047PermutationsII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0004MedianOfTwoSortedArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0004MedianOfTwoSortedArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0044WildcardMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0044WildcardMatching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0054SpiralMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0054SpiralMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0056MergeIntervals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0056MergeIntervals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0076MinimumWindowSubstring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0076MinimumWindowSubstring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0099RecoverBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0099RecoverBinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0109ConvertSortedListToBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0109ConvertSortedListToBinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0116PopulatingNextRightPointersInEachNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0116PopulatingNextRightPointersInEachNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0146LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0146LRUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0208ImplementTrie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0208ImplementTrie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0232ImplementQueueUsingStacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0232ImplementQueueUsingStacks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0249GroupShiftedStrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0249GroupShiftedStrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0253MeetingRoomsII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0253MeetingRoomsII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0255VerifyPreorderSequenceInBinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0255VerifyPreorderSequenceInBinarySearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0256PaintHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0256PaintHouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0261GraphValidTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0261GraphValidTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0265PaintHouseII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0265PaintHouseII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0361BombEnemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0361BombEnemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0378KthSmallestElementInASortedMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0378KthSmallestElementInASortedMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0431EncodeNaryTreeToBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0431EncodeNaryTreeToBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0460LFUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0460LFUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0523ContinuousSubarraySum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0523ContinuousSubarraySum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0647PalindromicSubstrings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0647PalindromicSubstrings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0694NumberOfDistinctIslands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0694NumberOfDistinctIslands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0739DailyTemperatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0739DailyTemperatures.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0763PartitionLabels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0763PartitionLabels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0772BasicCalculatorIII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0772BasicCalculatorIII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0785IsGraphBipartite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0785IsGraphBipartite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0847ShortestPathVisitingAllNodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0847ShortestPathVisitingAllNodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0907SumOfSubarrayMinimums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0907SumOfSubarrayMinimums.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0934ShortestBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0934ShortestBridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_0994RottingOranges.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0994RottingOranges.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1004MaxConsecutiveOnesIII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1004MaxConsecutiveOnesIII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_1153StringTransformsIntoAnotherString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1153StringTransformsIntoAnotherString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0329LongestIncreasingPathInAMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0329LongestIncreasingPathInAMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0436FindRightInterval.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0436FindRightInterval.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0828CountUniqueCharactersOfAllSubstringsOfAGivenString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0828CountUniqueCharactersOfAllSubstringsOfAGivenString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0864ShortestPathToGetAllKeys.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0864ShortestPathToGetAllKeys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0890FindAndReplacePattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0890FindAndReplacePattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_0935KnightDialer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_0935KnightDialer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_1284MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_1284MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +226,7 @@
       <workItem from="1619421675167" duration="2487000" />
       <workItem from="1619903376283" duration="24571000" />
       <workItem from="1621381968582" duration="105581000" />
-      <workItem from="1624142556834" duration="77699000" />
+      <workItem from="1624142556834" duration="87486000" />
     </task>
     <servers />
   </component>
@@ -293,22 +260,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="660" height="303" key="GridCell.Tab.0.bottom" timestamp="1625158584563">
+    <state width="661" height="229" key="GridCell.Tab.0.bottom" timestamp="1625549315926">
       <screen x="-110" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="660" height="303" key="GridCell.Tab.0.bottom/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625158584563" />
-    <state width="660" height="303" key="GridCell.Tab.0.center" timestamp="1625158584562">
+    <state width="661" height="229" key="GridCell.Tab.0.bottom/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625549315926" />
+    <state width="661" height="229" key="GridCell.Tab.0.center" timestamp="1625549315921">
       <screen x="-110" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="660" height="303" key="GridCell.Tab.0.center/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625158584562" />
-    <state width="660" height="303" key="GridCell.Tab.0.left" timestamp="1625158584562">
+    <state width="661" height="229" key="GridCell.Tab.0.center/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625549315921" />
+    <state width="661" height="229" key="GridCell.Tab.0.left" timestamp="1625549315920">
       <screen x="-110" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="660" height="303" key="GridCell.Tab.0.left/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625158584562" />
-    <state width="660" height="303" key="GridCell.Tab.0.right" timestamp="1625158584563">
+    <state width="661" height="229" key="GridCell.Tab.0.left/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625549315920" />
+    <state width="661" height="229" key="GridCell.Tab.0.right" timestamp="1625549315923">
       <screen x="-110" y="-1055" width="1920" height="1055" />
     </state>
-    <state width="660" height="303" key="GridCell.Tab.0.right/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625158584563" />
+    <state width="661" height="229" key="GridCell.Tab.0.right/0.25.1440.875/-110.-1055.1920.1055@-110.-1055.1920.1055" timestamp="1625549315923" />
     <state width="660" height="303" key="GridCell.Tab.1.bottom" timestamp="1625158584566">
       <screen x="-110" y="-1055" width="1920" height="1055" />
     </state>

@@ -50,7 +50,7 @@ public class _1284MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
                             int row1 = row + direction[0];
                             int col1 = col + direction[1];
                             if (row1 >= 0 && row1 < rows && col1 >= 0 && col1 < cols) {
-                                next ^= 1 << (row1 * cols + col1); // exlcusive or
+                                next ^= 1 << (row1 * cols + col1); // exclusive or
                             }
                         }
 
@@ -66,6 +66,11 @@ public class _1284MinimumNumberOfFlipsToConvertBinaryMatrixToZeroMatrix {
     }
 
     /**
-     * 2. DFS
+     * 2. DFS:
+     * https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/discuss/446371/Java-Recursion-%2B-Memoization-Explained
+     * HashMap remember answers (applicable to a certain board configuration regardless where we start)
+     * HashSet remember CURRENT recursive path (Avoid revisiting, not GLOBAL visited)
+     *
+     * https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/discuss/446342/JavaPython-3-Convert-matrix-to-int%3A-BFS-and-DFS-codes-w-explanation-comments-and-analysis.
      */
 }

@@ -96,7 +96,7 @@ public class _0329LongestIncreasingPathInAMatrix {
         }
 
         // BFS implements the Topological Sort
-        int length = 0; // The longest path so far
+        int length = 0; // if initialized to 1, return length - 1;
         while(!queue.isEmpty()) {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
@@ -106,10 +106,17 @@ public class _0329LongestIncreasingPathInAMatrix {
                 for (int[] dir: dirs) {
                     int row1 = row + dir[0];
                     int col1 = col + dir[1];
-                    if (row1 >= 0 && row1 < rows && col1 >= 0 && col1 < cols
-                            && matrix[row1][col1] > matrix[row][col]
-                            && --indegree[row1][col1] == 0) {
-                        queue.offer(new int[]{row1, col1});
+                    if (row1 >= 0 && row1 < rows && col1 >= 0 && col1 < cols) {
+                        continue;
+                    }
+
+                    if (matrix[row1][col1] > matrix[row][col]) {
+                        indegree[row1][col1]--;
+
+                        // this if needs be inside
+                        if (indegree[row1][col1] == 0) {
+                            queue.offer(new int[]{row1, col1});
+                        }
                     }
                 }
             }

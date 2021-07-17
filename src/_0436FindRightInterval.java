@@ -11,9 +11,7 @@ public class _0436FindRightInterval {
     /**
      * 2. Binary Search
      *
-     * Time: O(nlogn)
-     * Space: O(n)
-     *
+     * Sorting of an array of primitive values with a custom comparator is not supported by the standard Java libraries.
      * int[] indices = new int[n]
      * Arrays.sort(indices, (a, b) -> a - b); // doesnt' work
      *
@@ -24,6 +22,9 @@ public class _0436FindRightInterval {
      *
      * T#1 is type-variable:
      * T#1 extends Object declared in method <T#1>sort(T#1 [], Comparator<? super T#1>)
+     *
+     * Time: O(nlogn)
+     * Space: O(n)
      */
     public int[] findRightInterval(int[][] intervals) {
         int n = intervals.length;
@@ -47,9 +48,12 @@ public class _0436FindRightInterval {
                              int end) {
         int left = 0;
         int right = intervals.length - 1;
+
         while (left < right) {
             int mid = left + (right - left) / 2;
-            if (intervals[indices.get(mid)][0] < end) {
+            int start = intervals[indices.get(mid)][0];
+
+            if (start < end) {
                 left = mid + 1;
             } else {
                 right = mid;
@@ -66,6 +70,8 @@ public class _0436FindRightInterval {
 
     /**
      * 3. TreeMap
+     *
+     * Be aware of value (it's idx)
      *
      * Time: O(nlogn)
      * Space: O(n)
@@ -103,57 +109,55 @@ public class _0436FindRightInterval {
      * Space: O(n)
      */
     class Point {
-        int idx;
-        int val;
         boolean isStart;
+        int val;
+        int idx;
 
-        public Point(int idx, int val, boolean isStart) {
-            this.idx = idx;
-            this.val = val;
+        public Point(boolean isStart, int val, int idx) {
             this.isStart = isStart;
-        }
-    }
-
-    class PointComparator implements Comparator<Point> {
-        public int compare(Point p1, Point p2) {
-            if (p1.val != p2.val) {
-                return Integer.compare(p1.val, p2.val);
-            }
-            if (p1.isStart) {
-                return 1;
-            }
-            return -1;
+            this.val = val;
+            this.idx = idx;
         }
     }
 
     public int[] findRightInterval4(int[][] intervals) {
         int n = intervals.length;
         List<Point> points = new ArrayList<>();
+
         for (int i = 0; i < n; i++) {
-            points.add(new Point(i, intervals[i][0], true));
-            points.add(new Point(i, intervals[i][1], false));
+            int[] interval = intervals[i];
+
+            Point start = new Point(true, interval[0], i);
+            Point end = new Point(false, interval[1], i);
+
+            points.add(start);
+            points.add(end);
         }
 
-        PointComparator comparator = new PointComparator();
-        Collections.sort(points, comparator);
+        Collections.sort(points, (p1, p2) -> {
+            if (p1.val != p2.val) {
+                return Integer.compare(p1.val, p2.val);
+            }
 
-        PriorityQueue<Point> startMinHeap = new PriorityQueue<>(comparator);
+            if (p1.isStart) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+
+        int rightIdx = -1;
         int[] res = new int[n];
+
         for (int i = points.size() - 1; i >= 0; i--) {
             Point point = points.get(i);
             if (point.isStart) {
-                startMinHeap.offer(point);
+                rightIdx = point.idx;
             } else {
-                if (startMinHeap.size() == 0) {
-                    res[point.idx] = -1;
-                } else {
-                    res[point.idx] = startMinHeap.peek().idx;
-                }
+                res[point.idx] = rightIdx;
             }
         }
 
         return res;
     }
-
-
 }
